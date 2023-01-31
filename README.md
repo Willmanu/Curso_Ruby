@@ -1,1 +1,2 @@
-# estudoruby
+#Estudoruby
+Meus estudos do Ruby
