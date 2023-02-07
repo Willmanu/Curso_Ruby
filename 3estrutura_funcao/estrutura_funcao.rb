@@ -1,7 +1,4 @@
-def somar(x , y)
-	x + y
+def somar(x,y)
+	puts x + y
 end
 somar(1,2)
-
-resultado = somar
-print (resultado)
