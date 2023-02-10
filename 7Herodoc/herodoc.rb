@@ -14,4 +14,4 @@ Aquilo ou que delimita, que impõe limites.
 TXT
 
 puts mensagem
-puts "A quantidade de caracteres no texto é: #{mensagem.length} " # a quantidade de carctere é 504
+puts "A quantidade de caracteres no texto é: #{mensagem.length} "# a quantidade de carctere é 504
