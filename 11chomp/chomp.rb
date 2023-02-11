@@ -1,8 +1,38 @@
 =begin
 Estou fazendo um programa em Ruby e preciso fazer uma pergunta ao user, 
 colher essa entrada de dados, guardar em uma variável e trabalhar ela no código.
-Bom, posso usar o método get pata ler a entrada do usuário e guardar na variável.
+Bom, posso usar o método get para pegar a entrada do usuário e guardar na variável.
 	Exemplo:
+=end
+p mensagem
+name = gets
+p "Olá #{name}, prazer em conhecê-lo!"
+
+=begin
+  O que vai acontecer aqui é que: a mensagem -> 'Por favor! digite seu nome'
+  aparecerá para o user e o cursor vai ficar piscando esperando o user digitar o nome.
+  Assim que o user digitar, o get pega a informação guarda na variável 
+  Em seguida é impresso na tela: 
+
+  Olá + o nome_User
+  , prazer em conhecê-lo!
+
+  Observe que a frase ficou quebrada, ola + nome_User em uma linha e 
+, prazer em conhecê-lo em outra
+
+  Observe que para imprimir eu usei o p e não outro, porque este p faz a inspeção, ou seja, 
+  apresenta coisas ocultas no código.
+
+  Em oculto temos o caractere especial \n 
+  veja a frente do nome_user tem o \n
+
+  "Olá nome_user\n, prazer em conhecê-lo!"
+
+  Esse caractere especial faz a quebra da linha, 
+  tudo que estiver a frente dele vai para outra linha
+
+Agora para testar vou usar o .chomp a frente de .gets
+	Veja o exemplo abaixo e confira.
 =end
 
 mensagem = 'Por favor! digite seu nome'
@@ -11,36 +41,18 @@ name = gets.chomp
 puts "Olá #{name}, prazer em conhecê-lo!"
 
 =begin
-  O que vai acontecer aqui é que: a mensagem -> 'Por favor! digite seu nome'
-  aparecerá para o user e o cursor vai ficar piscando esperando o user digitar o nome.
-  Assim que o user digitar, o get pega a informação guarda na variável 
-  Em seguida é impresso na tela: Olá + o nome_User, prazer em conhecê-lo!
+  O que foi impresso agora é: "Olá nome_user\n, prazer em conhecê-lo!", ou seja,
+  a frase inteira em uma só linha.
 
-  Caso não tivesse o .chomp a frente do get, a mensagem de cumprimento ao user seria divida
-	desta forma:
-	Olá + nome_User
-	, prazer em conhecê-lo
-	Veja o exemplo abaixo e confira.
-=end
-p mensagem
-name = gets
-p "Olá #{name}, prazer em conhecê-lo!"
+  É isso que o chomp faz, remove caracteres especiais.
 
-=begin
-  Ao invés de usar o pust usei o p porque este ultimo faz a inspeção, ou seja, 
-  apresenta coisas ocultas no código.
-  Agora o que será impresso é: "Olá nome_user\n, prazer em conhecê-lo!"
-
-  Perceba que \n aparece a frente do nome do usuário
-  Esse caractere especial (\n) faz a quebra da linha. Estava oculto e graças ao p que inspeciona,
-  mostrou o que está oculto e podemos velo ai na impressão.
-
-  É isso que o chomp fez aqui, removeu o \n 
-  assim a mensagem permanece em uma unica linha e não dividida
+  Toda vez que for pegar (gets) uma informação do user, ou informações que vem de fora do get
+  como no banco de dados, arquivo etc. devo sempre usar o .chomp
 
   Resumo: sem o .chomp caracteres especiais atuam
   com o .chomp os caracteres especial não atuam.
-  Veja outro exemplo:
+
+  Veja o que acontece neste exemplo abaixo ao imprimir
 =end
 
 nome = gets
@@ -59,9 +71,3 @@ nome = gets.chomp
 if nome == 'David'
   p 'Olá David, estávamos esperando você!'
 end
-
-=begin
-  Agora com o .chomp a comparação foi true e temos a mensagem na tela.
-  Preciso ficar de olho nesses caracteres especiais e, sempre usar o .chomp ao pegar 
-  informações do user ou informações que vem de fora do get como no banco de dados, arquivo etc.
-=end
