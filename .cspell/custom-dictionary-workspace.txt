@@ -1,3 +1,5 @@
 # Custom Dictionary Words
+pust
 subcadeia
 textão
+unica

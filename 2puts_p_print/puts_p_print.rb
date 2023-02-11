@@ -7,3 +7,7 @@ puts ['A', 'B', 'C']
 # O p e o Print imprime as letras uam ao lado do outa
 p ['A', 'B', 'C']
 print ['A', 'B', 'C']
+
+=begin
+  O p faz a inspeção no código, ou seja, apresenta coisas ocultas no código.
+=end
