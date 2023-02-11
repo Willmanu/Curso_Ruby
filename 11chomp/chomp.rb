@@ -1,6 +1,6 @@
 =begin
-Estou fazendo um programa em Ruby e preciso fazer uma pergunta ao user, 
-colher essa entrada de dados, guardar em uma variável e trabalhar ela no código.
+  Estou fazendo um programa em Ruby e preciso fazer uma pergunta ao user, 
+  colher essa entrada de dados, guardar em uma variável e trabalhar ela no código.
 Bom, posso usar o método get para pegar a entrada do usuário e guardar na variável.
 	Exemplo:
 =end
@@ -50,11 +50,11 @@ if nome == "David"
 end
 
 =begin
-Neste código acima, por conta de não usar .chomp com gets, as duas strings 
-David digitado pelo user e David declarado de forma constante
- não serão as mesmas strings por causa do caractere de nova linha (\n),
- então isso será avaliado como falso.
-Veja com o .chomp
+  Neste código acima, por conta de não usar .chomp com gets, as duas strings 
+  David digitado pelo user e David declarado de forma constante
+  não serão as mesmas strings por causa do caractere de nova linha (\n),
+  então isso será avaliado como falso.
+  Veja com o .chomp
 =end
 nome = gets.chomp
 if nome == 'David'
