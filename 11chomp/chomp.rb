@@ -1,6 +1,11 @@
 =begin
+<<<<<<< HEAD
 Estou fazendo um programa em Ruby e preciso fazer uma pergunta ao user, 
 colher essa entrada de dados, guardar em uma variável e trabalhar ela no código.
+=======
+  Estou fazendo um programa em Ruby e preciso fazer uma pergunta ao user, 
+  colher essa entrada de dados, guardar em uma variável e trabalhar ela no código.
+>>>>>>> chompvschopvsstrip
 Bom, posso usar o método get para pegar a entrada do usuário e guardar na variável.
 	Exemplo:
 =end
@@ -13,6 +18,7 @@ p "Olá #{name}, prazer em conhecê-lo!"
   aparecerá para o user e o cursor vai ficar piscando esperando o user digitar o nome.
   Assim que o user digitar, o get pega a informação guarda na variável 
   Em seguida é impresso na tela: 
+<<<<<<< HEAD
 
   Olá + o nome_User
   , prazer em conhecê-lo!
@@ -31,6 +37,19 @@ p "Olá #{name}, prazer em conhecê-lo!"
   Esse caractere especial faz a quebra da linha, 
   tudo que estiver a frente dele vai para outra linha
 
+=======
+  Olá + o nome_User
+  , prazer em conhecê-lo!
+  Observe que a frase ficou quebrada, ola + nome_User em uma linha e 
+, prazer em conhecê-lo em outra
+  Observe que para imprimir eu usei o p e não outro, porque este p faz a inspeção, ou seja, 
+  apresenta coisas ocultas no código.
+  Em oculto temos o caractere especial \n 
+  veja a frente do nome_user tem o \n
+  "Olá nome_user\n, prazer em conhecê-lo!"
+  Esse caractere especial faz a quebra da linha, 
+  tudo que estiver a frente dele vai para outra linha
+>>>>>>> chompvschopvsstrip
 Agora para testar vou usar o .chomp a frente de .gets
 	Veja o exemplo abaixo e confira.
 =end
@@ -43,6 +62,7 @@ puts "Olá #{name}, prazer em conhecê-lo!"
 =begin
   O que foi impresso agora é: "Olá nome_user\n, prazer em conhecê-lo!", ou seja,
   a frase inteira em uma só linha.
+<<<<<<< HEAD
 
   É isso que o chomp faz, remove caracteres especiais.
 
@@ -52,6 +72,13 @@ puts "Olá #{name}, prazer em conhecê-lo!"
   Resumo: sem o .chomp caracteres especiais atuam
   com o .chomp os caracteres especial não atuam.
 
+=======
+  É isso que o chomp faz, remove caracteres especiais.
+  Toda vez que for pegar (gets) uma informação do user, ou informações que vem de fora do get
+  como no banco de dados, arquivo etc. devo sempre usar o .chomp
+  Resumo: sem o .chomp caracteres especiais atuam
+  com o .chomp os caracteres especial não atuam.
+>>>>>>> chompvschopvsstrip
   Veja o que acontece neste exemplo abaixo ao imprimir
 =end
 
@@ -61,13 +88,17 @@ if nome == "David"
 end
 
 =begin
-Neste código acima, por conta de não usar .chomp com gets, as duas strings 
-David digitado pelo user e David declarado de forma constante
- não serão as mesmas strings por causa do caractere de nova linha (\n),
- então isso será avaliado como falso.
-Veja com o .chomp
+  Neste código acima, por conta de não usar .chomp com gets, as duas strings 
+  David digitado pelo user e David declarado de forma constante
+  não serão as mesmas strings por causa do caractere de nova linha (\n),
+  então isso será avaliado como falso.
+  Veja com o .chomp
 =end
 nome = gets.chomp
 if nome == 'David'
   p 'Olá David, estávamos esperando você!'
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> chompvschopvsstrip
