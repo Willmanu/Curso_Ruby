@@ -6,9 +6,12 @@
   Bom, posso usar o método get para pegar a entrada do usuário e guardar na variável.
   Exemplo:
 =end
-p mensagem
+
+
+p 'Por favor! digite seu nome'
 name = gets
-p "Olá #{name}, prazer em conhecê-lo!"
+puts "Olá #{name}, prazer em conhecê-lo!"
+
 
 =begin
   O que vai acontecer aqui é que: a mensagem -> 'Por favor! digite seu nome'
@@ -37,8 +40,7 @@ p "Olá #{name}, prazer em conhecê-lo!"
   Veja o exemplo abaixo e confira.
 =end
 
-mensagem = 'Por favor! digite seu nome'
-p mensagem
+p 'Por favor! digite seu nome'
 name = gets.chomp
 p "Olá #{name}, prazer em conhecê-lo!"
 
@@ -59,11 +61,10 @@ p "Olá #{name}, prazer em conhecê-lo!"
   Veja o que acontece neste exemplo abaixo ao imprimir
 =end
 
-mensagem = 'Escreva seu nome'
-p mensagem
+p 'Por favor! digite seu nome'
 nome = gets
 if nome == 'David'
-  p 'Olá David, estávamos esperando você!'
+  puts 'Olá David, estávamos esperando você!'
 end
 
 =begin
@@ -75,8 +76,8 @@ end
   Veja com o .chomp
 =end
 
-mensagem = 'Escreva seu nome'
-p mensagem
+p 'Por favor! digite seu nome'
+nome = gets.chomp
 if nome == 'David'
   p 'Olá David, estávamos esperando você!'
 end
