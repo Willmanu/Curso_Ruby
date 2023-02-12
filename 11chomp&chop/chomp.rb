@@ -7,11 +7,9 @@
   Exemplo:
 =end
 
-
 p 'Por favor! digite seu nome'
 name = gets
 puts "Olá #{name}, prazer em conhecê-lo!"
-
 
 =begin
   O que vai acontecer aqui é que: a mensagem -> 'Por favor! digite seu nome'
