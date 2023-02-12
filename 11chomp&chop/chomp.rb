@@ -99,3 +99,6 @@ if nome == 'David'
   p 'Olá David, estávamos esperando você!'
 <<<<<<< HEAD
 end
+=======
+end
+>>>>>>> chompvschopvsstrip
