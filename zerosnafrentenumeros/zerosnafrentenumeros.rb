@@ -18,6 +18,7 @@
   1º vamos colher o numero e ver umas situações.
 =end
 
+
 print 'Digite um numero.'
 numero = gets
 print 'Seu número é:', numero
