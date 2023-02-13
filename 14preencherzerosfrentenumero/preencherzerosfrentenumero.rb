@@ -7,7 +7,7 @@
   Mas como regra de negocio esta variável precisa conter 5 dígitos.
   Precisamos formatá-lo para ficar com este 5 digito. exemplo: -> 00042, ou seja, 
   neste caso acrescentar 3 zeros a frente para somar com os dois outros números 
-  e assim termos 5 casas decimais. 
+  e assim teremos 5 casas decimais.
 
   Para isso usamos o simbolo -> % mais a quantidade de dígitos que queremos na variável.
   Exemplo: %05d
@@ -19,11 +19,19 @@
 =end
 
 
-print 'Digite um numero.'
-numero = gets
-print 'Seu número é:', numero
-print numero.class # o .class mostra o tipo da variável.
+=begin
+p numero.rjust(5, '0')
+p numero.rjust('0', 5)
+=end
 
+p 'Digite um numero.'
+numero = gets.to_s.rjust(5, 0)
+p numero
+
+=begin
+p numero.class # o .class mostra o tipo da variável.
+p numero.length
+=end
 
 =begin
 
@@ -47,15 +55,16 @@ print numero.class # o .class mostra o tipo da variável.
 =end
 
 =begin
-puts 'Digite um numero.'
+p 'Digite um numero.'
 numero = gets.chomp.to_i
-puts "Seu número é:" % numero
+p 'Seu número é:', numero
 p numero.class # o .class mostra o tipo da variável.
+-end
 
-
+=begin
+p numero.rjust(5, '0')
+p numero.rjust('0', 5)
 =end
-
-
 
 =begin
 
@@ -75,4 +84,3 @@ p numero.class # o .class mostra o tipo da variável.
  e adicionar zeros para que o total seja 5 dígitos.
 
 =end
-
