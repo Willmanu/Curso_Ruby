@@ -17,5 +17,5 @@ p meuarray # a impressão fica exatamente mostrando os valores igual está acima
 
 =begin
   A lista pode ser composta por tipos diferentes,
-  perceba que na impressão saiu string, i
+  perceba que na impressão mostra os tipos diferentes que no array.
 =end
