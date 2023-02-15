@@ -14,10 +14,9 @@ puts 'Digite um numero'
 numero = gets.to_i # Tudo que é obtido do teclado do pc é string. 
                    # Portanto precisa fazer a conversão para Integer ou Float
 
-if numero == 0
+if numero == 0 
   puts 'O numero digitado é zero e ele não é divisível. Por favor digitar outro numero.'
-
-  # aqui falta interromper o programa
+  exit
 end
 
 resultado = numero % 2 # usando o porcentagem para ver o resto da divisão
@@ -35,17 +34,16 @@ end
 Uma outra forma bem mais simples de se fazer essa tarefa é usar os métodos
 .even para o par e .odd para o impar
 Perceba que não precisa fazer conta e verificar.
-Somente fazer as perguntas e depois fazer a logica para exibir na tela, de uma
-forma bem mais simples.
+Somente fazer as perguntas depois fazer a logica para exibir na tela, de uma
+forma bem mais fácil.
 =end
 
 puts 'Digite um numero'
 
 numero = gets.to_i
-if numero.zero?
+if numero.zero? 
   puts 'O numero digitado é zero e ele não é divisível. Por favor digitar outro numero.'
-
-  # aqui falta interromper o programa
+  exit
 end
   
 
