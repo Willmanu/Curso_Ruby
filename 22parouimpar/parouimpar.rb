@@ -34,12 +34,9 @@ end
 
 Uma outra forma bem mais simples de se fazer essa tarefa é usar os métodos
 .even para o par e .odd para o impar
-
-=end
-
-=begin
-  Perceba que não precisa fazer conta e verificar.
-  Somente fazer as perguntas e depois fazer a logica para exibir na tela.
+Perceba que não precisa fazer conta e verificar.
+Somente fazer as perguntas e depois fazer a logica para exibir na tela, de uma
+forma bem mais simples.
 =end
 
 puts 'Digite um numero'
