@@ -16,7 +16,7 @@ numero = gets.to_i # Tudo que é obtido do teclado do pc é string.
 
 if numero == 0 
   puts 'O numero digitado é zero e ele não é divisível. Por favor digitar outro numero.'
-  exit
+  exit # encerra a execução do programa e não executa os demais blocos em condição falsa
 end
 
 resultado = numero % 2 # usando o porcentagem para ver o resto da divisão
@@ -43,7 +43,7 @@ puts 'Digite um numero'
 numero = gets.to_i
 if numero.zero? 
   puts 'O numero digitado é zero e ele não é divisível. Por favor digitar outro numero.'
-  exit
+  exit # encerra a execução do programa e não executa os demais blocos em condição falsa
 end
   
 
