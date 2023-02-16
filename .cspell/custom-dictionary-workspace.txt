@@ -1,4 +1,5 @@
 # Custom Dictionary Words
+bomdiasol
 divid
 empaty
 MAIUSCULA
