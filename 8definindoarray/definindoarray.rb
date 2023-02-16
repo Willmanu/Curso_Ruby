@@ -1,11 +1,15 @@
 =begin
   Para definir array em Ruby faça o seguinte:
   a frente da variável que vai ser do tipo array abra e feche chaves -> []
+  ou meuarray = Array.new
    exemplo:
 =end
 
 meuarray = []
 p meuarray.class # mostra na tela que o tipo da variável é array
+
+meuarray_2 = Array.new
+p meuarray_2.class
 
 =begin
   Para fazer uma lista dentro do array, cada valor deve ser separado por virgula.
