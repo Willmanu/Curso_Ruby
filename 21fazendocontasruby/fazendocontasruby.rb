@@ -30,11 +30,13 @@ puts divid
 soma = number.send('+', number2)
 puts soma
 
-soma = number.send('*', number2)
-puts soma
-soma = number.send('/', number2)
-puts soma
-soma = number.send('-', number2)
-puts soma
+multiplica = number.send('*', number2)
+puts multiplica
+
+dividi = number.send('/', number2)
+puts dividi
+
+subtrai = number.send('-', number2)
+puts subtrai
 
 # perceba que é só trocar o operador para realizar as outras formas.
