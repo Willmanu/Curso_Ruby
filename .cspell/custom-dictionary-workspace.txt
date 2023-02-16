@@ -6,6 +6,7 @@ MAIUSCULA
 mensagemspritada
 meuarray
 Pamella
+prefirível
 pust
 subcadeia
 textão
