@@ -27,7 +27,8 @@ array_1 << 1
 array_1.append(2)
 array_1 << :William
 p array_1 # aqui é impresso [1, 2, :William]
-p array_1.length # aqui é impresso 2
+p array_1.length # aqui é impresso 3
+p array_1.size # aqui é impresso 3
 
 =begin
   Perceba que o array recebe valores de tipos diferentes: inteiro, Simbolo et.
@@ -51,13 +52,20 @@ p array_1 [2] # aqui o que é impresso é :William
 
 p array_1.length # mostra o tamanho do array
 
+p array_1.size # mostra o tamanho do array igual o length esse é o mais usado
+
 p array_1.empty? # verifica se o array está vazio retorna tru ou false.
 
 p array_2.first # pega o primeiro valor
 
 p array_1.last # pega o último valor
 
-# somando indices de dois array diferente
+=begin
+  Em resumo, size e length em Ruby têm o mesmo comportamento e podem ser usados de forma
+  intercambiável, mas size é mais comum e disponível em mais classes de coleções.
+  
+  Abaixo estou somando indices de dois array diferente
+=end
 
 array_2 = [1, 2, 3]
 
@@ -77,3 +85,4 @@ puts resultado
 =end
 
 p resultado.class # o que é impresso é Array
+p resultado.size
