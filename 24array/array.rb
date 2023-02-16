@@ -25,9 +25,55 @@ p array_2.class
 
 array_1 << 1
 array_1.append(2)
-p array_1 # aqui é impresso [1, 2]
+array_1 << :William
+p array_1 # aqui é impresso [1, 2, :William]
 p array_1.length # aqui é impresso 2
 
 =begin
-  A lista de itens colocado no array, pode crescer a vontade.
+  Perceba que o array recebe valores de tipos diferentes: inteiro, Simbolo et.
+  Não se defini array com um tipo especifico em Ruby. 
+  A lista de itens colocado no array, pode crescer a vontade a medida
+  que é inserido novos valores.
+
+  Quando os valores entram no array, é criado indices para acessar esses valores. 
+  Os indices começam em 0.
+  Veja o exemplo de acesso.
 =end
+
+p array_1 [1] # aqui o que é impresso é 2
+p array_1 [0] # aqui o que é impresso é 1
+p array_1 [2] # aqui o que é impresso é :William
+
+=begin
+  Métodos Uteis quando se trabalha com array
+  Exemplo:
+=end
+
+p array_1.length # mostra o tamanho do array
+
+p array_1.empty? # verifica se o array está vazio retorna tru ou false.
+
+p array_2.first # pega o primeiro valor
+
+p array_1.last # pega o último valor
+
+# somando indices de dois array diferente
+
+array_2 = [1, 2, 3]
+
+resultado = array_1 + array_2
+
+puts resultado 
+=begin
+  o que vai ser impresso é :
+  1
+  2
+  William
+  1
+  2
+  3
+  ou seja foi acrescentado os valores do dois array em resultado
+  E resultado por ter recebido os valores agora é do tipo array.
+=end
+
+p resultado.class # o que é impresso é Array

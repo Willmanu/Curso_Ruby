@@ -1,5 +1,6 @@
 # Custom Dictionary Words
 divid
+empaty
 MAIUSCULA
 mensagemspritada
 meuarray
