@@ -17,11 +17,23 @@ array_2 = Array.new # O .new é um método que instancia novo objeto daquela cla
 p array_2.class
 
 =begin
-  Para incluir valor no array se faz de duas formas:
-  nome_array << valor
-  ou 
-  nome_array.append(valor)
+  Em Ruby, é possível inserir valores em um array de diversas maneiras além de usar
+  o sinal de igual, abre e fecha chaves e os valeres a serem inseridos quando mais de um
+  são separados por virgula.
+  meu_array = [1,2,3]
+  
+  Seguem abaixo algumas das principais formas:
+
+  Exemplo com o push
+
+  Utilizando o método push: o método push adiciona um ou mais elementos ao final do array.
+  Exemplo:
 =end
+
+array = [1, 2, 3]
+array.push(4)
+puts array # [1, 2, 3, 4]
+
 
 array_1 << 1 # ao inserir mais de um valor inicie com [] e separe por virgula
 array_1.append(2)
