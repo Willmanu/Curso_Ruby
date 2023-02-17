@@ -1,6 +1,6 @@
 =begin
 
-  Enquanto uma variável guarda um valor, o Array guarda mais de um podendo até com ele
+  Enquanto uma variável guarda um valor, o Array guarda mais podendo até com eles
   se formar listas.
 
   Existe duas forma para declarar ou inicializar o array:
@@ -26,25 +26,78 @@ p array_2.class
 
   Exemplo com o push
 
-  Utilizando o método push: o método push adiciona um ou mais elementos ao final do array.
+  O método push adiciona um ou mais elementos ao final do array.
   Exemplo:
 =end
 
 array = [1, 2, 3]
 array.push(4)
+p array # [1, 2, 3, 4]
+
+=begin
+
+  Utilizando o método <<: o operador << adiciona um único elemento ao final do array.
+  Exemplo:
+=end
+
+array = [1, 2, 3]
+array << 4
 puts array # [1, 2, 3, 4]
 
+=begin
+  
+  Utilizando o método unshift: o método unshift adiciona um ou mais elementos
+  no início do array.
+  Exemplo:
 
-array_1 << 1 # ao inserir mais de um valor inicie com [] e separe por virgula
-array_1.append(2)
-array_1 << :William
-p array_1 # aqui é impresso [1, 2, :William]
-p array_1.length # aqui é impresso 3
-p array_1.size # aqui é impresso 3
+=end
+
+array = [1, 2, 3]
+array.unshift(0)
+puts array # [0, 1, 2, 3]
+
+=begin
+
+  Utilizando o método insert: o método insert adiciona um ou mais elementos
+  em uma posição específica do array.
+  Exemplo: 
+
+=end
+
+array = [1, 2, 3]
+array.insert(1, 1.5) # inserir na posição 1 o valor 1.5
+p array # [1, 1.5, 2, 3]
+
+=begin
+
+  Utilizando o método concat: o método concat adiciona os elementos de um array ao final
+  de outro array. Exemplo:
+
+=end
+
+array1 = [1, 2, 3]
+array2 = [4, 5, 6]
+array1.concat(array2) # array 1 concatenando, ou seja, juntando com o array 2
+p array1 # [1, 2, 3, 4, 5, 6]
+
+=begin
+
+  É importante lembrar que, em Ruby, arrays podem conter elementos de tipos diferentes,
+  como por exemplo strings, símbolos, inclusive outros arrays.
+  Além disso, arrays em Ruby são dinâmicos, ou seja, é possível adicionar ou remover
+  elementos a qualquer momento.
+  Exemplo
+
+=end
+
+array1.push('William', :William)
+p array1 # [1, 2, 3, 4, 5, 6, "William", :William]
+p array1.length # aqui é impresso 8
+p array1.size # aqui é impresso 8
 
 =begin
   Perceba que o array recebe valores de tipos diferentes: inteiro, Simbolo et.
-  Não se defini array com um tipo especifico em Ruby. 
+  Em Ruby não se defini array com um tipo especifico. 
   A lista de itens colocado no array, pode crescer a vontade a medida
   que é inserido novos valores.
 
@@ -53,24 +106,24 @@ p array_1.size # aqui é impresso 3
   Veja o exemplo de acesso.
 =end
 
-p array_1 [1] # aqui o que é impresso é 2
-p array_1 [0] # aqui o que é impresso é 1
-p array_1 [2] # aqui o que é impresso é :William
+p array1 [1] # aqui o que é impresso é 2
+p array1 [0] # aqui o que é impresso é 1
+p array1 [7] # aqui o que é impresso é :William
 
 =begin
   Métodos Uteis quando se trabalha com array
   Exemplo:
 =end
 
-p array_1.length # mostra o tamanho do array
+p array1.length # mostra o tamanho do array
 
-p array_1.size # mostra o tamanho do array igual o length esse é o mais usado
+p array1.size # mostra o tamanho do array igual o length esse é o mais usado
 
-p array_1.empty? # verifica se o array está vazio retorna tru ou false.
+p array1.empty? # verifica se o array está vazio retorna tru ou false.
 
-p array_2.first # pega o primeiro valor
+p array1.first # pega o primeiro valor
 
-p array_1.last # pega o último valor
+p array1.last # pega o último valor
 
 =begin
   Em resumo, size e length em Ruby têm o mesmo comportamento e podem ser usados de forma
@@ -79,22 +132,19 @@ p array_1.last # pega o último valor
   Abaixo estou somando indices de dois array diferente
 =end
 
-array_2 = [1, 2, 3]
+array_2 = [7, 8, 9]
 
-resultado = array_1 + array_2
+resultado = array1 + array_2
 
-puts resultado 
+p resultado 
 =begin
   o que vai ser impresso é :
-  1
-  2
-  William
-  1
-  2
-  3
+
+  [1, 2, 3, 4, 5, 6, "William", :William, 7, 8, 9]
+
   ou seja foi acrescentado os valores do dois array em resultado
   E resultado por ter recebido os valores agora é do tipo array.
 =end
 
 p resultado.class # o que é impresso é Array
-p resultado.size
+p resultado.size # 11
