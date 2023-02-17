@@ -1,3 +1,5 @@
+require 'dubygger'
+
 =begin
               Verificando se um numero é para.
   Existem situações, que vamos precisar verificar se um numero que vai
