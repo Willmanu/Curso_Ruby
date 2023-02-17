@@ -41,7 +41,7 @@ forma bem mais fácil.
 puts 'Digite um numero'
 
 numero = gets.to_i
-if numero.zero? 
+if numero.zero?
   puts 'O numero digitado é zero e ele não é divisível. Por favor digitar outro numero.'
   exit # encerra a execução do programa e não executa os demais blocos em condição falsa
 end
