@@ -10,9 +10,7 @@
   esse índice.
   Exemplo:
 
+  lista = lista.new
+  lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  p lista[9]
 =end
-
-lista = ['1, 2, 3, 4, 5, 6, 7, 8, 9, 10']
-p lista[1]
-
-
