@@ -1,4 +1,4 @@
-require 'dubygger'
+require 'dubugger'
 
 =begin
               Verificando se um numero é para.
