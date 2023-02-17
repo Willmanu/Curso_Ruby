@@ -23,7 +23,7 @@ p array_2.class
   nome_array.append(valor)
 =end
 
-array_1 << 1
+array_1 << 1 # ao inserir mais de um valor inicie com [] e separe por virgula
 array_1.append(2)
 array_1 << :William
 p array_1 # aqui é impresso [1, 2, :William]
