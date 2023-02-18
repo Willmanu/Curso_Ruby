@@ -130,6 +130,10 @@ p h2.values # aqui mostra os valores de h2 -> ["William", 15, 23456789, 98765432
 
 p h2.values_at(:rg) # _at trás apenas um valor de uma chave especificada no parâmetro.
 
+p h2.empty? # retorna falso ou true
+
+p h2[:nome].empty? # vendo um valor específico
+
 =begin
   
   Observação: 
@@ -148,9 +152,9 @@ p h2.values_at(:rg) # _at trás apenas um valor de uma chave especificada no par
 
 # obtendo por meio de uma variável
 acessando_hash = h2[:nome]
-puts acessando_hash # retorna William
+puts acessando_hash # retorna o valor William
 
 # usando o método .fetch  vc passa a chave e após ela um valor padrão, se a chave não tiver nada
 # o valor padrão assume o lugar.
 
-
+puts h2.fetch(:sexo, 'M') # ele imprimiu o valor M como padrão, porque não exite o simbolo :sexo em h2
