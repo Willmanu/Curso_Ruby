@@ -126,9 +126,9 @@ puts " As chaves e valore deste hash são #{h2}"
 p h2.key(15) # vc passa o valor e o retorno é a chave :idade, é como se estivesse perguntado:
              # No hash h2 qual é o nome da chave desse valor?
 
-p h2.values # aqui mostra os valores de h2 -> ["William", 15, 23456789, 98765432]
+p h2.values # aqui mostra os valores de h2 -> ["William", 15, 23456789, 98765432]s
 
-p h2.values_at(:rg)
+p h2.values_at(:rg) # _at trás apenas um valor de uma chave especificada no parâmetro.
 
 =begin
   
@@ -139,4 +139,18 @@ p h2.values_at(:rg)
   especifica para o valor desejado. E quando passar a chave, essa deve ser passada com os : a frente
   do nome.
 
+	                          Acessando um valor especifico do hash
+
+  Além dos métodos acima descritos: .key, .values e .values_at sobre uma investigação de chave e valor
+  podemos acessar um valor específico no hash de varias formas dependendo de sua estrutura:
+
 =end
+
+# obtendo por meio de uma variável
+acessando_hash = h2[:nome]
+puts acessando_hash # retorna William
+
+# usando o método .fetch  vc passa a chave e após ela um valor padrão, se a chave não tiver nada
+# o valor padrão assume o lugar.
+
+
