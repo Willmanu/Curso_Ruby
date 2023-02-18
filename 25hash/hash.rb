@@ -104,13 +104,15 @@ h = {:nome => 'William', :idade => 15} # com o simbolo carregando o valor ao inv
 =end
 
 h2 = {}
-h2 = { nome: 'William', idade: 15 } # simbolo em hash com : a frente do nome.
+h2 = { nome: 'William', idade: 15,
+		rg: 234_567_89, cpf: 987_654_32
+     } # simbolo em hash com : a frente do nome.
 puts " As chaves e valore deste hash são #{h2}"
 
 =begin
 
   A impressão fica:
-  As chaves e valore deste hash são {:nome=>"William", :idade=>15
+  As chaves e valore deste hash são {:nome=>"William", :idade=>15 }
   Perceba que na impressão os símbolos são mostrados com : a frente dos nomes e mostra também =>
 
                                 Métodos .key e .values
@@ -122,6 +124,19 @@ puts " As chaves e valore deste hash são #{h2}"
 
 
 p h2.key(15) # vc passa o valor e o retorno é a chave :idade, é como se estivesse perguntado:
-             # qual é o nome da chave desse valor?
+             # No hash h2 qual é o nome da chave desse valor?
 
-p h2.value ('william')
+p h2.values # aqui mostra os valores de h2 -> ["William", 15, 23456789, 98765432]
+
+p h2.values_at(:rg)
+
+=begin
+  
+  Observação: 
+  O método .key só aceita um argumento, ou seja, mostra apenas a chave de um valor passado
+
+  Para ver valores específicos, precisa usar o _at a frente da palavra values e passar a chave
+  especifica para o valor desejado. E quando passar a chave, essa deve ser passada com os : a frente
+  do nome.
+
+=end
