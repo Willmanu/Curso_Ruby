@@ -43,7 +43,9 @@ p hash.class
   colocados dentro da chave e funciona como um simbolo que carrega esse valor, ou seja, 
   onde estiver o simbolo sabemos que lá esta o valor que foi associado a ele.
 
-  No contexto de um hash em Ruby, a chave é um valor que é usado para identificar e acessar o valor correspondente no hash. Cada chave é única dentro do hash, o que significa que você pode ter apenas um valor associado a uma chave específica em um determinado momento.
+  No contexto de um hash em Ruby, a chave é um valor que é usado para identificar e acessar
+  o valor correspondente no hash. Cada chave é única dentro do hash, o que significa que você
+  pode ter apenas um valor associado a uma chave específica em um determinado momento.
 
   A chave pode ser de qualquer tipo, incluindo uma string, um símbolo ou um objeto.
   No entanto, é importante notar que a maneira como a chave é definida pode afetar o desempenho
@@ -76,5 +78,21 @@ p hash.class
 
 =end
 
+h = {:nome => 'William', :idade => 15} # com o simbolo carregando o valor ao invés de string
+                                          # evita possíveis conflitos.
 
+=begin
+  Perceba que este novo hash é chamado de h, e simplesmente escrevi o nome a comecei a
+  por os valores.
+  Esa também é uma forma de iniciar o hahs, porém é melhor inicia-lo primeiro, e na
+  outra linha associar os valores as chaves.
+
+  Perceba também que este exemplo acima tomando o nome e a idade, faz lembrar de um cadastro.
+  É muito util usar o hash para uma situação assim e definir os símbolos que representam os
+  valores desejados com o nome apropriado.
+
+  Os métodos .key e .value são métodos que podem ser usados para acessar as chaves e valores
+  em um hash em Ruby.
+
+=end
 
