@@ -92,11 +92,22 @@ h = {:nome => 'William', :idade => 15} # com o simbolo carregando o valor ao inv
   valores desejados com o nome apropriado.
 
   Pode se colocar vários valores e chaves dentro do hash separando-os com vírgula (,).
+                         
+	                             Forma correta de se fazer chave e valor.
+								 
+  Na criação dos símbolos usa-se dois pontos (:) a frente do seu nome.
+  Porém símbolos em hash deve usar primeiro o nome depois os (:) e o simbolo => pode ser retirado
+  porque os : servem como atribuição.
+
+  Exeplo:
 
   Os métodos .key e .value são métodos que podem ser usados para acessar as chaves e valores
   em um hash em Ruby.
 
 =end
 
-p h.key
-p h.value
+h2 = {}
+h2 = { nome: 'William', idade: 15 }
+p h2
+p h2.key
+p h2.value
