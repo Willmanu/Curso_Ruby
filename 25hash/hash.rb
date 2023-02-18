@@ -25,8 +25,42 @@ p lista[9]
 
   As formas de se iniciar um has é:
   escreva o nome do hash, sinal de igual e abre e fecha chaves.
-  
+  ou
+  escreva o nome do hash, sem espaço entre o nome digite um ponto e escreva new.
+
+	O primeiro é o que se recomenda usar.
+
 =end
 
 hash = {}
+p hash.class
+
+hash = Hash.new # lembre-se que dessa forma a palavra hash após o = é com a primeira em maiúscula.
+p hash.class
+
+=begin
+  
+  Para inserir valor dentro do hash se faz:
+  1º nome da variável que recebe os valores
+  2º sinal de igual
+  3º Abre e fecha chave
+  4º sinal de igual e sinal de maior de atribuição
+  5º o valor
+  Exemplo:
+   
+  hash = { chave => 1 }
+
+  ou 
+
+  1º nome da variável que recebe os valores
+  2º abre e fecha colchetes com o nome chave dentro
+  3º sinal de igual
+  4º valor
+  exemplo:
+
+  hash [chave] = 2
+
+=end
+
+
 
