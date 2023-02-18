@@ -10,7 +10,23 @@
   esse índice.
   Exemplo:
 
-  lista = lista.new
-  lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  p lista[9]
 =end
+
+lista = Array.new
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+p lista[9]
+
+=begin
+  A impressão foi o numero 10, porque o primeiro índice/posição é 0 e não 1.
+  Para trazer esse numero o código percorreu todo o array vendo um por um dos índice/posição até achar
+  o índice/posição 9.
+
+  Com o hash não funciona assim. Ele vai exatamente no índice informado, portanto uma busca mais rápida.
+
+  As formas de se iniciar um has é:
+  escreva o nome do hash, sinal de igual e abre e fecha chaves.
+  
+=end
+
+hash = {}
+
