@@ -39,26 +39,40 @@ hash = Hash.new # lembre-se que dessa forma a palavra hash após o = é com a pr
 p hash.class
 
 =begin
+  Enquanto que no array os valor são inserido e ficam nos indices, no Hash os valores são 
+  colocados dentro da chave e funciona como um simbolo que carrega esse valor, ou seja, 
+  onde estiver o simbolo sabemos que lá esta o valor que foi associado a ele.
+
+  No contexto de um hash em Ruby, a chave é um valor que é usado para identificar e acessar o valor correspondente no hash. Cada chave é única dentro do hash, o que significa que você pode ter apenas um valor associado a uma chave específica em um determinado momento.
+
+  A chave pode ser de qualquer tipo, incluindo uma string, um símbolo ou um objeto.
+  No entanto, é importante notar que a maneira como a chave é definida pode afetar o desempenho
+  do hash. Em geral, é recomendável usar símbolos como chaves sempre que possível,
+  pois eles são mais eficientes em termos de desempenho em comparação com as strings.
   
   Para inserir valor dentro do hash se faz:
   1º nome da variável que recebe os valores
   2º sinal de igual
-  3º Abre e fecha chave
-  4º sinal de igual e sinal de maior de atribuição
-  5º o valor
+  3º Abre e fecha chave -> {}
+  4º escreve o nome da chave ou simbolo
+  5º sinal de igual + o sinal de maior de atribuição
+  6º o valor
   Exemplo:
    
-  hash = { chave => 1 }
+  hash = { chave => valor }
 
   ou 
 
   1º nome da variável que recebe os valores
-  2º abre e fecha colchetes com o nome chave dentro
+  2º abre e fecha colchetes com a chave dentro
   3º sinal de igual
   4º valor
   exemplo:
 
-  hash [chave] = 2
+  hash [chave] = valor
+
+  Em resumo, a chave é a peça fundamental que permite o armazenamento e acesso eficiente de dados
+  em um hash em Ruby.
 
 =end
 
