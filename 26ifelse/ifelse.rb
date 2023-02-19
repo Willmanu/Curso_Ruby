@@ -31,7 +31,7 @@ Exeplo:
 =end
 nome = 'William'
 
-if nome.empty? # pergunta se o numero esta vazio.
+if nome.empty? # pergunta se a variável nome esta vazia.
 
 	puts 'Não pode ficar sem nome'
 else
