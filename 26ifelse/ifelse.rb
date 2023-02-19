@@ -196,3 +196,10 @@ else
 	# a pergunta que o programa faz aqui é: se não estiver vazio.
 
 end
+
+=begin
+  
+                             Condicionais aninhadas
+  São estruturas condicionais de controle de fluxo de múltiplas condições de escolha.
+  São conjuntos de condições dentro de outras, com o propósito de executar diferentes blocos 
+=end
