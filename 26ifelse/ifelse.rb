@@ -183,7 +183,7 @@ end
 
 # ! (negação lógica):
 
-valor = ""
+valor = ''
 
 if !valor.empty?
   
