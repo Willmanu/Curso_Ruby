@@ -264,9 +264,20 @@ puts 'Eu sou maior que 50' if valor2 > 50
   Exemplo:
 =end
 
-valor2 > 50 ? puts('Eu sou maior que 50') : puts('Eu sou menor que 50')
+valor3 = 70
+valor3 > 50 ? puts('Eu sou maior que 50') : puts('Eu sou menor que 50')
 
+=begin
+  Observações:
+  O else neste trecho acima é representado pelos dois pontos (:)
+  Nesta caso usei o operador ? para fazer uma pergunta:
+   O valor que a variável valor2 carrega é maior que 50?
+   Uma coisa importante aqui é que o operador ? precisa de um espaço entre a condição
+   e o bloco de código.
 
-
-
-
+   Outra coisa importante aqui e diferente da condicional simples é que:
+   1º ao usar o método para imprimir na tela, precisa ter parentese() e dentro vai a mensagem
+   2º estes parenteses são colados a palavra de puts ou p ou print.
+   3º os dois ponto que representa o else também precisam ter espaços entre as mensagem.
+   
+=end
