@@ -211,20 +211,32 @@ end
   exemplo:
 
   Tenho uma variável que recebeu dentro desta o valor 20. Vou testar essa variável como propósito
-  de saber se este valor que a variável carrega é igual, maior, menor que outro numero.
+  de saber se este valor que a variável carrega é igual, maior, diferente ou menor que outro numero.
 
 =end
 
-valor = 20
+valor = 40
 
 if valor == 50
-	puts 'Sou igual a 50'
-elseif valor > 50
-	puts 'Sou maior que 50'
-elseif valor < 50
-	puts 'Sou menor que 50'
+  puts 'Sou igual a 50'
+elsif valor > 50
+  puts 'Sou maior que 50'
+elsif valor != 40
+  puts 'Sou diferente de 40'
+else
+  puts 'Sou menor que 50'
 end
 
 =begin
-  
+
+  Perceba que em condicionais aninhadas usamos a palavra els+if, ou seja, elsif que significa "se não"
+	se o valor for igual a 50 executa o bloco de código na proxima linha e encerra estas analises.
+	O programa ve que a condição é falsa e ao invés de encerrar, vê o "se não" e lê essa condição
+	se esta for verdadeira executa o bloco de código dentro desta condição e encerra
+	se for falsa o programa segue vendo as próximas condições, e achando verdade executa o bloco de
+	código que esta dentro desta verdade e encerra o programa sem verificar as demais condições se tiver.
+
+    Observação:  Perceba que a ultima palavra é else e não elsif. Isso porque else é usado quando
+	não há mais condições para verificar, ou seja, else é sempre a ultima opção.
+
 =end
