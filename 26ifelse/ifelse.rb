@@ -238,5 +238,35 @@ end
 
     Observação:  Perceba que a ultima palavra é else e não elsif. Isso porque else é usado quando
 	não há mais condições para verificar, ou seja, else é sempre a ultima opção.
+  
 
+
+	                               Condicional simples em uma linha
+
+	Essa é uma outra forma de se fazer condicionais.
+	Na estrutura que vimos até agora, temos a condição primeiro e se for verdade ou falso
+	executa o bloco de código.
+	Nessa nova estrutura vem o bloco de código primeiro e depois a condição. Execute o
+	bloco de código se for falsa ou verdadeira a condição. Porém tudo escrito em uma linha só.
+	Exemplo:
 =end
+
+valor2 = 90
+puts 'Eu sou maior que 50' if valor2 > 50
+# O trecho acima diz: imprima a mensagem se o valor for maior que 50.
+
+=begin
+  
+                      Condicional composta em uma linha
+
+  Neste caso de condicional composta vem  a condição primeiro e depois a execução do código.
+  Porém em uma linha só.
+  Exemplo:
+=end
+
+valor2 > 50 ? puts('Eu sou maior que 50') : puts('Eu sou menor que 50')
+
+
+
+
+
