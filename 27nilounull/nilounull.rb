@@ -18,5 +18,7 @@ Para examinar se esta variável usa-se o método .nil?
 
 =end
 
-valor
-puts valor
+valor = nil # variável recebe um valor nulo
+
+valor = 1 if valor.nil? # valor recebe 1 se estiver absolutamente sem nada.
+
