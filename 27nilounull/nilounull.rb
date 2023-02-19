@@ -14,6 +14,7 @@ métodos em objetos nil sem causar um erro, o que pode ser útil em algumas situ
 
 Imagina pegarmos um input de um usuário.
 E só queremos atribuir um valor a essa variável se ela estiver sem valor.
+Para examinar se esta variável usa-se o método .nil?
 
 =end
 
