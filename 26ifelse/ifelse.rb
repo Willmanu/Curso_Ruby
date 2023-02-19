@@ -200,6 +200,31 @@ end
 =begin
   
                              Condicionais aninhadas
-  São estruturas condicionais de controle de fluxo de múltiplas condições de escolha.
-  São conjuntos de condições dentro de outras, com o propósito de executar diferentes blocos 
+  São estruturas condicionais(if else end), de controle de fluxo, de múltiplas condições de escolha.
+  São conjuntos de condições dentro de outras, com o propósito de executar diferentes blocos se 
+  for falsa ou verdadeira essas condições.
+
+  Aninhada vem do latim 'NIDUS', que significa "ninho".
+  Esta palavra aninhada é usada para descrever algo que está em um estado de ninho, ou seja,
+  algo que esta envolvido dentro de algo maior ou mais abrangente.
+  Neste contexto e em resumo, condicionais aninhadas são condicionais que estão dentro de outras.
+  exemplo:
+
+  Tenho uma variável que recebeu dentro desta o valor 20. Vou testar essa variável como propósito
+  de saber se este valor que a variável carrega é igual, maior, menor que outro numero.
+
+=end
+
+valor = 20
+
+if valor == 50
+	puts 'Sou igual a 50'
+elseif valor > 50
+	puts 'Sou maior que 50'
+elseif valor < 50
+	puts 'Sou menor que 50'
+end
+
+=begin
+  
 =end
