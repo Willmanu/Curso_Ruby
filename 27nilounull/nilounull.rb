@@ -16,22 +16,20 @@ Imagina pegarmos um input de um usuário.
 E só queremos atribuir um valor a essa variável se ela estiver sem valor.
 Para examinar se esta variável usa-se o método .nil?
 
+=end
 
 valor = nil # variável recebe um valor nulo
 p valor
 
-valor = 1 if valor.nil? # valor recebe 1 se estiver absolutamente sem nada.
-p valor
-=end
-
-
+valor = 1 if valor.nil? # valor recebe 1 se valor estiver com nil.
+p valor # a impressão é 1
 
 =begin
 
   Por padrão nil de forma booleana sempre retornara false.
   Por saber disso temos uma outra forma de atribuir valor em uma variável nil
   usando negação, ou seja, com o operador de negação -> !
-  Exemplo: 
+  Exemplo:
 
 =end
 
@@ -58,3 +56,8 @@ Estou dizendo se não for verdadeiro.
 exemplo:
 
 =end
+
+valor3 = nil
+
+valor3 = 1 unless valor3 # isso substitui isso -> valor2 = 1 if !valor2
+p valor3 # o que é impresso é 1 porque unless nega o true.
