@@ -108,7 +108,7 @@ end
 
 # <= (menor ou igual a):
 
-if num2 = num1
+if num2 <= num1
 
 	puts 'Maior mas não igual'
 
@@ -131,6 +131,68 @@ else
 
 	puts 'Não somos iguais'
 
-	# O resultado vai ser :  'Maior mas não igual'.
+	# O resultado vai ser :  Somos iguais.
+
+end
+
+# != (diferente de):
+
+if num1 != num3
+
+	puts 'Somos diferentes'
+
+else
+
+	puts 'Não somos diferentes'
+
+	# O resultado vai ser : Não somos diferentes
+
+end
+
+=begin
+
+                Operadores lógicos
+  Em Ruby, os operadores lógicos são usados para combinar valores booleanos e retornar
+  um novo valor booleano como resultado.
+  Esses operadores incluem:
+
+&& (e lógico): retorna verdadeiro se ambos os valores à esquerda e à direita forem verdadeiros.
+|| (ou lógico): retorna verdadeiro se pelo menos um dos valores à esquerda e à direita for verdadeiro.
+! (negação lógica): retorna verdadeiro se o valor for falso e falso se o valor for verdadeiro.
+Exemplo:
+
+=end
+
+# && (e lógico):
+
+valor = 50
+
+if valor >= 50 && valor < 51
+
+ puts 'Só funciona se as duas condições forem verdadeiras'
+
+end
+
+# || (ou lógico):
+
+if valor >= 50 || valor < 51
+
+  puts 'Se uma condição for verdadeira e a outra falsa vai imprimir, ou um ou outro'
+
+end
+
+# ! (negação lógica):
+
+valor = ""
+
+if !valor.empty?
+  
+	puts 'Eu tenho alguma coisa'
+
+else
+
+	puts 'Eu não tenho nada'
+
+	# a pergunta que o programa faz aqui é: se não estiver vazio.
 
 end
