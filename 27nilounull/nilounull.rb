@@ -63,7 +63,8 @@ valor3 = 1 unless valor3 # isso substitui isso -> valor2 = 1 if !valor2
 p valor3 # o que é impresso é 1 porque unless nega o true.
 
 =begin
-
+        Observação: Este método aqui baixo é o que a comidade Ruby usa para estes casos
+		
   Para finalizar esse raciocínio, temos uma outra opção que é usada para negar que pode
   substituir o if !valor2 e o unless valor 3 que é o:
   ||=  barra barra + =
