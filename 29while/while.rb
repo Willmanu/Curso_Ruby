@@ -3,6 +3,8 @@
   O laço de repetição while em Ruby é uma estrutura de controle que permite executar
   um bloco de código repetidamente enquanto uma determinada condição for verdadeira.
 
+  Esse laço executa o bloco e depois verifica a condição.
+
   A sintaxe básica do while é a seguinte:
   while condição do
    bloco de código a ser executado
