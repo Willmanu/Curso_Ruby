@@ -1,7 +1,7 @@
 =begin
   
   until significa até, ou seja, até que condição seja igual o que se deseja faça.
-  Ao contrario do while esse laço verifica a condição logo no inicio para depois
+  Ao contrario do while esse laço verifica a condição logo no inicio e depois
   executar o bloco.
 
   A estrutura básica do until é a seguinte:
@@ -27,8 +27,8 @@ end
 
 =begin
 
-Acima esta dizendo: até que o valor seja igual a 10 faça o blocoden código.
-Fazer o bloco é: imprimir o valor na tela e somar mais um na variável,
+Acima esta dizendo: até que o valor seja igual a 10 faça o bloco de código.
+Fazer o bloco de código é: imprimir o valor na tela e somar mais um na variável,
 até que o valor seja 10.
 
 A impressão fica:
@@ -45,9 +45,9 @@ A impressão fica:
 9
 Perceba que ele imprimiu o zero e foi imprimindo até o numero 9
 Isso porque ele testa primeiro para depois executar o código
-Como o programa testa primeiro, quando estava no nove ele imprimiu o nove acrecentou
+Como o programa testa primeiro, quando estava no nove ele imprimiu o nove acrescentou
 mais um no 9, e a variável ficou com o 10.
-No momente de testar após o 9 viu que a varável estava com 10.
+No momento de testar após o 9 viu que a varável estava com 10.
 Sendo assim não imprimi o 10 porque ja tinha o valor desejado, então encerra sem imprimir.
-
+ Isso é testar primeiro para depois executar.
 =end
