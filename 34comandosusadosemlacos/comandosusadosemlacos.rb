@@ -95,19 +95,47 @@ while i < 5 do
 	if i == 3
 
 	 i += 1
-	 
+
 	 redo
 	 
 	end
 
-	i += 1
 	puts i
+	i += 1
+	
 end
 
 =begin
 
   Nesse código, enquanto o i for menor que 5 o loop será executado.
-  Dentro do loop, há um if que verifica se i é igual a 3.
+  O i sai com 0 como é menor que 5 entra no loop com o valor 0
+  Passa pelo if como não é igual a 3 não executa o redo
+  Imprimi 0 e adiciona 1 ao i
+
+  Volta para o topo e testa se é menor que 5 e como é 1 entra no loop
+  Porém não entra no if porque não é igual ao 3
+  imprimi 1 e adiciona mais 1 ao i ficando com 2
+
+  volta para o topo e testa se é menor que 5 e como é 2 entra no loop
+  Passa pelo if como não é igual a 3 não executa o redo
+  imprimi o 2 e adiciona mais 1 ficando com 3
+
+  volta para o topo e testa se é menor que 5 e como é entra no loop
+  Passa pelo if e como é igual a 3 entra no if adiciona 1 ao i e este fica com 4
+  O redo faz o código voltar para o topo e não desce para imprimir o 3
+  
+  Voltando para o topo com 4 é testado e por ser menor que 5 entra no loop
+  Não é igual a 3 por isso não entra no if
+  Imprimi 4 e adiciona mais 1 ficando com 5
+
+  Volta para o topo e testa como é 5 e não menor mas igual entra no loop
+  Não entra no if porque não é igual a 3
+  imprimi 5 e adiciona mais 1 ficando com 6
+
+  Volta para o topo e testa como é maior qu 5 sai do loop e o encerra.
 
 
+	O uso do redo deve ser feito com cuidado, pois pode levar a loops infinitos
+	ou comportamentos inesperados.
+	É importante ter certeza de que a lógica do loop está correta antes de usar o redo.
 =end
