@@ -98,4 +98,6 @@ puts resultado # 1400.0
 
  salario = 5000, taxa = 0.12 e dependente = 2
 
+ Dessa forma definindo a variável como Símbolo é possível manipular melhor os valores.
+
 =end
