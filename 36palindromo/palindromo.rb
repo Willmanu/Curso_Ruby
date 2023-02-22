@@ -12,21 +12,60 @@
 
 puts 'Escreva uma palavra e verificaremos se é palíndromo ou não'
 
-palavra = gets.strip
+palavra = gets
 
 if palavra.empty? || palavra.blank? || palavra.nil?
  
-  while palavra.empty
+  while palavra.empty? || palavra.blank? || palavra.nil? do
   
 	puts 'Não é uma palavra, por favor digite uma palavra'
 
-	palavra.gets.strip
+	palavra.gets.chomp.strip
 
   end
+
+else
+	 palíndromo?(palavra)
 	
+end
+
+
+
+if palíndromo? == true
+
+	puts "Sua palavra é #{palavra} portando é palíndromo"
+
+else
+	puts "Sua palavra é #{palavra} portanto não é palíndromo"
 
 end
 
-def palíndromo (palavra)
+
+
+def palíndromo? (palavra)
+
+  palavra_reversa = ""
+
+  tamanho = palavra.length
+
+  until tamanho.zero? do
+
+	letras = palavra [tamanho - 1]
+
+	palavra_reversa << letras
+
+	tamanho -= 1
+
+  end
+
+  if palavra_reversa == palavra
+
+	return true
+
+  else
+
+	return false
+
 
 end
+
