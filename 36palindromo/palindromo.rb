@@ -12,60 +12,43 @@
 
 puts 'Escreva uma palavra e verificaremos se é palíndromo ou não'
 
-palavra = gets
+palavra = gets.chomp.strip
 
-if palavra.empty? || palavra.blank? || palavra.nil?
- 
-  while palavra.empty? || palavra.blank? || palavra.nil? do
-  
-	puts 'Não é uma palavra, por favor digite uma palavra'
-
-	palavra.gets.chomp.strip
-
+if palavra.empty?
+  while palavra.empty?
+    puts 'Não é uma palavra, por favor digite uma palavra'
+    palavra = $stdin.gets.chomp.strip
   end
-
 else
-	 palíndromo?(palavra)
-	
+  e_palindromo = palindromo(palavra)
+  if e_palindromo
+    puts "Sua palavra é #{palavra} portando é palíndromo"
+  else
+    puts "Sua palavra é #{palavra} portanto não é palíndromo"
+  end
 end
 
 
-
-if palíndromo? == true
-
-	puts "Sua palavra é #{palavra} portando é palíndromo"
-
-else
-	puts "Sua palavra é #{palavra} portanto não é palíndromo"
-
-end
-
-
-
-def palíndromo? (palavra)
-
-  palavra_reversa = ""
-
+def palindromo (palavra)
+  palavra_reversa = ''
   tamanho = palavra.length
+  until tamanho.zero?
 
-  until tamanho.zero? do
+    letras = palavra [tamanho - 1]
 
-	letras = palavra [tamanho - 1]
+    palavra_reversa << letras
 
-	palavra_reversa << letras
-
-	tamanho -= 1
+    tamanho -= 1
 
   end
 
   if palavra_reversa == palavra
 
-	return true
+    return true
 
   else
 
 	return false
 
-
+  end
 end
-
