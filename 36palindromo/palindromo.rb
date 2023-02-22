@@ -14,7 +14,7 @@ puts 'Escreva uma palavra e verificaremos se é palíndromo ou não'
 
 palavra = gets.strip
 
-if palavra.empty
+if palavra.empty? || palavra.blank? || palavra.nil?
  
   while palavra.empty
   
