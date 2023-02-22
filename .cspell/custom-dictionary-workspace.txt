@@ -6,6 +6,7 @@ empaty
 MAIUSCULA
 mensagemspritada
 meuarray
+palindromo
 Pamella
 prefirível
 pust
