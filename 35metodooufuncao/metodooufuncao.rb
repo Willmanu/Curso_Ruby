@@ -46,6 +46,12 @@ puts "A soma dos valores são: #{soma(10, 5)}"
   No exemplo acima a variável valor 1 é a posição 1 e valor2 é a posição 2.
   10 é a posição 1 e 5 é a posição 2.
    
-  Pode parecer óbvio isso porém em uma função que recebe muitos parâmetro precisamos
+  Pode parecer óbvio isso das posições, porém em uma função que recebe muitos parâmetro,
+  precisamos estar atento pois, não é difícil errar os valores a serem passados ocasionando
+  erros em contas e o valor desejado não sera alcançado.
+
+               Argumentos/parâmetros nomeados
+  
+  Parâmetros nomeados são um recurso de linguagem de programação que permite que uma função receba argumentos em uma ordem específica, sem que o chamador precise se preocupar com a ordem exata dos argumentos. 
 
 =end
