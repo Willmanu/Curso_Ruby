@@ -52,6 +52,32 @@ puts "A soma dos valores são: #{soma(10, 5)}"
 
                Argumentos/parâmetros nomeados
   
-  Parâmetros nomeados são um recurso de linguagem de programação que permite que uma função receba argumentos em uma ordem específica, sem que o chamador precise se preocupar com a ordem exata dos argumentos. 
+  Parâmetros nomeados é um recurso de linguagem de programação que permite que uma função
+  receba parâmetros/argumentos em uma ordem específica, sem que o chamador precise se
+  preocupar com a ordem exata dos argumentos.
+  Com os parâmetros nomeados, é possível chamar uma função passando os argumentos em qualquer
+  ordem, desde que sejam especificados pelo nome correspondente.
+
+  Esse método em algumas linguagem é conhecido como: parâmetro/argumentos como nome
+  ou etiqueta ou simbolo.
+  Exemplo de como funciona em Ruby:
 
 =end
+
+def calcular_imposto(salario: 0, taxa: 0.10, dependente: 0)
+
+imposto = salario * taxa
+desconto_dependente = dependente * 1000
+
+return imposto - desconto_dependente
+
+end
+
+
+
+  
+  
+  
+  
+  
+  
