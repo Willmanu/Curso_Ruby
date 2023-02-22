@@ -18,7 +18,7 @@ Exemplo:
 =end
 
 def soma valor1, valor2
-	
+
 	puts "Estou somando #{valor1} e #{valor2}"
 
 	return valor1 + valor2
@@ -78,7 +78,7 @@ def calcular_imposto(salario: 0, taxa: 0.10, dependente: 0)
 
   puts desconto_dependente #2000
 
-  return imposto - desconto_dependente
+  imposto - desconto_dependente
 
 end
 
