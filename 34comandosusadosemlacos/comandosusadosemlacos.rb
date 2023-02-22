@@ -45,7 +45,7 @@ end
 
 resp = i + 2
 
-puts "O valor de i é #{i} e #{i} + 2 é #{resp} por isso o valor de rep é #{12}"
+puts "O valor de i é #{i} e #{i} + 2 é #{resp} por isso o valor de rep é #{resp}"
 
 =begin
   
@@ -78,8 +78,11 @@ puts "O valor de i é #{i} e #{i} + 2 é #{resp} por isso o valor de rep é #{12
   porque o next como dito antes, não executa a proxima linha
   de código dentro do loop saindo para a proxima linha de código fora dele
 
+  Em resumo, "next" é útil para controlar o fluxo de execução em loops e pode
+  ser usado para pular iterações, ignorar elementos, ou fazer verificações prévias.
+
 
   redo -> significa refazer.
-  
+
 
 =end
