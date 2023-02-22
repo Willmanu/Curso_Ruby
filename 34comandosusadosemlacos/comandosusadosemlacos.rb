@@ -83,6 +83,31 @@ puts "O valor de i é #{i} e #{i} + 2 é #{resp} por isso o valor de rep é #{re
 
 
   redo -> significa refazer.
+  O método redo é usado dentro de um loop para refazer ou repetir a iteração atual.
+  Quando o redo é chamado, a iteração atual é repetida, sem voltar ao início do loop.
+  Como exemplo veremos o loop abaixo.
+
+=end
+
+i = 0
+while i < 5 do
+
+	if i == 3
+
+	 i += 1
+	 
+	 redo
+	 
+	end
+
+	i += 1
+	puts i
+end
+
+=begin
+
+  Nesse código, enquanto o i for menor que 5 o loop será executado.
+  Dentro do loop, há um if que verifica se i é igual a 3.
 
 
 =end
