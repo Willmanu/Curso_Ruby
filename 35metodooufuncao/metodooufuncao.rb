@@ -66,14 +66,19 @@ puts "A soma dos valores são: #{soma(10, 5)}"
 
 def calcular_imposto(salario: 0, taxa: 0.10, dependente: 0)
 
-imposto = salario * taxa
-desconto_dependente = dependente * 1000
+  puts salario
 
-return imposto - desconto_dependente
+  imposto = salario * taxa
+
+  desconto_dependente = dependente * 1000
+
+  return imposto - desconto_dependente
 
 end
 
+resultado = calcular_imposto(taxa: 0.12, dependente: 2, salario: 5000)
 
+puts resultado
 
   
   
