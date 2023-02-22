@@ -66,23 +66,35 @@ puts "A soma dos valores são: #{soma(10, 5)}"
 
 def calcular_imposto(salario: 0, taxa: 0.10, dependente: 0)
 
-  puts salario
+  puts salario # 5000
+  puts taxa # 0.12
+  puts dependente # 2
 
   imposto = salario * taxa
+  puts imposto # 600.0
 
   desconto_dependente = dependente * 1000
+
+  puts desconto_dependente #2000
 
   return imposto - desconto_dependente
 
 end
 
-resultado = calcular_imposto(taxa: 0.12, dependente: 2, salario: 5000)
+resultado = calcular_imposto(dependente: 2, taxa: 0.12, salario: 5000)
 
-puts resultado
+puts resultado # 1400.0
 
+=begin
+
+  Perceba que a ordem dos símbolos dentro de def é: salario, taxa e dependente
   
-  
-  
-  
-  
-  
+  E aqui fora de def em resultado foi: dependente, taxa, salario
+
+ Ou seja a ordem totalmente inversa e mesmo assim a conta foi correta.
+ Perceba que a impressão dentro de def, dos valores passados aqui fora
+ para cada variável, correspondem ao que foi definido aqui fora.
+
+ salario = 5000, taxa = 0.12 e dependente = 2
+
+=end
