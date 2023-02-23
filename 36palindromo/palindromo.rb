@@ -68,7 +68,29 @@ end
 
   O downcase transforma todos as letras em minuscula
 
-  A variável   palavra_reversa
- 
+  A variável palavra_reversa vai receber a palavra digitada ao contrario.
+  A variável tamanho recebe o tamanho da palavra.
+  Agora temos um loop que faz o trabalho de inverte a palavra.
 
+  1º o loop vai acontecer até que tamanho seja igual a zero. Isso porque a cada interação
+  do loop se retira um do tamanha. Isso acontece antes do end em -> tamanho -= 1
+
+  2º A variável letras recebe cada letra da palavra. Isso porque a sua frente temos:
+  palavra [tamanho - 1] e palavra [tamanho -1] quer dizer a posição 0
+
+  def palindromo (palavra)
+  palavra = palavra.downcase # transforma toadas as letras em minuscula
+  palavra_reversa = ''
+  tamanho = palavra.length
+  until tamanho.zero?
+    letras = palavra [tamanho - 1]
+    palavra_reversa << letras
+    tamanho -= 1
+  end
+  if palavra_reversa == palavra
+    return true
+  else
+    return false
+  end
+end
 =end
