@@ -106,32 +106,53 @@ end
 
                                           Método reverse
 
-  Com esse método não precisamos fazer tudo isso que fizemos para descobri se a palavra
-  digitada é palindromo
+  Com esse método não precisamos escrever muitas linhas dentro da função palindromo,
+  como fizemos anteriormente.
+
+  O método .reverse é um método que pode ser chamado em uma array, ele inverte a ordem dos
+  elementos na array. O primeiro elemento passa a ser o último, o segundo passa a ser o
+  penúltimo, e assim por diante.
+
+  O método .reverse não modifica a array original, mas retorna um novo array com os elementos
+  invertidos. Se você quiser modificar a array original, você pode usar o método .reverse!,
+  com um ponto de exclamação no final, que irá modificar a array original assim não teremos
+  um array sem uso na memória.
+  Exemplo:
 
 =end
 
-def palindromo(palavra)
+def palindromo?(palavra)
 
-	palavra.downcase == palavra.downcase.reverse
+  palavra.downcase == palavra.downcase.reverse!
   
+end
+
+puts 'Escreva uma palavra e verificaremos se é palíndromo ou não'
+
+palavra = gets.chomp.strip
+ 
+if palavra.empty?
+  while palavra.empty?
+    puts 'Não é uma palavra, por favor digite uma palavra'
+    palavra = $stdin.gets.chomp.strip
   end
-  
-  puts 'Escreva uma palavra e verificaremos se é palíndromo ou não'
-  
-  palavra = gets.chomp.strip
-  
-  if palavra.empty?
-	while palavra.empty?
-	  puts 'Não é uma palavra, por favor digite uma palavra'
-	  palavra = $stdin.gets.chomp.strip
-	end
+
+else
+
+  e_palindromo = palindromo?(palavra)
+
+  if e_palindromo
+    puts "Sua palavra é #{palavra} portando é palíndromo"
   else
-  
-	e_palindromo = palindromo(palavra)
-	if e_palindromo
-	  puts "Sua palavra é #{palavra} portando é palíndromo"
-	else
-	  puts "Sua palavra é #{palavra} portanto não é palíndromo"
-	end
+    puts "Sua palavra é #{palavra} portanto não é palíndromo"
   end
+end
+
+=begin
+
+Perceba que diferente do código anterior, dentro da função palindromo, temos somente um linha.
+Isso porque chamei o metodo .reverse! para fazer a reversão da palavra.
+
+Com isso fica mais fácil verificar se a palavra é reversa
+
+=end
