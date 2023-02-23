@@ -66,19 +66,18 @@ end
 
   Ovo é != ovO assim o programa vai tratar como não palindromo
 
-  O downcase transforma todos as letras em minuscula
+  O downcase transforma todos as letras em minuscula ovo == ovo
 
   A variável palavra_reversa vai receber a palavra digitada ao contrario.
   A variável tamanho recebe o tamanho da palavra.
   Agora temos um loop que faz o trabalho de inverte a palavra.
 
-  1º o loop vai acontecer até que tamanho seja igual a zero. Isso porque a cada interação
-  do loop se retira um do tamanha. Isso acontece antes do end em -> tamanho -= 1
+  1º o loop vai acontecer até que a variável tamanho seja igual a zero. Isso porque a cada
+  interação do loop se retira um da varável tamanho. Isso acontece antes do end em -> tamanho -= 1
 
-  2º A variável letras recebe cada letra da palavra. Isso porque a sua frente temos:
+  2º A variável letras recebe cada letra da varável palavra. Isso porque a sua frente temos:
   palavra [tamanho - 1]. O tamanho da palavra é 3, porém a letras dentro da variável palavra
   começa em 0. exemplo:
-  
   palavra -> ['o' 'v' 'o'] são 3 letras por isso a variável letras mostra 3
   posição -> [ 0   1   2 ] posição começa em 0 poe isso precisamos pegar a ultima
   
@@ -86,9 +85,20 @@ end
   Com isso a variável letras recebe a 2 posição que no caso é a ultima letra.
 
   3º Em palavra_reversa é adicionado (<<) a ultima letra que é a 2.
-  O fato de termos a variável letras recebendo 
-  
-  e palavra [tamanho -1] quer dizer a posição 0
+  O fato de termos a variável letras recebendo palavra [tamanho -1]dessa forma com colchete []
+  faz com a variável letra seja um array. Então por isso palavra_reversa que recebe o
+  adicionamento << agora vira um array. Primeiro que o dado que ela recebe vem de um array,
+  depois que o uso desse simbolo << é para adicionar em array
+  A variável palavra_reversa agora tem a ultima letra d variável palavra.
+
+  4º Sabemos que a varável tamanho carrega o valor de 3 e essa linha escrita tamanho -= 1
+  subtrai um da variável tamanho. Sendo assim quando entra no loop novamente não é zero ainda,
+  e o loop continua a fazer o mesmo que fez anteriormente.
+
+
+  Com isso teremos na variável palavra_reversa, a palavra digitada em reverso que será
+  comparada fora desse laço until
+
 
   def palindromo (palavra)
   palavra = palavra.downcase # transforma toadas as letras em minuscula
