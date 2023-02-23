@@ -42,20 +42,21 @@ end
 
   2º empty para validar a variável e ver se o usuário não clicou
   em enter ou digitou espaços vazios. Se for esse o caso temos um loop que imprimi uma
-  mensagem avisando para digitar uma palavra. O loop fica até que ele digite mesmo uma palavra.
+  mensagem avisando para digitar uma palavra. O loop fica até que ele digite uma palavra.
 
-  3º dentro do loop se for o caso de não digitar palavras precisamos obter a palavra digitada
-  usando o $stdin que representa um objeto global de entrada padrão do programa.
+  3º dentro do loop que trata o fato de não digitar uma palavra, depois da mensagem
+  apresentada ao usuário, precisamos obter a palavra digitada usando o $stdin que represent
+  um objeto global de entrada padrão do programa.
 
   4º o e_palindromo ao mesmo tempo que chama a função, é a variável que recebe o return
-  da mesma
+  da mesma. Nela temos uma condicional para imprimir uma mensagem caso o retorno seja
+  palindromo ou não.
+                     
+            Como funciona a função/método que verifica se é palindromo ou não
 
-  5º temos uma condicional para imprimir caso o retorno seja palindromo ou não.
-  
-  6º uma coisas importantíssima a se dizer é que dentro da função ou método, temos o downcase
-  método que transforma todas as palavras em minusculas. Assim se o usuário digitar a palavra
-  começando em maiúscula, q
-        
-
+  5º Quando a palavra entra na função a primeira ação a ser feita e importantíssima a se fazer
+  é: por a variável palavra em downcase. Porque quando o usuário digita a palavra, esta pode
+  vir com a primeira letra em maiúscula.
+ 
 
 =end
