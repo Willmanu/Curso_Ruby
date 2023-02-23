@@ -9,9 +9,11 @@ if numero.empty? || numero.include?('\n') || numero.include?(' ')
     numero = $stdin.gets.chomp
   end
 
+else
+  numero2 = numero.to_i
+  numero2.action_view::Base.new
+  numero2.number_to_currency(numero, unit: 'R$', separator: ',', delimiter: '.')
+  
+  puts numero
 end
-numero.to_i
-numero.action_view::Base.new
-numero.number_to_currency(numero, unit: 'R$', separator: ',', delimiter: '.')
 
-puts numero
