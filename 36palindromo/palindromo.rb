@@ -76,7 +76,19 @@ end
   do loop se retira um do tamanha. Isso acontece antes do end em -> tamanho -= 1
 
   2º A variável letras recebe cada letra da palavra. Isso porque a sua frente temos:
-  palavra [tamanho - 1] e palavra [tamanho -1] quer dizer a posição 0
+  palavra [tamanho - 1]. O tamanho da palavra é 3, porém a letras dentro da variável palavra
+  começa em 0. exemplo:
+  
+  palavra -> ['o' 'v' 'o'] são 3 letras por isso a variável letras mostra 3
+  posição -> [ 0   1   2 ] posição começa em 0 poe isso precisamos pegar a ultima
+  
+  Então tamanho -1 quer dizer -> 3 que é o tamanho da palavra - 1 fica 2.
+  Com isso a variável letras recebe a 2 posição que no caso é a ultima letra.
+
+  3º Em palavra_reversa é adicionado (<<) a ultima letra que é a 2.
+  O fato de termos a variável letras recebendo 
+  
+  e palavra [tamanho -1] quer dizer a posição 0
 
   def palindromo (palavra)
   palavra = palavra.downcase # transforma toadas as letras em minuscula
