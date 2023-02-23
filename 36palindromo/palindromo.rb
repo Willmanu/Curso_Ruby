@@ -46,7 +46,7 @@ end
 
   3º dentro do loop que trata o fato de não digitar uma palavra, depois da mensagem
   apresentada ao usuário, precisamos obter a palavra digitada usando o $stdin que represent
-  um objeto global de entrada padrão do programa.
+  um objeto global de entrada padrão do programa
 
   4º o e_palindromo ao mesmo tempo que chama a função, é a variável que recebe o return
   da mesma. Nela temos uma condicional para imprimir uma mensagem caso o retorno seja
@@ -54,9 +54,21 @@ end
                      
             Como funciona a função/método que verifica se é palindromo ou não
 
-  5º Quando a palavra entra na função a primeira ação a ser feita e importantíssima a se fazer
-  é: por a variável palavra em downcase. Porque quando o usuário digita a palavra, esta pode
-  vir com a primeira letra em maiúscula.
+  Quando a palavra entra na função a primeira ação a ser feita e importantíssima a se fazer
+  é: por a variável palavra em downcase.
+  Porque quando o usuário digita a palavra, esta pode vir com a primeira letra em maiúscula.
+  Isso é importante porque o proposito desta função é: pegar a palavra digitada e inverter
+  as letras, então assim saberemos se tem o mesmo sentido vendo ela ao contrario.
+  Exemplo:
+
+  Ovo com a primeira em maiúscula
+  ovO ao contrario tem o mesmo sentido porém não é igual ao que foi digitado.
+
+  Ovo é != ovO assim o programa vai tratar como não palindromo
+
+  O downcase transforma todos as letras em minuscula
+
+  A variável   palavra_reversa
  
 
 =end
