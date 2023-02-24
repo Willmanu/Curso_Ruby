@@ -3,7 +3,7 @@ require 'action_view'
 puts 'Digite um número'
 numero = gets.chomp.strip
 
-while numero.empty? || numero.include?("\n") || numero.include?(' ') || !numero.downcase.match?(/\a\d+\z/) do
+while numero.empty? || numero.include?("\n") || numero.include?(' ') || !numero.downcase.match?(/\A\d+\z/) do
   puts 'O que foi digitado não é um número, por favor digite um '
   numero = $stdin.gets.chomp.strip.downcase
 end
