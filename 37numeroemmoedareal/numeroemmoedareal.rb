@@ -3,8 +3,8 @@ require 'action_view'
 puts 'Digite um número'
 numero = gets.chomp.strip
 
-if numero.empty? || numero.include?('\n') || numero.include?(' ')
-  while numero.empty? || numero.include?('\n') || numero.include?(' ') do
+if numero.empty? || numero.include?('\n') || numero.include?(' ') || numero.numeric?
+  while numero.empty? || numero.include?('\n') || numero.include?(' ') || numero.numeric? do
     puts 'O que foi digitado não é um número, por favor digite um '
     numero = $stdin.gets.chomp
   end
