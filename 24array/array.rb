@@ -17,6 +17,7 @@ array_2 = Array.new # O .new é um método que instancia novo objeto daquela cla
 p array_2.class
 
 =begin
+                       inserindo valores no Array
   Em Ruby, é possível inserir valores em um array de diversas maneiras além de usar
   o sinal de igual, abre e fecha chaves e os valeres a serem inseridos quando mais de um
   são separados por virgula.
