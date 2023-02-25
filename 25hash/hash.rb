@@ -24,7 +24,7 @@ p lista[9]
   Com o hash não funciona assim. Ele vai exatamente no índice informado, portanto uma busca mais rápida.
 
   As formas de se iniciar um has é:
-  escreva o nome do hash, sinal de igual e abre e fecha chaves.
+  escreva o nome do hash, sinal de igual e abre e fecha chaves(entre os programadores se chama sintaxuguer).
   ou
   escreva o nome do hash, sem espaço entre o nome digite um ponto e escreva new.
 
@@ -32,7 +32,7 @@ p lista[9]
 
 =end
 
-hash = {}
+hash = {} #sintaxuguer 
 p hash.class
 
 hash = Hash.new # lembre-se que dessa forma a palavra hash após o = é com a primeira em maiúscula.

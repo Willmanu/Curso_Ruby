@@ -4,13 +4,13 @@
   se formar listas.
 
   Existe duas forma para declarar ou inicializar o array:
-  - o nome do array e após o = abre e fecha colchete []
+  - o nome do array e após o = abre e fecha colchete [] o que entre programadores se chama sintaxuguer
   - ou nome do array e após = escreve-se Array.new
   Exemplo:
   
 =end
 
-array_1 = []
+array_1 = [] #sintaxuguer
 p array_1.class # a impressão é Array
 
 array_2 = Array.new # O .new é um método que instancia novo objeto daquela classe

@@ -11,6 +11,7 @@ palindromo
 Pamella
 prefirível
 pust
+sintaxuguer
 subcadeia
 textão
 unica
