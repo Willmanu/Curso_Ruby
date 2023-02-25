@@ -23,10 +23,37 @@ por Alan Kay para POO.
 Antes de poo tínhamos:
 Década de 40- 50 quando os computadores começaram a surgir.
 
-1º Linguagem de baixo nível - cada computar tinhas suas instruções de acordo com suas
+1º Programação de baixo nível - cada computar tinhas suas instruções de acordo com suas
 características. Se o pc era em decimal as instruções eram em decimal, se em binário etc.
 E só os engenheiros que faziam a programação.
 
-2º 
+2º Programação Linear
+
+3º Programação Estruturada
+
+4º Programação modular
+
+5º Poo
+
+                              Forma de acessar os dados antes de POO
+
+Na programação estruturada e programação modular o conjunto de dados são tratados todos juntos.
+Temos uma grande massa de dados que são tratadas por procedimentos.
+Os procedimentos/métodos/funções, tem acesso a essa massa dados, processam e geram resultados.
+
+O problema é que nem todos os procedimentos vão fazer uso de todos os dados necessários.
+Só farão uso dos dados que lhe convêm.
+Imaginem uma sala cheia de gente e cada um precisa ser atendido por uma coisa específica.
+Antes de começar a funcionar os procedimentos precisam filtrar os dados para saber quais são
+uteis.
+
+
+                                     Proposta de POO
+A proposta de poo e criar as coisas um pouco menor e assim são criados os objetos.
+Aqui agora temos os dados de Objetos.
+Dessa forma os procedimentos/métodos/funções só trabalhariam os dados daquele objeto sem criar
+os filtros adicionais.
+Assim é possível ter vários objetos e trocar dados entre os objetos.
+
 
 =end
