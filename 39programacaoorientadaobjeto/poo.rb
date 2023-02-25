@@ -56,4 +56,16 @@ os filtros adicionais.
 Assim é possível ter vários objetos e trocar dados entre os objetos.
 
 
+                             Exemplo programar um controle remoto
+
+Imagina programar um controle remoto sem POO
+Sem poo a preocupação seria pensar nos detalhes, muitos procedimentos etc.
+O foco seria nos circuitos internos e seus detalhes e como se inter-relacionam.
+
+Em POO o foco seria no objeto controle remoto.
+Focar nas funcionalidades que cada botão tem, em cada opção tem e nas ações que eles
+vão executar caso sejam pressionados.
+Baseado neste raciocínio programar em poo é mais simples.
+
+
 =end
