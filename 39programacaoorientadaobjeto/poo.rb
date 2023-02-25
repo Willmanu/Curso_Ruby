@@ -20,6 +20,13 @@ Assim qualquer coisa que seja considerado um objeto, pode se aplicar os conceito
 por Alan Kay para POO.
 
                                            Antes de POO
-Antes de poo tinhamos a programação estruturada e programação
+Antes de poo tínhamos:
+Década de 40- 50 quando os computadores começaram a surgir.
+
+1º Linguagem de baixo nível - cada computar tinhas suas instruções de acordo com suas
+características. Se o pc era em decimal as instruções eram em decimal, se em binário etc.
+E só os engenheiros que faziam a programação.
+
+2º 
 
 =end
