@@ -54,7 +54,21 @@ A caneta pronta é o objeto.
 
 Para construir uma classe precisamos responder 3 perguntas:
 
-1º 
+1º Que coisas eu tenho?
+2º Que coisas eu faço?
+3º Como estou agora?
+
+Que coisas eu tenho
+Exemplo: Modelo, Cor, ponta, carga, tampa
+
+Que coisas eu faço
+Exemplo: Escrever, Rabiscar, Sublinhar, pintar, tampar, Destampar etc.
+
+Como estou agora
+Exemplo: Nova com 100% de carga tampada etc.
+ou velha, com 10% de carga sem tampa etc.
+
+
 
 
 O criador de POO foi Alan Kay, um matemático e biólogo.
