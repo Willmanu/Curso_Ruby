@@ -67,5 +67,42 @@ Focar nas funcionalidades que cada botão tem, em cada opção tem e nas ações
 vão executar caso sejam pressionados.
 Baseado neste raciocínio programar em poo é mais simples.
 
+                                 Vantagem de usar POO
+C
+O
+M
+E
+R
+N
+
+Confiável
+  Confiável porque á um isolamento entre as partes que geram o software.
+  Visto que cada coisa é um objeto e se trabalho em um objeto específico.
+  Quando se altera um objeto os outros não são afetados.
+
+Oportuno
+Porque em poo pode-se dividir em partes as tarefas.
+Com isso pode-se desenvolver em paralelo.
+Isso porque se pensarmos no controle remoto, cada parte
+dele é feito em um momento especifico e se junta no final para forma-lo
+
+Manutenível
+Fica mais fácil atualizar um software por ser tratar de partes em objetos.
+Atualizando um objeto todos os outros que usam esse objeto se beneficiam.
+
+Extensível
+Em poo o software não é estático, ou seja, fica parado sem crescimento.
+Ele cresce com melhorias em cada objeto para permanecer útil em cada fase de vida.
+Exemplo do contro remoto: digamos que o controle atual de 4 funcionalidade, e com a manutenção
+pode-se criar outras funcionalidades, aproveitando o que ja tem sem criar outro controle do zero
+
+Reutilizável
+os objetos desse produto pode ser reutilizado para outras coisas.
+Imagine um sistema para uma escola e nesse criamos uma funcionalidade para os alunos
+Podemos reutilizar essa funcionalidade para um sistema de academia visto que tem alunos também
+
+Natural
+Uma coisa natural é mais fácil de se entender. A preocupação é com a funcionalidade do que
+com os detalhes de implementação.
 
 =end
