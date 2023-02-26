@@ -9,6 +9,8 @@ Coisas materiais é fácil saber: um celular, um carro, uma caneta, mouse etc.
 E as abstratas como por exemplo: um compromisso agendado? não podemos tocar no compromisso,
 logo não é uma coisa material e sim é um objeto abstrato.
 
+                                       Objeto abstrato
+
 Para saber se algo se enquadra em como objeto em programação temos que observar algumas
 coisas que são:
 - Características
@@ -27,6 +29,32 @@ mais cedo ou mais tarde etc.
 
 Levantando esses conceitos, e atendo todos os requisitos, podemos dizer que Compromisso é
 um objeto.
+
+                                Objeto material
+Exemplo caneta:
+
+Características:
+tamanho, cor, ponta fina ou grossa etc..
+
+Comportamento:
+Pode escrever, rabiscar, sublinhar, pintar etc.
+
+Estado:
+Nova, usada, com tinta, sem tinta, tampada ou destampada etc.
+
+                           Classe
+
+Classe é molde, ou seja, o modelo no qual vários objetos vão ser construído a partir desse
+modelo ou o esquema ou a planta de uma construção.
+Imagine construir varias casas populares. Para isso todas as casas vão ser construídas com
+uma única planta.
+Com relação a caneta teremos o mesmo molde para fazer varias de cores diferentes
+A caneta pronta é o objeto.
+
+
+Para construir uma classe precisamos responder 3 perguntas:
+
+1º 
 
 
 O criador de POO foi Alan Kay, um matemático e biólogo.
