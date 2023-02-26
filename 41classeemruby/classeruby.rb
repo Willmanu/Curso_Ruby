@@ -21,10 +21,23 @@ Exemplo: NomeDaClasse
                                       Objeto
 Sabemos que um objeto tem seus atributos, métodos/funções e é construído a partir da classe ()
 Para construir esse objeto em Ruby se faz assim:
-
-objeto = NomeDaClasse.new 
+objeto = NomeDaClasse.new
 
 .new é método que constrói uma nova
 
+=end
+
+class MinhaClass
+
+end
+
+objeto = MinhaClass.new
+
+p objeto.object_id # 60
+
+=begin
+
 
 =end
+
+
