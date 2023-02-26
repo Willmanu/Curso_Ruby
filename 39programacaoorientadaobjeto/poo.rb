@@ -1,6 +1,22 @@
 =begin
                                        POO
 POO é programação orientada a objetos.
+
+Um objeto segundo livros de programação é:
+Coisa material ou abstrata que pode ser percebida pelos sentidos e descrita por meio das suas
+características, comportamento e estado atual.
+Coisas materiais é fácil saber: um celular, um carro, uma caneta, mouse etc.
+E as abstratas como por exemplo: um compromisso agendado? não podemos tocar no compromisso,
+logo não é uma coisa material e sim é um objeto abstrato.
+
+Para saber se algo se enquadra em como objeto temos que observar algumas coisas:
+- Características
+- Comportamento
+- Estado atual
+
+Características: 
+
+
 O criador de POO foi Alan Kay, um matemático e biólogo.
 Ele é apaixonado por educação e principalmente a educação de crianças. Com o conhecimento
 lógico que conquistou com a matemática e o conhecimento de biologia formou os grandes
