@@ -18,13 +18,13 @@ coisas que são:
 - Estado atual
 A exemplo veremos se Compromisso é um objeto.
 Características:
-mês, dia, hora em que foi marcado, o tipo de roupa
+mês, dia, hora em que foi marcado, o tipo de roupa deve se ir nele
 
 Comportamento:
 Pode ser marcado, desmarcado, adiado, cancelado etc.
 
 Estado:
-Esta combinado, estado de agora foi suspenso, remarcado para um horário
+Estado combinado, estado de agora foi suspenso, remarcado para um horário
 mais cedo ou mais tarde etc.
 
 Levantando esses conceitos, e atendo todos os requisitos, podemos dizer que Compromisso é
@@ -34,7 +34,7 @@ um objeto.
 Exemplo caneta:
 
 Características:
-tamanho, cor, ponta fina ou grossa etc..
+tamanho, cor, ponta fina ou grossa etc.
 
 Comportamento:
 Pode escrever, rabiscar, sublinhar, pintar etc.
@@ -47,7 +47,7 @@ O criador de POO foi Alan Kay, um matemático e biólogo.
 Ele é apaixonado por educação e principalmente a educação de crianças. Com o conhecimento
 lógico que conquistou com a matemática e o conhecimento de biologia formou os grandes
 conceitos da POO.
-Este formulou o seguinte postulado: ano de 1970 nem existia graduação em informática
+Este formulou o seguinte postulado: ano de 1970 quando não existia graduação em informática
 "O computador ideal deve funcionar como um organismo vivo, isso é: cada célula se relaciona
 com outras a fim de alcançar um objetivo, mas cada uma funciona de forma autônoma.
 As células poderiam se agrupar para resolver um outro problema ou desempenhar outras funções."
@@ -101,7 +101,7 @@ Assim é possível ter vários objetos e trocar dados entre os objetos.
                              Exemplo programar um controle remoto
 
 Imagina programar um controle remoto sem POO
-Sem poo a preocupação seria pensar nos detalhes, muitos procedimentos etc.
+Sem poo a preocupação seria pensar nos detalhes, muitos procedimentos/métodos/funções etc.
 O foco seria nos circuitos internos e seus detalhes e como se inter-relacionam.
 
 Em POO o foco seria no objeto controle remoto.
