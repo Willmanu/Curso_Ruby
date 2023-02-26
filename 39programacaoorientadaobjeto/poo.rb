@@ -9,12 +9,24 @@ Coisas materiais é fácil saber: um celular, um carro, uma caneta, mouse etc.
 E as abstratas como por exemplo: um compromisso agendado? não podemos tocar no compromisso,
 logo não é uma coisa material e sim é um objeto abstrato.
 
-Para saber se algo se enquadra em como objeto temos que observar algumas coisas:
+Para saber se algo se enquadra em como objeto em programação temos que observar algumas
+coisas que são:
 - Características
 - Comportamento
 - Estado atual
+A exemplo veremos se Compromisso é um objeto.
+Características:
+mês, dia, hora em que foi marcado, o tipo de roupa
 
-Características: 
+Comportamento:
+Pode ser marcado, desmarcado, adiado, cancelado etc.
+
+Estado:
+Esta combinado, estado de agora foi suspenso, remarcado para um horário
+mais cedo ou mais tarde etc.
+
+Levantando esses conceitos, e atendo todos os requisitos, podemos dizer que Compromisso é
+um objeto.
 
 
 O criador de POO foi Alan Kay, um matemático e biólogo.
