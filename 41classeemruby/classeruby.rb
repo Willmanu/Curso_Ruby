@@ -30,7 +30,7 @@ Sabemos que um objeto tem seus atributos, métodos/funções e é construído a 
 Para construir esse objeto em Ruby se faz assim:
 objeto = NomeDaClasse.new
 
-.new é método que constrói coisas
+.new é método que constrói coisas, muito importante entender isso.
 
 =end
 
@@ -45,12 +45,17 @@ Dessa forma a variável objeto esta construindo a classe em memória, por conta 
 método .new
 Esta variável não é uma variável comum como declaramos para receber um valor como:
 string, inteiros, float etc.
-Este agora é o "objeto" que vai receber atributos, ou seja, características e métodos/funções
-que vão gerar as ações.
+Esta variável objeto, agora é o "objeto" que vai receber atributos, ou seja, características
+e métodos/funções que vão gerar as ações por manipular os atributos.
 
+É importante saber que está variável não é uma variável comum quando estamos desenvolvendo.
+É importante saber que é um objeto novo, criado por nós e existe para nós e nossas necessidades
+e não faz parte do framework do Rails etc. é algo exclusivo nosso.
 
-E seu id é o 60
+Neste objeto quando imprimimos o id é o 60. Se eu entrar na classe e inserir algo nela,
+e quando pedir a impressão será o mesmo id 60, porque se trata do mesmo objeto.
 
+Em uma variável comum, isso não acontece sempre será um novo id.
 =end
 
 
