@@ -69,6 +69,44 @@ p nome.object_id # imprimi 120
 
 =begin
 
+Perceba que neste caso o id da varável nome é 80 e da variável outro_nome é 100, ou seja,
+dois objetos strings diferentes na memória
 
+Quando atribui um valor diferente para nome, o id muda para 120, ou seja, é um novo
+objeto na memória.
+
+Mas veja o que acontece se jogar um objeto existente dentro de uma variável.
+
+=end
+
+nome = outro_nome
+
+p nome # imprimi "William"
+
+p nome.object_id # imprimi 100
+
+
+=begin
+
+nome deixa seu valor que é "Pamela"  e assume o valor de outro_nome "William"
+E deixa seu id que era '120' e assume o id de outro_nome que é '100'
+
+veja agora este caso
+
+=end
+
+p nome # "William"
+
+p outro_nome # "William"
+
+p nome.upcase! # "WILLIAM"
+
+p outro_nome # "WILLIAM"
+
+=begin
+
+Perceba que quando usei o método upcase com o !(e isso faz com que não seja criado um novo
+objeto na memória, enquanto sem o ! cria um novo objeto na memória) a variável outro_nome
+também é alterada para MAIÚSCULA.
 
 =end
