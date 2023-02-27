@@ -52,10 +52,17 @@ e métodos/funções que vão gerar as ações por manipular os atributos.
 É importante saber que é um objeto novo, criado por nós e existe para nós e nossas necessidades
 e não faz parte do framework do Rails etc. é algo exclusivo nosso.
 
-Neste objeto quando imprimimos o id é o 60. Se eu entrar na classe e inserir algo nela,
-e quando pedir a impressão será o mesmo id 60, porque se trata do mesmo objeto.
+                       O Cuidado com mutabilidade de objetos
+Sabemos que o id é um número de identificação única.
+É uma etiqueta nos objetos que dizem tudo sobre ele, e é por ele que o sistema conhece para
+que ele serve, e é por ele que o sistema mapeia o trajeto do uso desse objeto.
 
-Em uma variável comum, isso não acontece sempre será um novo id.
+Quando imprimi o id do meu novo objeto, tive a resposta de que é 60.
+Se eu entrar na classe e inserir algo nela, e quando pedir a impressão é provável que será o
+mesmo id 60 porque se trata do mesmo objeto.
+
+Em uma variável comum, isso não acontece sempre será um novo id se for aletrada.
+Exemplo:
 =end
 
 nome = 'William'
@@ -106,7 +113,14 @@ p outro_nome # "WILLIAM"
 =begin
 
 Perceba que quando usei o método upcase com o !(e isso faz com que não seja criado um novo
-objeto na memória, enquanto sem o ! cria um novo objeto na memória) a variável outro_nome
-também é alterada para MAIÚSCULA.
+objeto na memória, alterando o mesmo objeto, enquanto sem o ! cria um novo objeto na memória,
+sem alterar objeto original) a variável outro_nome também é alterada para MAIÚSCULA, sem
+ter usado o upcase! nela.
+
+RESUMO:
+Neste caso foi alterado os dois objetos que tinham o mesmo id.
+O cuidado e a atenção ao trabalhar com mutabilidade de objeto é importante, para não acontecer
+resultados indesejados como este, de alterar objetos que tem o mesmo id, e causar impactos
+negativos no sistema.
 
 =end
