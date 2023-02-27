@@ -36,7 +36,7 @@ objeto = NomeDaClasse.new
 
 objeto = NomeDaClasse.new
 
-p objeto.object_id # 60
+p objeto.object_id # imprimi 60
 
 =begin
 
@@ -58,4 +58,17 @@ e quando pedir a impressão será o mesmo id 60, porque se trata do mesmo objeto
 Em uma variável comum, isso não acontece sempre será um novo id.
 =end
 
+nome = 'William'
+p nome.object_id # imprimi 80
 
+outro_nome = 'William'
+p outro_nome.object_id # imprimi 100
+
+nome = 'Pamela'
+p nome.object_id # imprimi 120
+
+=begin
+
+
+
+=end
