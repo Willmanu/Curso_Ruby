@@ -20,6 +20,10 @@ objeto.imprimir_ola('William')
 
 =begin
 
-
+Dentro da classe criamos uma ação para o objeto.
+recebe o nome e imprimi na tela
+fora da classe temos a variável objeto que recebe a classe com a ação, e assim criamos
+o objeto Cumprimento na memória.
+Depois o objeto chama o método e recebe por parâmetro o nome.
 
 =end
