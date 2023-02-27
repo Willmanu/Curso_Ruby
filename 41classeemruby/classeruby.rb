@@ -13,7 +13,7 @@ End
 
 Segundo a convecção do Ruby:
 - nomes de de variáveis são todos em minúsculos e separado por underline caso duas palavras
-Exemplo: MinhaVarável
+Exemplo: minha_varável
 - nome de classe são cada palavra começando em maiúscula(Camel Case)
 Exemplo: NomeDaClasse
 
@@ -27,8 +27,7 @@ objeto = NomeDaClasse.new
 
 =end
 
-class MinhaClass
-
+class NomeDaClasse
 end
 
 objeto = MinhaClass.new
