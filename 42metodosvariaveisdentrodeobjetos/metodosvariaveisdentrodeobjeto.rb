@@ -1,10 +1,10 @@
 =begin
                                Métodos e variáveis dentro de objetos
 
-Neste exemplo vamos criar um objeto que comprimente uma pessoa.
+Neste exemplo vamos criar um objeto que cumprimenta uma pessoa.
 O propósito é passar o nome de uma pessoa e gerar o Ola! nomepessoa.
 =end
-
+# classe que gera o cumprimento
 class Cumprimentar
 
   def imprimir_ola(nome)
@@ -68,21 +68,32 @@ Para isso precisamos criar um método chamado Initialize.
 Com esse método é possível acessar um valor de uma variável em qualquer outro objeto.
 
 Initialize é um método construtor.Ele pega os valores passados dentro do método/função e cria
-objetos, ou seja, constrói com essas partes que recebeu objetos que podem ser usados em qualquer
-outro objeto diferente.
+objetos, ou seja, constrói com essas partes que recebeu em parâmetro, objetos que podem ser
+usados em qualquer outro objeto diferente.
 Ele inicializa os valores, ou seja, deixa enxergáveis os valores para outros objetos usarem.
 Sem ele os outros objetos não enxergão esses valores e assim não podem usar.
 
-
+1º declarar a classe
+2º fazer o método construtor, para inicializar os valores passados em parâmetro, e assim esses valor
+vão ficar disponíveis para serem usados em outros objetos.
+3º fazer o método que imprimi olá!
+Exemplo:
 
 =end
 
+# adicionando initialize
 class Cumprimentar3
-  def Initialize (nomepessoa)
-	@nome = nomepessoa
+
+  # initialize seta(defini) a variável de instancia
+  def initialize(nomepessoa)
+    @nome = nomepessoa
   end
-  
+
+  # não precisa passar o parâmetro porque temos o initialize
   def imprimir_ola3
     puts "Olá! #{@nome}"
   end
 end
+
+pessoa = Cumprimentar3.new
+pessoa.imprimir_ola3('Emanuel')
