@@ -37,7 +37,7 @@ objeto = NomeDaClasse.new
 
 =end
 
-objeto = NomeDaClasse.new # .new é novo..criando um novo objeto a partir do nome classe
+objeto = NomeDaClasse.new # .new é novo..criando um novo objeto a partir da classe
 
 p objeto.object_id # imprimi 60
 

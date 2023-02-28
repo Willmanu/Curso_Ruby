@@ -120,10 +120,58 @@ Quando instancio o objeto em pessoa = Cumprimentar3.new('Emanuel'), o valor é p
 Por fim o objeto pessoa chama a função para imprimir e esta pega o valor a ser impresso do initialize
 
                          Trocar o valor que foi passado como parâmetro
-Se for necessário trocar o valor passado como parâmetro usamos o getter e setter.
+Se for necessário trocar o valor passado como parâmetro, usamos o getter e setter e um novo método qu.
 getter significa obter, pegar
 setter significa definir para um novo
-Com getter se obtém um valor e se precisar trocar, usamos o setter.
+Com getter se obtém um valor e com o setter se defini um valor novo.
 Para se fas necessário criar um método que faça isso
+
+O getter é o initialize porque ele pega/obtém o valor passado.
+Setter será este novo método que será incluindo agora nesta classe.
+
+=end
+
+# Criando nesta classe o setter
+class Cumprimentar4
+
+  # este é o getter
+  def initialize (nomepessoa2)
+    @nomepessoa2 = nomepessoa2
+  end
+
+  # método que imprime a frase de cumprimento
+  def imprimir_ola4
+    puts "Olá! #{@nomepessoa2}"
+  end
+
+  # método que retorna o valor que foi passado no parâmetro
+  def nome
+   @nome2 = nomepessoa2
+  end
+
+  # este é o setter
+  def nome=(new_name)
+    @nomepessoa2 = new_name
+  end
+
+end
+
+pessoa2 = Cumprimentar4.new('Milena')
+pessoa2.imprimir_ola4
+
+=begin
+class Person
+  def initialize(name)
+    @name = name
+  end
+
+  def name
+    @name
+  end
+
+  def name=(new_name)
+    @name = new_name
+  end
+end
 
 =end
