@@ -68,5 +68,11 @@ Para isso precisamos criar um método chamado Initialize.
 Com esse método é possível acessar um valor de uma variável em qualquer outro objeto.
 
 
+initialize é um método construtor.Ele pega os valores passados dentro da método/função e cria
+objetos, ou seja, constrói com essas partes que recebeu objetos que podem ser usados em qualquer
+outro objeto diferente.
+Ele inicializa os valores, ou seja, deixa enxergáveis os valores para outros objetos usarem
+
+
 
 =end
