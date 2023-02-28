@@ -4,6 +4,7 @@
 Neste exemplo vamos criar um objeto que cumprimenta uma pessoa.
 O propósito é passar o nome de uma pessoa e gerar o Ola! nomepessoa.
 =end
+
 # classe que gera o cumprimento
 class Cumprimentar
 
@@ -20,11 +21,15 @@ objeto.imprimir_ola('William')
 
 =begin
 
-Dentro da classe criamos uma ação para o objeto: recebe o nome e imprimi na tela
-fora da classe temos a variável objeto que recebe a classe com a ação, e assim criamos
-o objeto Cumprimento na memória.
-Depois o objeto chama o método e recebe por parâmetro o nome.
-Valida o código e imprime: Olá! mundo.
+Dentro da classe criamos uma ação, através do método, para o objeto: recebe o nome e imprimi na tela
+Fora da classe temos a variável objeto que recebe a classe com com o .new
+O método .new é o responsável por criar e inicializar a classe na memória, ou seja, inicializar é
+fazer valer tudo que está escrito dentro da classe que a varável objeto recebe. Objeto está recebendo
+atributos e métodos que vão funcionar, entrar em atividade quando chamados.
+Agora que o objeto está inicializado, podemos chamar a função imprimir_ola e passar o nome da pessoa
+que vai ser cumprimentada.
+É isso que objeto.imprimir_ola('William') significa
+
 
                              Ciclo de vida do parâmetro passado
 O valor que foi passado  em parâmetro para o método imprimir_ola só funciona dentro deste
