@@ -3,13 +3,15 @@
 Sabemos que classe é um modelo, ou uma planta de construção de casa etc.(veja a teoria no 40)
 Em ruby uma classe é definida dessa forma:
 
+# xxxxxxxx
 class NomeDaCLasse
 End
 
 1º palavra class
-2º em camel case o nome da classe
+2º em CamelCase escreva o nome da classe
 3º finaliza com end
 4º no meio vai seus métodos/funções e atributos etc.
+5º quando se cria uma classe é por convenção por um comentário explicando o que ele faz
 
 Segundo a convecção do Ruby:
 - nomes de de variáveis são todos em minúsculos e separado por underline caso duas palavras
@@ -19,7 +21,8 @@ Exemplo: NomeDaClasse
 
 =end
 
-class NomeDaClasse # declaração da classe
+# declaração da classe
+class NomeDaClasse
 end
 
 
@@ -34,7 +37,7 @@ objeto = NomeDaClasse.new
 
 =end
 
-objeto = NomeDaClasse.new
+objeto = NomeDaClasse.new # .new é novo..criando um novo objeto a partir do nome classe
 
 p objeto.object_id # imprimi 60
 
@@ -42,7 +45,8 @@ p objeto.object_id # imprimi 60
 
 Neste caso temos uma palavra chamada objeto recebendo a classe, recebendo o molde, o esquema.
 Dessa forma a variável objeto esta construindo a classe em memória, por conta do
-método .new
+método .new (.new é um método que cria o objeto, sem ele nada é criado).
+
 Esta variável não é uma variável comum como declaramos para receber um valor como:
 string, inteiros, float etc.
 Esta variável objeto, agora é o "objeto" que vai receber atributos, ou seja, características

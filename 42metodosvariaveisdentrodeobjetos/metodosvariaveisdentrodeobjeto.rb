@@ -67,12 +67,22 @@ Se quisermos acessar esse valor passado para essa classe, em outra classe, não 
 Para isso precisamos criar um método chamado Initialize.
 Com esse método é possível acessar um valor de uma variável em qualquer outro objeto.
 
-
-initialize é um método construtor.Ele pega os valores passados dentro da método/função e cria
+Initialize é um método construtor.Ele pega os valores passados dentro do método/função e cria
 objetos, ou seja, constrói com essas partes que recebeu objetos que podem ser usados em qualquer
 outro objeto diferente.
-Ele inicializa os valores, ou seja, deixa enxergáveis os valores para outros objetos usarem
+Ele inicializa os valores, ou seja, deixa enxergáveis os valores para outros objetos usarem.
+Sem ele os outros objetos não enxergão esses valores e assim não podem usar.
 
 
 
 =end
+
+class Cumprimentar3
+  def Initialize (nomepessoa)
+	@nome = nomepessoa
+  end
+  
+  def imprimir_ola3
+    puts "Olá! #{@nome}"
+  end
+end
