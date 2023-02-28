@@ -21,6 +21,9 @@ objeto.imprimir_ola('William')
 
 =begin
 
+Antes da classe temos um comentário. Esse comentário faz parte da convenção ruby, para explicar esse
+método. É obrigatório.
+
 Dentro da classe criamos uma ação, através do método, para o objeto: recebe o nome e imprimi na tela
 Fora da classe temos a variável objeto que recebe a classe com com o .new
 O método .new é o responsável por criar e inicializar a classe na memória, ou seja, inicializar é
@@ -83,6 +86,8 @@ Sem ele os outros objetos não enxergão esses valores e assim não podem usar.
 2º fazer o método construtor, para inicializar os valores passados em parâmetro, e assim esses valor
 vão ficar disponíveis para serem usados em outros objetos.
 3º fazer o método que imprimi olá!
+4º o parametro agora é passado quando usar o .new e não mais na hora de chamar o método
+5º chama o método sem passar parâmetro
 Exemplo:
 
 =end
@@ -101,5 +106,24 @@ class Cumprimentar3
   end
 end
 
-pessoa = Cumprimentar3.new
-pessoa.imprimir_ola3('Emanuel')
+pessoa = Cumprimentar3.new('Emanuel')
+pessoa.imprimir_ola3
+
+=begin
+
+A primeira coisa que fiz dentro da classe foi fazer o construtor que recebe o valor do parâmetro
+e @nomepessoa recebe este valor. Assim o valor passado por parâmetro pode ser usado em qualquer
+objeto.
+Perceba que no método imprimir_ola3, não foi necessário ter um parâmetro porque o valor que este
+trabalho vem do método initialize.
+Quando instancio o objeto em pessoa = Cumprimentar3.new('Emanuel'), o valor é passado aqui.
+Por fim o objeto pessoa chama a função para imprimir e esta pega o valor a ser impresso do initialize
+
+                         Trocar o valor que foi passado como parâmetro
+Se for necessário trocar o valor passado como parâmetro usamos o getter e setter.
+getter significa obter, pegar
+setter significa definir para um novo
+Com getter se obtém um valor e se precisar trocar, usamos o setter.
+Para se fas necessário criar um método que faça isso
+
+=end
