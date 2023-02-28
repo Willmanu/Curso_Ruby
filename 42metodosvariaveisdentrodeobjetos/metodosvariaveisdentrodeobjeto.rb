@@ -44,16 +44,13 @@ Exemplo:
 @nome
 
 =end
-
+# Classe responsável por cumprimentar uma pessoa pelo nome.
+# @nome recebe o valor que nome recebeu. Esta @nome pode ser usada em toda a classe
 class Cumprimentar2
-
   def imprimir_ola2(nome)
-
     @nome = nome
     puts "Olá! #{@nome}"
-
   end
-
 end
 
 objeto2 = Cumprimentar2.new
@@ -64,11 +61,12 @@ objeto2.imprimir_ola2('William')
 Perceba que antes do método puts foi colocado o @nome recebendo o valor em parâmetro.
 Dessa forma este valor que está agora em @nome pode ser usado em qualquer lugar
 dentro da classe.
-Se quisermos acessar esse valor passado para essa classe, em outra classe, precisamos
-criar um método que deixa esse valor acessível para todos os objetos que quisermos.
 
+                                    Initialize
+Se quisermos acessar esse valor passado para essa classe, em outra classe, não será possível.
+Para isso precisamos criar um método chamado Initialize.
+Com esse método é possível acessar um valor de uma variável em qualquer outro objeto.
 
-           Criando um método que faz a variável ser acessada em todos os objetos.
 
 
 =end
