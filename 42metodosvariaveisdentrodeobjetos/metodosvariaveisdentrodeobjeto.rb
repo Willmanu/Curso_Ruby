@@ -133,7 +133,6 @@ Setter será este novo método que será incluindo agora nesta classe.
 
 # Criando nesta classe o setter
 class Cumprimentar4
-
   # este é o getter
   def initialize (nomepessoa2)
     @nomepessoa2 = nomepessoa2
@@ -148,7 +147,6 @@ class Cumprimentar4
   def nome=(new_name)
     @nomepessoa2 = new_name
   end
-
 end
 
 pessoa2 = Cumprimentar4.new('Milena')
