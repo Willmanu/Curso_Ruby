@@ -42,7 +42,10 @@ Exemplo:
 
 # usando o método attr_accessor
 class Ola
-  attr_accessor :nome
+  attr_accessor :nome # getter e setter
+
+  # attr_reader  :nome # apenas getter
+  # attr_writter  :nome # apenas setter
 
   def initialize(nome)
     @nome = nome
