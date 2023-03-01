@@ -8,7 +8,7 @@ $LOAD_PATHe carrega o conteúdo desse arquivo para dentro do seu programa.
 
 =end
 
-require 
+require './classes/carro'
 
 objetocarro = Carro.new('Chevrolet', '2002', 'William P. Silva')
 objetocarro.carro
