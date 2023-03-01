@@ -29,7 +29,21 @@ pessoa.nome= 'Nathan'          aqui é o novo valor que chama o metodo setter
 pessoa.ola                     aqui é a impressão do novo valor
 
 
-	Usando o attr_accessor
+	                             Usando o attr_accessor
+Exemplo:
 
 =end
+# usando o método attr_accessor
+class Ola
+  attr_accessor :nome
+
+  def initialize(nome)
+    @nome = nome
+  end
+
+  def ola
+    puts "Ola!#{@nome}"
+  end
+end
+
 

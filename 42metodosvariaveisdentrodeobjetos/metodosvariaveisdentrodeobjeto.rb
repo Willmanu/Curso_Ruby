@@ -172,35 +172,4 @@ pessoa2.imprimir_ola4 # Olá! Emile
 
 Percebe que com o objeto pessoa2 eu chamo o método .nome= e seto(defino) o valor 'Emile'
 Logo após uso o objeto pessoa2 para chamar o método imprimir_ola4 e tenho a resposta  Olá! Emile
-
-                                           attr_accessor
-Este método cria automaticamente os métodos getter e setter.
-sso significa que posso acessar e atribuir valores, a variável que recebeu parâmetros dentro
-da classe, usando esse método sem ter que definir os métodos getter e setter manualmente como
-fiz anteriormente.
-Exemplo:
-
 =end
-
-# usando o método attr_accessor
-class Cumprimentar5
-  attr_accessor :nome  #getter e setter
-  #attr_reader :nome   apenas getter
-  #attr_writter :nome  apenas setter
-
-  # este é o getter
-  def initialize(nome)
-    @nome = nome
-  end
-
-  # método que retorna o valor que foi passado no parâmetro
-  def imprimir_ola5
-    puts "Olá! #{@nome}"
-  end
-end
-
-pessoa3 = Cumprimentar5.new('Maria')
-pessoa3.imprimir_ola5 # o que é impresso aqui é Maria
-
-pessoa3.nome = 'Fatima'
-pessoa3.imprimir_ola5 # Olá! Fatima
