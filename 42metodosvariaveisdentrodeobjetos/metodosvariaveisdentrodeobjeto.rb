@@ -184,7 +184,9 @@ Exemplo:
 
 # usando o método attr_accessor
 class Cumprimentar5
-  attr_accessor :nome
+  attr_accessor :nome  #getter e setter
+  #attr_reader :nome   apenas getter
+  #attr_writter :nome  apenas setter
 
   # este é o getter
   def initialize(nome)

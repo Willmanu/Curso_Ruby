@@ -16,3 +16,4 @@ sintaxuguer
 subcadeia
 textão
 unica
+writter
