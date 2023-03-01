@@ -126,14 +126,15 @@ getter significa obter, pegar
 setter significa definir para um novo
 Com getter se obtém um valor e com o setter se defini um valor novo.
 
-O getter é o initialize porque ele pega/obtém o valor passado no parâmetro.
-Setter será este novo método que será incluindo agora nesta classe.
+O getter é um método que paga o valor passado em parametro dentro da classe
+e retorna este valor
+Setter pega um novo valor fora da classe, leva para dentro da classe e define
+como novo valor dentro da classe.
 
 =end
 
-# Criando nesta classe o setter
+# Criando nesta classe o getter e setter
 class Cumprimentar4
-  # este é o getter
   def initialize(nomepessoa2)
     @nomepessoa2 = nomepessoa2
   end
@@ -141,6 +142,11 @@ class Cumprimentar4
   # método que retorna o valor que foi passado no parâmetro
   def imprimir_ola4
     puts "Olá! #{@nomepessoa2}"
+  end
+
+  # este é o getter
+  def nome
+    @nomepessoa2
   end
 
   # este é o setter
@@ -155,7 +161,7 @@ pessoa2.imprimir_ola4 # o que é impresso aqui é Milena
 =begin
 
 Acima tenho:
-O getter que é initialize
+O getter que o método nome
 O setter que defini um novo valor, que é representado com o 'nome=(new_name)'
 
 O que esta sendo impresso acima é Milena, ou seja, o valor passado no parâmetro.
@@ -167,9 +173,19 @@ Exemplo:
 pessoa2.nome = 'Emile'
 pessoa2.imprimir_ola4 # Olá! Emile
 
+puts pessoa2.nome 
+
 
 =begin
 
 Percebe que com o objeto pessoa2 eu chamo o método .nome= e seto(defino) o valor 'Emile'
-Logo após uso o objeto pessoa2 para chamar o método imprimir_ola4 e tenho a resposta  Olá! Emile
+antes tinha Milena e agora o setter troca para Emile.
+Logo após uso o objeto pessoa2 para chamar o método imprimir_ola4 e tenho a resposta
+Olá! Emile
+
+por ultimo chamo o getter, ou seja, peço a impressão do método chamado nome que retorna
+o valor que tem em @nomepessoa2
+
+Resumo:
+getter retorna o valor passado em parâmetro e setter defini um novo valor
 =end
