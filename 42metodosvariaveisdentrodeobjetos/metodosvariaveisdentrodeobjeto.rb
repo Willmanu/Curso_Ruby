@@ -134,7 +134,7 @@ Setter será este novo método que será incluindo agora nesta classe.
 # Criando nesta classe o setter
 class Cumprimentar4
   # este é o getter
-  def initialize (nomepessoa2)
+  def initialize(nomepessoa2)
     @nomepessoa2 = nomepessoa2
   end
 
