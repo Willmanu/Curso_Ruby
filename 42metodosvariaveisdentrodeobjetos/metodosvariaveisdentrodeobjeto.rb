@@ -129,7 +129,7 @@ Com getter se obtém um valor e com o setter se defini um valor novo.
 
 O getter é um método que paga o valor passado em parametro dentro da classe
 e retorna este valor
-Setter pega um novo valor fora da classe, leva para dentro da classe e define
+Setter pega um novo valor fora da classe, leva para dentro da classe e o define
 como novo valor dentro da classe.
 
 =end
@@ -162,7 +162,7 @@ pessoa2.imprimir_ola4 # o que é impresso aqui é Milena
 =begin
 
 Acima tenho:
-O getter que o método nome
+O getter é o método nome
 O setter que defini um novo valor, que é representado com o 'nome=(new_name)'
 
 O que esta sendo impresso acima é Milena, ou seja, o valor passado no parâmetro.
