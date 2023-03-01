@@ -77,4 +77,3 @@ Resumo:
 com o attr_accessor o código fica pequeno, mais limpo e mais visível.
 Melhor usar o attr_accessor do que fazer dois métodos como getter e setter.
 =end
-
