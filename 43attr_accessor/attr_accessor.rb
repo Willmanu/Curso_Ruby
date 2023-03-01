@@ -1,7 +1,9 @@
 =begin
 
                                          attr_accessor
-Este método cria automaticamente os métodos getter e setter.
+a palavra vem do inglês attribute access, ou seja, acessador de atributo.
+Este método cria automaticamente os métodos getter e setter que manipulam a entrada e saída
+de uma valor dentro da classe.
 Isso significa que posso acessar e atribuir valores, a variável que recebeu parâmetros dentro
 da classe, usando esse método sem ter que definir os métodos getter e setter manualmente como
 fiz anteriormente no 42.
@@ -70,6 +72,6 @@ E na última linha tem o getter, ou seja, chamo o método nome que está em attr
 
 Resumo:
 com o attr_accessor o código fica pequeno, mais limpo e mais visível.
-Melhor usar o attr_accessor do que fazer dois métodos como getter e setter. 
+Melhor usar o attr_accessor do que fazer dois métodos como getter e setter.
 =end
 

@@ -122,6 +122,7 @@ Por fim o objeto pessoa chama a função para imprimir e esta pega o valor a ser
                          Trocar o valor que foi passado como parâmetro
 Se for necessário trocar o valor passado como parâmetro, usamos o getter e setter.
 
+getter e setter são métodos que manipulam valores dentro de uma classe.
 getter significa obter, pegar
 setter significa definir para um novo
 Com getter se obtém um valor e com o setter se defini um valor novo.
@@ -172,9 +173,7 @@ Exemplo:
 
 pessoa2.nome = 'Emile'
 pessoa2.imprimir_ola4 # Olá! Emile
-
-puts pessoa2.nome 
-
+puts pessoa2.nome # getter retornando o valor que está dentro da classe -> Emile
 
 =begin
 
