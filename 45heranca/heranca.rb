@@ -70,7 +70,7 @@ Exemplo:
 Temos a classe Cachorro e precisamos do método respirar, quando chamamos o método, o Ruby
 verifica se existe o método dentro da classe Cachorro primeiro. Não existindo o Ruby vai
 procurar dentro da classe Animal, se não tiver vai para classe Object porque é a ultima.
-Enquanto houver classe superior vai procurando, se não existir o método o Ruby joga uma
-mensagem de exceção dizendo que o método não existe.
+Enquanto houver classe superior o Ruby vai procurando, se não existir, o método o Ruby joga uma
+mensagem de exceção dizendo que o método não existe, não encontrado etc.
 
 =end
