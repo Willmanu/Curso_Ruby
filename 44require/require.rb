@@ -58,9 +58,9 @@ lembre se:
 classcarro -> é nome do repositório que esta a classe Carro
 /carro -> é o nome do método que esta dentro da classe Carro que faz a impressão.
 
-Aqui eu criei uma minha classe para fazer uso dela.
+Aqui eu criei minha classe para fazer uso dela.
 No Ruby existe classe feitas que fazem outros tipos de coisas que podemos chamar com o require
-exemplo é a classe: 'action_view' que tem os métodos NullViewContext e NullLookupContext
+exemplo é a classe: 'action_view' que tem os métodos number_to_currency, NullViewContext e NullLookupContext
 que fazem a representação de um número em uma moeda de um pais
 exemplo se digitarmo 100 esta classe 'action_view' com seus métodos fazem isso-> R$ 100,00
 representando a moeda Brasileira o Real, mas faz a representação de moedas de outras países.
