@@ -16,6 +16,18 @@ end
 Suponhamos que esta classe Animal tenha um método chamado respirar. Quando a classe Cachorro
 herdar a classe Animal, este método respirar fará parte da classe Cachorro.
 
+Se ao criar uma classe, não for especificado a herança desta, o Ruby automaticamente faz a
+herança desta classe criada sem especificação, da classe Object do próprio Ruby. Ou seja, uma
+classe não especificada sua herança, herda a classe do Ruby chamada Object automaticamente.
 
 
+Class Object                Classe padrão Ruby
+end
+
+
+class Animal                definição da classe, como não tem especificação de herança
+end                         a classe Animal recebe herança de Object
+
+class Cachorro < Animal     Definindo class Cachorro e herdando com o < a class Animal
+end
 =end
