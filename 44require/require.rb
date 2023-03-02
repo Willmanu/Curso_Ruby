@@ -25,7 +25,7 @@ diretório no $LOAD_PATH, o Ruby gerará um erro.
 Nesta caso o endereço que vai ser passado para que o require será o do meu diretorio que contém 
 =end
 
-require '/home/william/workspace/estudoruby/classcarro/carro'
+require './classcarro/carro'
 
 objetocarro = Carro.new('Chevrolet', '2002', 'William P. Silva')
 objetocarro.carro
