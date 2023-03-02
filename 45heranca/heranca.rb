@@ -13,4 +13,9 @@ end
 class Cachorro < Animal     Definindo class Cachorro e herdando com o < a class Animal
 end
 
+Suponhamos que esta classe Animal tenha um método chamado respirar. Quando a classe Cachorro
+herdar a classe Animal, este método respirar fará parte da classe Cachorro.
+
+
+
 =end
