@@ -55,9 +55,32 @@ específicos.
 As variável de classe, ou seja, varáveis pessoais são reconhecidas com 2 arrobas
 no inicio do nome.
 exemplo:
-@@variavel_da_classe_pessoa
+@@nome_da_variavel
 
-Os métodos definidos com self, ou seja, métodos pessoais conseguem gravar nesta variáveis.
+Os métodos definidos com self, ou seja, métodos pessoais conseguem acessar e gravar
+nesta variáveis.
+exemplo:
+
+class Pessoa
+  @@variavel_da_classe_pessoa = 100
+
+  def self.valor_variavel
+    @@variavel_da_classe_pessoa
+  end
+
+  def self.incrementar_valor_variavel
+    @@variavel_da_classe_pessoa += 1
+  end
+end
+
+Esta classe pessoa tem uma variavel pessoa que recebe o valor de 100
+Tem também um método valor_variavel que é um getter, só retorna o valor da variavel
+E um método que vai incrementando mais 1 a variável
+
+Essas variáveis em Ruby tem aspecto de variáveis globais. Sendo assim podem ser acessadas
+em qualquer lugar no Ruby. Por esse motivo seu uso são evitados.
+
+por exemplo esse incremento 
 
 Como foi dito os métodos de classe, próprios (self) não usam estado de objeto.
 Estado do objeto seria estar existindo na memória.
