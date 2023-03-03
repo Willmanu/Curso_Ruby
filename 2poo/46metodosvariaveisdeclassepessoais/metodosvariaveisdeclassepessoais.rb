@@ -19,14 +19,14 @@ No raciocínio comum, este objeto pessoa precisaria estar instanciado, e o méto
 precisaria ser do Ruby, assim como .new que existe no Ruby e instancia na memória o objeto.
 
 
-                             Definindo métodos e variáveis pessoais
+                             Definindo métodos pessoais
 
 Os métodos do Ruby são criados usando a palavra def, depois o nome.
 Os métodos pessoais são criados usando a palavra def, depois a palavra self e logo após o
 nome do método
 exemplo:
 
-class pessoa
+class Pessoa
   def self.gerar
     bloco de código
   end
@@ -40,7 +40,31 @@ não é algo que é do Ruby, mas foi feito com o Ruby e tem suas característica
 É como se fosse uma etiqueta que assinalá um objeto, dizendo que este é único, distinto e
 pessoal.
 
-No caso o método .gerar é único, distinto e pessoal. 
+No caso o método .gerar é único, distinto e pessoal.
+
+Este método .gerar de exemplo só está disponível para essa classe, e não para as instancias
+de um objeto.
+Exemplo:
+se instanciar a classe pessoa -> pessoa = Pessoa.new
+e chamar o método .gerar -> pessoa.gerar
+recebo um erro.
+Então métodos de classe, ou seja, métodos próprios não podem ser chamados em objetos
+específicos.
+
+                                  Definindo variáveis pessoais
+As variável de classe, ou seja, varáveis pessoais são reconhecidas com 2 arrobas
+no inicio do nome.
+exemplo:
+@@variavel_da_classe_pessoa
+
+Os métodos definidos com self, ou seja, métodos pessoais conseguem gravar nesta variáveis.
+
+Como foi dito os métodos de classe, próprios (self) não usam estado de objeto.
+Estado do objeto seria estar existindo na memória.
+
+
+
+
 =end
 
 

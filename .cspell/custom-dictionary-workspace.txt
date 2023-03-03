@@ -24,4 +24,5 @@ sintaxuguer
 subcadeia
 textão
 unica
+variavel
 writter
