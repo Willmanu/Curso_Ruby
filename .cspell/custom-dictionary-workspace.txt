@@ -6,6 +6,7 @@ divid
 empaty
 MAIUSCULA
 mensagemspritada
+metricas
 meuarray
 nomepessoa
 objetocarro
@@ -13,6 +14,9 @@ palindromo
 Pamella
 prefirível
 pust
+sensorindutivo
+sensorsolo
+sensortemperatura
 sintaxuguer
 subcadeia
 textão

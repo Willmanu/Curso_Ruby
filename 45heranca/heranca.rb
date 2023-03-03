@@ -180,6 +180,44 @@ Estou coletando métricas de temperatura
 As 2 primeiras impressões são se sensor classe pai e as outras duas são de sensortemperatura
 classe filha
 
+
+                                             super
+Estou reutilizando o código e e subscrevendo o método coletar_metricas da classe sensor
+porém á momentos que precisarei usar o código inteiro da classe pai sem subscrever, ou seja,
+ter o código da classe pai inteiro e o da classe filho no mesmo lugar.
+A palavra super é utilizada para chamar o mesmo método da classe pai, permitindo que você
+tenha acesso a sua implementação original.
+Para essa tarefa se usa a palavra super, dentro da classe filho, depois da ultima linha de
+código do método que vai subscrever.
+exemplo:
+
+=end
+
+# Adotados para detectar elementos metálicos, como ferro, alumínio, aço, latão, etc.
+class SensorIndutivo < Sensor
+  def coletar_metricas
+    puts 'Analisando métricas dos materiais'
+    puts 'Coletando métricas dos materiais'
+    super
+  end
+end
+  
+sensorindutivo = SensorIndutivo.new
+sensorindutivo.coletar_metricas
+
+=begin
+
+A impressão fica:
+Estou instalando                          impressão da classe pai sensor
+Estou inciando                            impressão da classe pai sensor
+Analisando métricas dos materiais         impressão da classe filha sensorindutivo
+Coletando métricas dos materiais          impressão da classe filha sensorindutivo
+Estou coletando                           impressão da classe pai sensor
+Estou analisando as métricas              impressão da classe pai sensor
+
+O que muda aqui são as duas ultimas impressões que são da classe pai sensor, que o super trouxe
+
+
 Resumo: o propósito de herança é reutilizar código que são genéricos.
 
 Outra coisas o correto deste exercício é fazer cada classe em seu repositório e usar o require
