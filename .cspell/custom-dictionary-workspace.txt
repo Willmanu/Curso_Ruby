@@ -2,6 +2,7 @@
 actionview
 bomdiasol
 booleana
+classecarro
 divid
 empaty
 MAIUSCULA
