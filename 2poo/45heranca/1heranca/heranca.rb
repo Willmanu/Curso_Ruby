@@ -1,4 +1,9 @@
+require './2poo/45heranca/2sensorgenerico/sensorgenerico'
 =begin
+
+# o require acima é o responsável por criar a ligação entra as classes que estão abaixo
+
+
                                           Herança
 Herança é para reuso de funcionalidade.
 Quando uma classe herda as funcionalidades de outra, chama-se esse fato de herança.
@@ -82,14 +87,13 @@ mensagem de exceção dizendo que o método não existe, não encontrado etc.
 No geral, todo tipo de sensor é um dispositivo que detecta determinados estímulos e desencadeia
 reações específicas a partir disso.
 
-Imaginemos uma classe que trata do comportamento de um sensor.
-Nesta classe temos 3 método para:
+Imaginemos uma classe que seja genérica, ou seja, que vai servir para que outras classes de
+sensor com comportamentos específicos tenha essa como herança.
+Esta classe vai se chamar sensor e vai tratar de 3 comportamentos:
 -instala o sensor
 -iniciar o sensor
 -coletar métricas genéricas
 exemplo abaixo:
-
-=end
 
 # Sensor genérico
 class Sensor
@@ -112,23 +116,26 @@ sensor.instalar
 sensor.iniciar
 sensor.coletar_metricas
 
-
-=begin
-
-Esse acima é um sensor genérico, inicializado e pedi algumas impressões chamando
-os métodos e temos os resultados:
+Essa classe genérica, retorna os seguintes resultados:
 
 Estou instalando
 Estou inciando
 Estou coletando
+Estou analisando as métricas
+
+Observação: este código acima está em outro repositório, nesse endereço local abaixo:
+/home/william/workspace/estudoruby/Curso_Ruby/2poo/45heranca/2sensorgenerico/sensorgenerico
+
 
 Agora abaixo farei um outro senso de solo que recebe como herança o sensor genérico.
+
 =end
 
 # sensor do solo
 class SensorSolo < Sensor
   def coletar_metricas
-	puts 'Analisando métricas do solo'
+    puts 'Analisando métricas do solo'
+
     puts 'Coletando métricas do solo'
   end
 end
@@ -137,12 +144,15 @@ sensorsolo = SensorSolo.new
 sensorsolo.coletar_metricas
 
 =begin
+
 A classe sensorsolo e a classe sensor são diferentes porque o sensorsolo analisa o solo.
 Como a classe sensor é genérica podemos reutilizar informações dela em sensorsolo. A ideia é
-reutilizar os métodos instalar é iniciar porém, o método coletar_metricas precisa ser diferente
-porque sensorsolo coleta métricas do solo.
-Então eu herdo a classe sensor em sensorsolo o método coletar_metricas deste sensorsolo vai
-subscrever a sensor, ou seja, o método coletar_metricas de sensor não será impressa.
+reutilizar os métodos da classe sensor: instalar é iniciar. O método coletar_metricas precisa
+ser diferente em sensorsolo, porque coleta métricas do solo enquanto de sensor é genérico.
+
+Aqui a classe sensorsolo herda a classe sensor através do <
+O método coletar_metricas deste sensorsolo vai subscrever o método da classe sensor, ou seja,
+o método coletar_metricas da classe sensor não será impressa.
 Então a impressão fica:
 
 Estou instalando
@@ -150,8 +160,9 @@ Estou inciando
 Analisando métricas do solo
 Coletando métricas do solo
 
-As duas primeiras impressões são da classe sensor e as outras são de sensorsolo.
-vejo este outro sensor de temperatura.
+As duas primeiras impressões são da classe sensor que são reutilizadas, e as outras são da
+classe sensorsolo.
+vejo este outro exemplo com sensor de temperatura.
 
 =end
 
@@ -177,8 +188,8 @@ Estou inciando
 Analisando métricas de temperatura
 Estou coletando métricas de temperatura
 
-As 2 primeiras impressões são se sensor classe pai e as outras duas são de sensortemperatura
-classe filha
+As 2 primeiras impressões são se sensor, ou seja, a classe pai
+e as outras duas são de sensortemperatura classe filha
 
 
                                              super
@@ -187,8 +198,8 @@ porém á momentos que precisarei usar o código inteiro da classe pai sem subsc
 ter o código da classe pai inteiro e o da classe filho no mesmo lugar.
 A palavra super é utilizada para chamar o mesmo método da classe pai, permitindo que você
 tenha acesso a sua implementação original.
-Para essa tarefa se usa a palavra super, dentro da classe filho, depois da ultima linha de
-código do método que vai subscrever.
+Na tarefa abaixo se usa a palavra super, dentro da classe filho, depois da ultima linha de
+código, dentro do método que vai subscrever.
 exemplo:
 
 =end
@@ -220,6 +231,4 @@ O que muda aqui são as duas ultimas impressões que são da classe pai sensor, 
 
 Resumo: o propósito de herança é reutilizar código que são genéricos.
 
-Outra coisas o correto deste exercício é fazer cada classe em seu repositório e usar o require
-para chamar as classes.
 =end

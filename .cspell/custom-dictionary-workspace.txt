@@ -5,6 +5,7 @@ booleana
 classecarro
 divid
 empaty
+heranca
 MAIUSCULA
 mensagemspritada
 metricas
@@ -15,6 +16,7 @@ palindromo
 Pamella
 prefirível
 pust
+sensorgenerico
 sensorindutivo
 sensorsolo
 sensortemperatura

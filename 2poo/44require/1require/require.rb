@@ -41,7 +41,7 @@ Exemplo:
 
 =end
 
-require '/home/william/workspace/estudoruby/Curso_Ruby/poo/44require/2classcarro/' # 1º
+require './poo/44require/2classcarro/carro' # 1º
 
 objetocarro = Carro.new('Chevrolet', '2002', 'William P. Silva') # 2º
 objetocarro.carro # 3º
