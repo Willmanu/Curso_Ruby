@@ -123,6 +123,8 @@ trabalho vem do método initialize.
 Quando instancio o objeto em pessoa = Cumprimentar3.new('Emanuel'), o valor é passado aqui.
 Por fim o objeto pessoa chama a função para imprimir e esta pega o valor a ser impresso do initialize
 
+	
+	                                     getter e setter
                          Trocar o valor que foi passado como parâmetro
 Se for necessário trocar o valor passado como parâmetro, usamos o getter e setter.
 

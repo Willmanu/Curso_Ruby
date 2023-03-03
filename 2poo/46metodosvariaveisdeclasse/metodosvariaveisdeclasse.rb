@@ -8,9 +8,9 @@ estados compartilhados, entre todas as instâncias.
 As classes e métodos  dos objetos, ou seja, de instancia, são dependentes do objeto.
 Para funcionarem no objeto, o mesmo precisa existir, ou seja, ser instanciado com o método .new
 
-Aqui a palavra instancia é o objeto em si que existe na memória.
+A palavra instancia é o objeto em si que existe na memória.
 
-Os métodos e variáveis de classe são independentes, não precisam que o objeto em si seja instanciado
+Os métodos e variáveis de classe são independentes, não precisam que o objeto seja instanciado
 para funcionarem.
 
 São muito uteis quando temos funcionalidades que não dependem, se o objeto está instanciado
@@ -19,7 +19,7 @@ Exemplo:
  pessoa.gerar
  
 Sabemos que o . é para chamar um método e realizar sua ou suas ações.
-Esse .gerar, tem como ação o poder de construir uma nova pessoa.
+Esse .gerar do exemplo, tem como ação o poder de construir uma nova pessoa.
 
 
                              Definindo métodos de classe
@@ -51,17 +51,18 @@ Este é o meu método de classe
 
 Se instanciarmos esta classe, o Ruby informa que o método gerar não existe.
 Exemplo:
+# esta trecho de código não funciona deve ser tirado se for testar os demais abaixo
 # exemplo de instanciar um método de classe
 class Pessoa1
   def self.gerar
-  	  p 'Este é o meu método de classe'
+    p 'Este é o meu método de classe'
   end
 end
 
 pessoa = Pessoa.new
 pessoa.gerar
-=end
 
+=end
 
 
 =begin
@@ -74,7 +75,7 @@ undefined method `gerar' for #<Pessoa:0x0000559eee6b3bd0> (NoMethodError)
 Aqui 'undefined method `gerar' for' que dizer que não á definição para o método.
 Aqui Pessoa:0x0000559eee6b3bd0 é o id do objeto Pessoa que foi criado.
 
-alterando o código para gerar o objeto a partir do método da classe fica assim:
+Alterando o código para gerar o objeto a partir do método da classe fica assim:
 
 =end
 
@@ -96,7 +97,7 @@ O resultado é:
 #<Pessoa2:0x000055d3d27c6c48>    e gerou o id do objeto, ou seja construiu o objeto através do método
 
 
-                                  Definindo variáveis pessoais
+                                  Definindo variáveis de classe
 A variável de classe é reconhecida com 2 arrobas no inicio do nome.
 exemplo:
 @@nome_da_variavel
@@ -113,7 +114,7 @@ class Pessoa3
 
   def self.gerar
     @@numerodepessoas3 += 1
-	p 'Cuidado com variáveis de classe, pode gerar muitos problemas'
+    p 'Cuidado com variáveis de classe, pode gerar muitos problemas'
     Pessoa3.new
   end
 
@@ -122,10 +123,10 @@ class Pessoa3
   end
 end
 
-pessoa3 = Pessoa3.gerar
-pessoa3 = Pessoa3.gerar
-pessoa3 = Pessoa3.gerar
-pessoa3 = Pessoa3.gerar
+Pessoa3.gerar
+Pessoa3.gerar
+Pessoa3.gerar
+Pessoa3.gerar
 
 p Pessoa3.numero_de_pessoas
 
