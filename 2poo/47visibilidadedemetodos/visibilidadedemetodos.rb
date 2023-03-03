@@ -13,6 +13,11 @@ chamado de qualquer lugar dentro ou fora da classe.
 
                                       private -> privado
 
-Este método só poe ser chamado de dentro de dentro da própria classe.
-Significando que outros objetos não terão acesso diretamente a estes métodos quando privados.
+Este método só pode ser chamado de dentro de dentro da própria classe.
+Significando que outros objetos não terão acesso diretamente a estes métodos quando
+privados.
+No entanto uma subclasse pode acessar este métodos privados, porque a subclasse recebe
+herança da classe que contém os métodos privados. Por isso o acesso é concedido.
+Exemplo:
+
 =end
