@@ -62,11 +62,11 @@ Classe Caneta                     Atributos
 
   Método rabiscar()               Métodos
     Se (tampada) entao            Escrever
-	  Escreva("Erro")             Rasbiscar
+	  Escreva("Erro")             Rabiscar
 	Senão                         Pintar
 	  Escreva("Rabisco")          Tampar
 	FimSe                         Destampar
-    Método tampar()                
+    Método tampar()
 	  tampada = verdadeiro        Estado
 	FimMétodo
   FimMétodo

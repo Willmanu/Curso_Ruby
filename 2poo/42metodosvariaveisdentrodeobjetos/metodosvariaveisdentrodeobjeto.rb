@@ -1,8 +1,12 @@
 =begin
                                Métodos e variáveis dentro de objetos
-
-Neste exemplo vamos criar um objeto que cumprimenta uma pessoa.
-O propósito é passar o nome de uma pessoa e gerar o Ola! nomepessoa.
+Sabemos que Atributos são as características do objeto e Métodos são as ações do objeto.
+Variáveis por assim dizer, carregam os atributos até os métodos para sua manipulação
+O nome pode ser um atributo de uma pessoa por exemplo. E através de um método podemos manipula-lo para
+um fim.
+Como exemplo vamos criar um objeto que cumprimenta uma pessoa.
+O propósito é passar o nome(atributo) de uma pessoa e gerar um cumprimento para essa pessoa reconhecida
+por seu nome.
 =end
 
 # classe que gera o cumprimento
@@ -17,8 +21,8 @@ class Cumprimentar
 end
 
 objeto = Cumprimentar.new
-objeto.imprimir_ola('William')
-
+objeto.imprimir_ola('William') # o ponto antes do nome representa uma chamada para o método
+                               # ou seja, chamando imprimir_ola para executar sua ação.
 =begin
 
 Antes da classe temos um comentário. Esse comentário faz parte da convenção ruby, para explicar esse

@@ -8,9 +8,12 @@ empaty
 heranca
 MAIUSCULA
 mensagemspritada
+metodosvariaveisdeclassepessoais
 metricas
 meuarray
+nomemetodo
 nomepessoa
+numerodepessoas
 objetocarro
 palindromo
 Pamella
