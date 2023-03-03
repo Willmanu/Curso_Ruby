@@ -32,6 +32,15 @@ class pessoa
   end
 end
 
+O termo "self" é uma abreviação da palavra inglesa "selfhood", que se refere à qualidade
+ou estado de ser um indivíduo ou objeto distinto e autônomo.
+Como tudo no Ruby é um objeto, essa palavra é aplicada para se referir ao objeto que está
+sendo manipulado no momento. Dizendo que este é um objeto próprio de seu construtor, que
+não é algo que é do Ruby, mas foi feito com o Ruby e tem suas características pessoais.
+É como se fosse uma etiqueta que assinalá um objeto, dizendo que este é único, distinto e
+pessoal.
+
+No caso o método .gerar é único, distinto e pessoal. 
 =end
 
 
