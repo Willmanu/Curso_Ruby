@@ -22,12 +22,15 @@ Exemplo:
 
 =end
 
+# testando o private
 class MinhaClass
   def m1
     p 'Método 1'
   end
 
-  private def m2
+  private
+
+  def m2
     p 'Método 2'
   end
 
@@ -59,4 +62,17 @@ interrompa a impressão do m3, porque esse eu quero que seja impresso.
 Exemplo:
 =end
 
-class 
+# só o método m2 será private
+class MinhaClass2
+  def m1
+    puts 'Método m1'
+  end
+
+  private def m2
+	puts 'Método m2'
+  end
+
+  def m3
+	puts 'Método 3'
+  end
+end
