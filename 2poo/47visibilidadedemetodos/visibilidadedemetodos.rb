@@ -26,14 +26,13 @@ class MinhaClass
   def m1
     p 'Método 1'
   end
-  
-  private
-  def m2
+
+  private def m2
     p 'Método 2'
   end
 
   def m3
-    p 'Método 4'
+    p 'Método 3'
   end
 end
 obj = MinhaClass.new
@@ -41,3 +40,23 @@ obj.m1
 obj.m2
 obj.m3
 
+=begin
+
+Neste caso os métodos m2 e m3 quero que sejam privados.
+Perceba que antes do(s) método(s) escrevi private.
+
+Após o end da MinhaClass inicializei o objeto e nas linhas abaixo chamei os metodo.
+O resultado foi:
+"Método 1"
+...private method `m2' called for #<MinhaClass:0x000055df02c2f470> (NoMethodError)
+
+O Ruby imprimiu o m1 e gerou um erro avisando que m2 é privado, e não chega a m3 porque
+temos um erro. Sendo assim o Rby interrompe o resto do código para resolver esta questão.
+
+Se eu quero que somente o m2 seja privado preciso indicar qual é o que será privado,
+escrevendo private na frente de def deste método, e tratar o erro para oque o Ruby não
+interrompa a impressão do m3, porque esse eu quero que seja impresso.
+Exemplo:
+=end
+
+class 
