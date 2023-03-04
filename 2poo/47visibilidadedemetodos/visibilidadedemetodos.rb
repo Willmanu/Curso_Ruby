@@ -21,3 +21,23 @@ herança da classe que contém os métodos privados. Por isso o acesso é conced
 Exemplo:
 
 =end
+
+class MinhaClass
+  def m1
+    p 'Método 1'
+  end
+  
+  private
+  def m2
+    p 'Método 2'
+  end
+
+  def m3
+    p 'Método 4'
+  end
+end
+obj = MinhaClass.new
+obj.m1
+obj.m2
+obj.m3
+
