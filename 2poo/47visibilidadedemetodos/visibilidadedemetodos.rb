@@ -13,17 +13,17 @@ chamado de qualquer lugar dentro ou fora da classe.
 
                                       private -> privado
 
-Este método só pode ser chamado de dentro de dentro da própria classe.
+Este método só pode ser chamado de dentro da própria classe.
 Significando que outros objetos não terão acesso diretamente a estes métodos quando
-privados.
-No entanto uma subclasse pode acessar este métodos privados, porque a subclasse recebe
+privado.
+No entanto uma subclasse pode acessar este método privado, porque a subclasse recebe
 herança da classe que contém os métodos privados. Por isso o acesso é concedido.
 Exemplo:
-
-=end
-
 # o método abaixo foi comentado para funcionar o próximo, para testar esse descomente
 =begin
+=end
+
+
 # testando o private
 class MinhaClass
   def m1
@@ -44,7 +44,7 @@ obj = MinhaClass.new
 obj.m1
 obj.m2
 obj.m3
-=end
+
 =begin
 
 Neste caso os métodos m2 e m3 quero que sejam privados.
@@ -56,7 +56,7 @@ O resultado foi:
 ...private method `m2' called for #<MinhaClass:0x000055df02c2f470> (NoMethodError)
 
 O Ruby imprimiu o m1 e gerou um erro avisando que m2 é privado, e não chega a m3 porque
-temos um erro. Sendo assim o Rby interrompe o resto do código para resolver esta questão.
+temos um erro. Sendo assim o Ruby interrompe o resto do código para resolver esta questão.
 
 Se eu quero que somente o m2 seja privado preciso indicar qual é o que será privado,
 escrevendo private na frente de def deste método, e tratar o erro para oque o Ruby não
@@ -91,3 +91,11 @@ rescue NoMethodError => e
 end
 
 class2.m3
+
+
+=begin
+
+
+
+
+=end
