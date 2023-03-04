@@ -19,11 +19,11 @@ privado.
 No entanto uma subclasse pode acessar este método privado, porque a subclasse recebe
 herança da classe que contém os métodos privados. Por isso o acesso é concedido.
 Exemplo:
-# o método abaixo foi comentado para funcionar o próximo, para testar esse descomente
-=begin
+
 =end
 
-
+# o método abaixo foi comentado para funcionar o próximo, para testar esse descomente
+=begin
 # testando o private
 class MinhaClass
   def m1
@@ -44,7 +44,7 @@ obj = MinhaClass.new
 obj.m1
 obj.m2
 obj.m3
-
+=end
 =begin
 
 Neste caso os métodos m2 e m3 quero que sejam privados.
@@ -83,11 +83,9 @@ class2 = MinhaClass2.new
 class2.m1
 
 begin
-
-	class2.m2
-
+  class2.m2
 rescue NoMethodError => e
-	p e.message
+  p e.message
 end
 
 class2.m3
@@ -95,7 +93,22 @@ class2.m3
 
 =begin
 
+Escrevei o private a frente do def do m2 e tornei ele privado.
 
+Após iniciar o objeto, perceba que chamei o m2 entre o begin e o end, ou seja, dentro de um
+bloco chamado recue, para que o programa não seja interrompido.
+Exemplo
 
+begin
+rescue NoMethodError => e
+p e.message
+end
 
+Isso é uma construção do Ruby que usa o bloco begin-rescue para capturar erros e tratá-los
+de forma adequada.
+O bloco begin-rescue é usado para capturar esse erro e executar um bloco de código alternativo
+em vez de interromper o programa com uma exceção não tratada.
+
+O bloco begin define o início do bloco de código a ser executado.
+Em seguida, é feita a chamada ao método m2 no objeto 
 =end
