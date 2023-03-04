@@ -22,6 +22,8 @@ Exemplo:
 
 =end
 
+# o método abaixo foi comentado para funcionar o próximo, para testar esse descomente
+=begin
 # testando o private
 class MinhaClass
   def m1
@@ -42,7 +44,7 @@ obj = MinhaClass.new
 obj.m1
 obj.m2
 obj.m3
-
+=end
 =begin
 
 Neste caso os métodos m2 e m3 quero que sejam privados.
@@ -76,3 +78,16 @@ class MinhaClass2
 	puts 'Método 3'
   end
 end
+
+class2 = MinhaClass2.new
+class2.m1
+
+begin
+
+	class2.m2
+
+rescue NoMethodError => e
+	p e.message
+end
+
+class2.m3
