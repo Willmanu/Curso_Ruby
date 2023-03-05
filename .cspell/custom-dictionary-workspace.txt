@@ -9,13 +9,16 @@ empaty
 heranca
 MAIUSCULA
 mensagemspritada
+metodosvariaveisdeclasse
 metodosvariaveisdeclassepessoais
 metricas
 meuarray
+minhaclasseprivate
 nomemetodo
 nomepessoa
 numerodepessoas
 objetocarro
+objsubclasse
 palindromo
 Pamella
 prefirível
