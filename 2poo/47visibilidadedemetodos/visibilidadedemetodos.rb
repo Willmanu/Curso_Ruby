@@ -58,6 +58,8 @@ O resultado foi:
 O Ruby imprimiu o m1 e gerou um erro avisando que m2 é privado, e não chega a m3 porque
 temos um erro. Sendo assim o Ruby interrompe o resto do código para resolver esta questão.
 
+	                Definindo somente um método como private e tratando erro
+
 Se eu quero que somente o m2 seja privado preciso indicar qual é o que será privado,
 escrevendo private na frente de def deste método, e tratar o erro para oque o Ruby não
 interrompa a impressão do m3, porque esse eu quero que seja impresso.
@@ -96,7 +98,7 @@ class2.m3
 Escrevei o private a frente do def do m2 e tornei ele privado.
 
 Após iniciar o objeto, perceba que chamei o m2 entre o begin e o end, ou seja, dentro de um
-bloco chamado recue, para que o programa não seja interrompido.
+bloco chamado rescue, para que o programa não seja interrompido.
 Exemplo
 
 begin
@@ -110,5 +112,17 @@ O bloco begin-rescue é usado para capturar esse erro e executar um bloco de có
 em vez de interromper o programa com uma exceção não tratada.
 
 O bloco begin define o início do bloco de código a ser executado.
-Em seguida, é feita a chamada ao método m2 no objeto 
+Em seguida, é feita a chamada ao método m2 no objeto
+Se essa chamada causar um erro, a execução do programa será interrompida e o bloco rescue será
+executado em vez disso.
+O bloco rescue define o código a ser executado se ocorrer um erro do tipo especificado.
+No caso, o tipo de erro especificado é NoMethodError. O operador => é usado para associar a
+exceção capturada com uma variável local e.
+Essa variável contém informações sobre a exceção que foi capturada, como a mensagem de erro.
+Dentro do bloco rescue, a mensagem de erro é impressa usando o método p, que exibe o conteúdo
+da variável e.message no console.
+Depois que o bloco rescue é executado, o programa continua a ser executado normalmente, a
+partir da linha seguinte à que causou o erro.
+No caso, a execução continuaria com a chamada ao método m3.
+
 =end
