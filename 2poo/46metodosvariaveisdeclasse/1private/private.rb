@@ -181,19 +181,13 @@ Método m1
 "private method `m2' called for #<MinhaClass2:0x000055dd3dcac090>"
 Método 3
 
-Imprimiu o m1
+Imprimiu o Método m1
 gerou o erro de m2 através do bloco rescue
-Imprimiu o m3
+Imprimiu o Método m3
 
-Vendo se subclasse chama os métodos private de MinhaClasse
-
-class Subclasse < MinhaClass
-  def m4
-  	puts 'Método 4'
-  	m1
-  	m2
-  	m3
-  end
-end
+                   Vendo se subclasse chama os métodos private de MinhaClasse
+Para isso criei um diretório chamado subclasseacessandoprivate, para testar essa possibilidade
+Veja esse teste lá.
 
 =end
+
