@@ -22,7 +22,7 @@ Exemplo:
 
 =end
 =begin
-# o método abaixo foi comentado para funcionar o próximo, para testar esse descomente
+# o método abaixo foi comentado para funcionar o próximo, para testar esse o descomente
 # testando o private
 class MinhaClass
   def m1
@@ -49,7 +49,7 @@ obj.m3
 Neste caso os métodos m2 e m3 quero que sejam privados.
 Perceba que antes do(s) método(s) escrevi private.
 
-Após o end da MinhaClass inicializei o objeto e nas linhas abaixo chamei os metodo.
+Após o end da MinhaClass inicializei o objeto e nas linhas abaixo chamei os metodo m2 e m3.
 O resultado foi:
 "Método 1" -> imprimiu o m1
 ...private method `m2' called for #<MinhaClass:0x000055df02c2f470> (NoMethodError)
@@ -60,16 +60,20 @@ temos um erro. Sendo assim o Ruby interrompe o resto do código para resolver es
 
 	                   A classe chamando os próprios método private
 
-
+O que vou fazer agora é inserir o m2 e m3 em def m1, e ver se essa classe chama esses
+métodos que são private
 =end
 
+=begin
+# este foi comentado para ver se o abaixo funciona
+# vendo se a classe chama os métodos privados
 class MinhaClass
   def m1
     p 'Método 1'
     m2
     m3
   end
-  
+
   private
 
   def m2
@@ -84,24 +88,30 @@ obj = MinhaClass.new
 obj.m1
 obj.m2
 obj.m3
-
-class Subclasse < MinhaClass
-  def m4
-  	puts 'Método 4'
-  	m1
-  	m2
-  	m3
-  end
-end
+=end
 
 =begin
 
-	                Definindo somente um método como private e tratando erro
+Veja a impressão:
+"Método 1"
+"Método 2"
+"Método 3"
+private method `m2' called for #<MinhaClass:0x000056089861e468> (NoMethodError)
+
+Como esperado o Ruby imprimi o m2 e m3 que estão dentro do método m1, porque é a própria classe
+quem está chamando os métodos private. Provando assim que métodos private quando chamados pela
+própria classe eles respondem.
+
+E o chamado de obj.m2 e obj.m3 não consegue acessar o métodos private.
+
+
+                     Deixando somente o m2 private e tratando erro para que m3 seja impresso
 
 Se eu quero que somente o m2 seja privado preciso indicar qual é o que será privado,
 escrevendo private na frente de def deste método, e tratar o erro para oque o Ruby não
 interrompa a impressão do m3, porque esse eu quero que seja impresso.
 Exemplo:
+
 =end
 
 # só o método m2 será private
@@ -168,5 +178,14 @@ Método m1
 "private method `m2' called for #<MinhaClass2:0x000055dd3dcac090>"
 Método 3
 
+
+class Subclasse < MinhaClass
+  def m4
+  	puts 'Método 4'
+  	m1
+  	m2
+  	m3
+  end
+end
 
 =end
