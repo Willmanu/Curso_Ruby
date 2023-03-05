@@ -1,15 +1,16 @@
 =begin
                                       Visibilidade de Métodos
 Visibilidade de Métodos se refere ao controle de acesso aos métodos em classe.
-São regras que determinam se um método pode ser chamado por um outro.
+São regras que determinam se um método pode ser chamado por um outro, e assim expor o comportamento
+dos métodos.
 Existem três níveis de visibilidades em Ruby:
 public -> público
 private -> privado
 protected -> protegido
 
                                      public -> público
-Por padrão o Ruby deixa os métodos públicos. Isso quer dizer que este método pode ser
-chamado de qualquer lugar dentro ou fora da classe.
+Por padrão o Ruby deixa os métodos públicos, ou seja, o comportamento dos métodos expostos.
+Isso quer dizer que este método pode ser chamado de qualquer lugar dentro ou fora da classe.
 
                                       private -> privado
 
@@ -17,7 +18,8 @@ Este método só pode ser chamado de dentro da própria classe.
 Significando que outros objetos não terão acesso diretamente a estes métodos quando
 privado.
 No entanto uma subclasse pode acessar este método privado, porque a subclasse recebe
-herança da classe que contém os métodos privados. Por isso o acesso é concedido.
+herança da classe que contém os métodos privados. E por fazerem parte do mesmo contexto, ou seja,
+do mesmo objeto em memória o acesso é concedido.
 Exemplo:
 
 =end

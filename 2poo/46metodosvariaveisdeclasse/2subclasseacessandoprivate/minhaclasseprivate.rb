@@ -16,8 +16,3 @@ class MinhaClassePrivate
 end
 obj = MinhaClassePrivate.new
 obj.m1
-
-=begin
-obj.m2
-obj.m3
-=end

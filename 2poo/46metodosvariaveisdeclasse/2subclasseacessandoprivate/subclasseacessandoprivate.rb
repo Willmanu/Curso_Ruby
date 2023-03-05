@@ -63,4 +63,8 @@ Método 4                     Esse as demais abaixo são a impressão de Subclas
 "Método 3"
 
 Mesmo que em MinhaClassePrivate os métodos m2 e m3 sejam privados a Subclasse consegue acessar.
+Isso porque os métodos estão no mesmo objeto.
+O ruby permite que os métodos private sejam impressos nas subclasse, se estes forem do mesmo
+contexto, ou seja, do mesmo objeto em memória.
+
 =end
