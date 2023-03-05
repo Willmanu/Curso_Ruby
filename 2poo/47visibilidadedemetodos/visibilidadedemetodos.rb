@@ -1,7 +1,7 @@
 =begin
                                       Visibilidade de Métodos
 Visibilidade de Métodos se refere ao controle de acesso aos métodos em classe.
-São regras que determinam se um método pode ser chamado um outro.
+São regras que determinam se um método pode ser chamado por um outro.
 Existem três níveis de visibilidades em Ruby:
 public -> público
 private -> privado
@@ -21,7 +21,7 @@ herança da classe que contém os métodos privados. Por isso o acesso é conced
 Exemplo:
 
 =end
-
+=begin
 # o método abaixo foi comentado para funcionar o próximo, para testar esse descomente
 # testando o private
 class MinhaClass
@@ -43,7 +43,7 @@ obj = MinhaClass.new
 obj.m1
 obj.m2
 obj.m3
-
+=end
 =begin
 
 Neste caso os métodos m2 e m3 quero que sejam privados.
@@ -51,25 +51,47 @@ Perceba que antes do(s) método(s) escrevi private.
 
 Após o end da MinhaClass inicializei o objeto e nas linhas abaixo chamei os metodo.
 O resultado foi:
-"Método 1"
+"Método 1" -> imprimiu o m1
 ...private method `m2' called for #<MinhaClass:0x000055df02c2f470> (NoMethodError)
 
 O Ruby imprimiu o m1 e gerou um erro avisando que m2 é privado, e não chega a m3 porque
 temos um erro. Sendo assim o Ruby interrompe o resto do código para resolver esta questão.
 
 
-	                   Subclasse chamando os método private
-
+	                   A classe chamando os próprios método private
 
 
 =end
 
+class MinhaClass
+  def m1
+    p 'Método 1'
+    m2
+    m3
+  end
+  
+  private
+
+  def m2
+    p 'Método 2'
+  end
+
+  def m3
+    p 'Método 3'
+  end
+end
+obj = MinhaClass.new
+obj.m1
+obj.m2
+obj.m3
+
 class Subclasse < MinhaClass
-def m4
-	puts 'Método 4'
-	m1
-	m2
-	m3
+  def m4
+  	puts 'Método 4'
+  	m1
+  	m2
+  	m3
+  end
 end
 
 =begin
