@@ -24,6 +24,7 @@ Exemplo:
 
 # o método abaixo foi comentado para funcionar o próximo, para testar esse descomente
 =begin
+=end
 # testando o private
 class MinhaClass
   def m1
@@ -44,7 +45,7 @@ obj = MinhaClass.new
 obj.m1
 obj.m2
 obj.m3
-=end
+
 =begin
 
 Neste caso os métodos m2 e m3 quero que sejam privados.
@@ -57,6 +58,15 @@ O resultado foi:
 
 O Ruby imprimiu o m1 e gerou um erro avisando que m2 é privado, e não chega a m3 porque
 temos um erro. Sendo assim o Ruby interrompe o resto do código para resolver esta questão.
+
+
+	                   Subclasse chamando os método private
+
+
+
+=end
+
+=begin
 
 	                Definindo somente um método como private e tratando erro
 
@@ -91,7 +101,6 @@ rescue NoMethodError => e
 end
 
 class2.m3
-
 
 =begin
 
