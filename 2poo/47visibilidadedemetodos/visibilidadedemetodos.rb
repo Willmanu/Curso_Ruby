@@ -23,8 +23,6 @@ Exemplo:
 =end
 
 # o método abaixo foi comentado para funcionar o próximo, para testar esse descomente
-=begin
-=end
 # testando o private
 class MinhaClass
   def m1
@@ -65,6 +63,14 @@ temos um erro. Sendo assim o Ruby interrompe o resto do código para resolver es
 
 
 =end
+
+class Subclasse < MinhaClass
+def m4
+	puts 'Método 4'
+	m1
+	m2
+	m3
+end
 
 =begin
 
@@ -110,10 +116,10 @@ Após iniciar o objeto, perceba que chamei o m2 entre o begin e o end, ou seja, 
 bloco chamado rescue, para que o programa não seja interrompido.
 Exemplo
 
-begin
+\begin
 rescue NoMethodError => e
 p e.message
-end
+\end
 
 Isso é uma construção do Ruby que usa o bloco begin-rescue para capturar erros e tratá-los
 de forma adequada.
@@ -139,9 +145,6 @@ Veja a impressão:
 Método m1
 "private method `m2' called for #<MinhaClass2:0x000055dd3dcac090>"
 Método 3
-
-
-                                         protected -> protegido
 
 
 =end
