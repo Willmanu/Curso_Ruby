@@ -65,7 +65,7 @@ métodos que são private
 =end
 
 =begin
-# este foi comentado para ver se o abaixo funciona
+# este foi comentado para ver se o abaixo funciona se quiser testar esse descomente-o
 # vendo se a classe chama os métodos privados
 class MinhaClass
   def m1
@@ -107,9 +107,11 @@ E o chamado de obj.m2 e obj.m3 não consegue acessar o métodos private.
 
                      Deixando somente o m2 private e tratando erro para que m3 seja impresso
 
-Se eu quero que somente o m2 seja privado preciso indicar qual é o que será privado,
-escrevendo private na frente de def deste método, e tratar o erro para oque o Ruby não
-interrompa a impressão do m3, porque esse eu quero que seja impresso.
+Se eu quero que somente o m2 seja privado preciso indicar qual é o que será privado
+Para isso após o end de m2 e antes de inciar o método m3, escreve-se a palavra:
+private :m2
+E quando for chamar o m2 precisamos criar um bloco de rescue para que o programa não 
+interrompa a impressão do m3.
 Exemplo:
 
 =end
@@ -120,38 +122,39 @@ class MinhaClass2
     puts 'Método m1'
   end
 
-  private def m2
-	puts 'Método m2'
+  def m2
+    puts 'Método m2'
   end
 
+  private :m2
+
   def m3
-	puts 'Método 3'
+    puts 'Método 3'
   end
 end
 
-class2 = MinhaClass2.new
-class2.m1
+obj = MinhaClass2.new
+obj.m1
 
 begin
-  class2.m2
+  obj.m2
 rescue NoMethodError => e
   p e.message
 end
 
-class2.m3
+obj.m3
 
 =begin
-
-Escrevei o private a frente do def do m2 e tornei ele privado.
 
 Após iniciar o objeto, perceba que chamei o m2 entre o begin e o end, ou seja, dentro de um
 bloco chamado rescue, para que o programa não seja interrompido.
 Exemplo
 
-\begin
+begin
+  obj.m2
 rescue NoMethodError => e
-p e.message
-\end
+  p e.message
+end
 
 Isso é uma construção do Ruby que usa o bloco begin-rescue para capturar erros e tratá-los
 de forma adequada.
@@ -178,6 +181,11 @@ Método m1
 "private method `m2' called for #<MinhaClass2:0x000055dd3dcac090>"
 Método 3
 
+Imprimiu o m1
+gerou o erro de m2 através do bloco rescue
+Imprimiu o m3
+
+Vendo se subclasse chama os métodos private de MinhaClasse
 
 class Subclasse < MinhaClass
   def m4
