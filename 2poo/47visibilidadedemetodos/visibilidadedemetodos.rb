@@ -125,4 +125,12 @@ Depois que o bloco rescue é executado, o programa continua a ser executado norm
 partir da linha seguinte à que causou o erro.
 No caso, a execução continuaria com a chamada ao método m3.
 
+Veja a impressão:
+
+Método m1
+"private method `m2' called for #<MinhaClass2:0x000055dd3dcac090>"
+Método 3
+
+
+
 =end
