@@ -11,16 +11,18 @@ Conta1.transferir(conta2,100) onde 100 é o valor que eu desejo transferir.
 
 # Esta representa uma conta bancaria
 class ContaBancaria
+  def initialize
+    @nome = nil
+	@agencia = nil
+  end
   def dadospessoais(nome, agencia, conta)
     @nome = nome
     @agencia = agencia
     @conta = conta
   end
 
-  def conta1.transferir(contadestino, valortransferir)
+  def contatransferir(contadestino, valortransferir)
     @contadestino = contadestino
     @valortransferir = valortransferir
   end
 end
-
-contabancaria = ContaBancaria.new

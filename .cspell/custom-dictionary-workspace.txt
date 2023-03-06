@@ -4,11 +4,16 @@ bomdiasol
 booleana
 classecarro
 classeprotected
+Cobranca
+cobrancaaotransferir
+contabancaria
 contadestino
+contatransferir
 dadospessoais
 descomente
 divid
 empaty
+exerciciocontabancaria
 heranca
 MAIUSCULA
 mensagemspritada
