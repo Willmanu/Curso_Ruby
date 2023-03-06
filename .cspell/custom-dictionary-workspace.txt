@@ -4,6 +4,8 @@ bomdiasol
 booleana
 classecarro
 classeprotected
+contadestino
+dadospessoais
 descomente
 divid
 empaty
@@ -34,5 +36,6 @@ subcadeia
 subclasseacessandoprivate
 textão
 unica
+valortransferir
 variavel
 writter
