@@ -19,6 +19,8 @@ class ContaBancaria
 
   def conta1.transferir(contadestino, valortransferir)
     @contadestino = contadestino
-	@valortransferir = valortransferir
+    @valortransferir = valortransferir
   end
 end
+
+contabancaria = ContaBancaria.new
