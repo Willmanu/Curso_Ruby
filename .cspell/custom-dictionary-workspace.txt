@@ -5,6 +5,7 @@ booleana
 classecarro
 classeprotected
 Cobranca
+cobrancaaotranferir
 cobrancaaotransferir
 cobrancaaotransferiri
 cobrancatransferir

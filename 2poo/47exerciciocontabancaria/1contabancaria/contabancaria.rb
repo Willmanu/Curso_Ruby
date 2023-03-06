@@ -12,27 +12,28 @@ Conta1.transferir(conta2,100) onde 100 é o valor que eu desejo transferir.
 # Esta representa uma conta bancaria
 class ContaBancaria
   def initialize
-    @nome = nil
-    @agencia = nil
-    @conta = nil
-    @contadestino = nil
-    @valortransferir = nil
+    @nome = ''
+    @agencia = ''
+    @conta = ''
+    @contadestino = ''
+    @valortransferir = ''
   end
 
   def dadospessoais
     puts 'Digite seu nome completo'
-    @nome.gets.chomp
+    @nome = $stdin.gets.chomp
 
     puts 'Digite sua agencia'
-    @agencia.gets.chomp
+    @agencia = $stdin.gets.chomp
 
     puts 'Digite o nº da sua conta'
-    @conta.gets.chomp
+    @conta = $stdin.gets.chomp
 
     puts 'Qual é a conta destino'
-    @contadestino.gets.chomp
+    @contadestino = $stdin.gets.chomp
 
     puts 'Qual valor vc deseja transferir para essa conta'
-    @valortransferir.gets.chomp.to_f
+    @valortransferir = $stdin.gets.chomp.to_f
   end
 end
+
