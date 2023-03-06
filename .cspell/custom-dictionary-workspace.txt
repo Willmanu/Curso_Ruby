@@ -44,6 +44,7 @@ sintaxuguer
 subcadeia
 subclasseacessandoprivate
 textão
+transferencia
 unica
 valortransferir
 variavel

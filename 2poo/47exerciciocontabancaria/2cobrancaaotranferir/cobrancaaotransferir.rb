@@ -11,7 +11,9 @@ class CobrancaAoTransferir < ContaBancaria
     dadospessoais
     @cobranca = @valortransferir * 0.01.to_f
     puts "O valo de #{@valortransferir}\n de transferência para a conta #{@contadestino}\n"\
-    " foi feito por #{@nome}\n que tem como agencia #{@agencia} e conta #{@conta}"
+    " foi feito por #{@nome}\n que tem como agencia #{@agencia} e conta #{@conta}\n"\
+    "Será cobrado pela transferência o valor de #{@cobranca} ao S.r #{@nome}\n"\
+    'Grato pela preferencia!'
   end
 end
 
