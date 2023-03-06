@@ -3,9 +3,9 @@
 Em Ruby, um método é um bloco de código que pode ser chamado várias vezes em diferentes
 partes do programa.
 É basicamente uma função que executa uma tarefa específica.
-Os métodos em Ruby são definidos usando a palavra-chave "def", seguida pelo nome do método
-e seus parâmetros, se houver, terminam com "end" e no meio entre def e end temos o bloco
-de código.
+Os métodos em Ruby são definidos usando a palavra-chave "def" (abreviação de defining- definindo)
+seguida pelo nome do método e seus parâmetros, se houver, terminam com "end" e no meio entre
+def e end temos o bloco de código.
 
 def nome_metodo (parâmetros)
   bloco de código
