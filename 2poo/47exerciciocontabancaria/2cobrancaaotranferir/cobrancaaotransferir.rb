@@ -1,12 +1,12 @@
-require './2poo/47exerciciocontabancaria/contabancaria'
+require './2poo/47exerciciocontabancaria/1contabancaria/contabancaria'
 
 # Classe que gera um valor ao transferir dinheiro
 class CobrancaAoTransferir < ContaBancaria
   def cobrancaaotransferir
     ContaBancaria.new
-	puts 'Insira seus nome,agencia e nº de conta'
-    ContaBancaria.dadospessoais.gets()
-	('William P. Silva', '1', '001')
-    ContaBancaria.contatransferir('006', 1250)
+    ContaBancaria.dadospessoais
   end
 end
+
+cobrancaaotransferir = CobrancaAoTransferir.new
+cobrancaaotransferir.cobrancaaotransferir

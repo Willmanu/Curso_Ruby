@@ -6,6 +6,8 @@ classecarro
 classeprotected
 Cobranca
 cobrancaaotransferir
+cobrancaaotransferiri
+cobrancatransferir
 contabancaria
 contadestino
 contatransferir
