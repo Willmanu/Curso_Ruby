@@ -4,6 +4,7 @@ bomdiasol
 booleana
 classecarro
 classeprotected
+cobranca
 Cobranca
 cobrancaaotranferir
 cobrancaaotransferir
