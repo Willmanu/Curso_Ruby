@@ -18,6 +18,7 @@ class ContaBancaria
   end
 
   def conta1.transferir(contadestino, valortransferir)
-
+    @contadestino = contadestino
+	@valortransferir = valortransferir
   end
 end
