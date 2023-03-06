@@ -112,7 +112,7 @@ E o chamado de obj.m2 e obj.m3 não consegue acessar o métodos private.
 Se eu quero que somente o m2 seja privado preciso indicar qual é o que será privado
 Para isso após o end de m2 e antes de inciar o método m3, escreve-se a palavra:
 private :m2
-E quando for chamar o m2 precisamos criar um bloco de rescue para que o programa não 
+E quando for chamar o m2 precisamos criar um bloco de rescue para que o programa não
 interrompa a impressão do m3.
 Exemplo:
 
@@ -186,6 +186,10 @@ Método 3
 Imprimiu o Método m1
 gerou o erro de m2 através do bloco rescue
 Imprimiu o Método m3
+
+O ruby tem uma forma de chamar um método private usando .send, porém isso é uma gambiarra
+não é recomendado fazer isso.
+
 
                    Vendo se subclasse chama os métodos private de MinhaClasse
 Para isso criei um diretório chamado subclasseacessandoprivate, para testar essa possibilidade

@@ -3,12 +3,14 @@ actionview
 bomdiasol
 booleana
 classecarro
+classeprotected
 descomente
 divid
 empaty
 heranca
 MAIUSCULA
 mensagemspritada
+metodomodeloprotected
 metodosvariaveisdeclasse
 metodosvariaveisdeclassepessoais
 metricas

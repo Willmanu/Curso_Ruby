@@ -1,5 +1,10 @@
-require '/home/william/workspace/estudoruby/Curso_Ruby/2poo/46metodosvariaveisdeclasse/2subclasseacessandoprivate/minhaclasseprivate'
-
+require '/home/william/workspace/estudoruby/Curso_Ruby/'\
+'2poo/46metodosvariaveisdeclasse/2subclasseacessandoprivate/'\
+'minhaclasseprivate'
+=begin
+  Este endereço ficou muito grande e pode dificultar a leitura.
+  Por esse motivo usei uma barra para esquerda para quebrar a linha e assim a visualização ficar mai fácil
+=end
 =begin
 
 Aqui vou criar uma classe chamada Subclasse que tém um método m4.
