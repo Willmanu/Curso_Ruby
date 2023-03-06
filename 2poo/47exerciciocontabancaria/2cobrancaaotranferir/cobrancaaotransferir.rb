@@ -7,13 +7,13 @@ class CobrancaAoTransferir < ContaBancaria
     super
   end
 
-  def dadospessoais
+  def cobrancaaotransferir
+    dadospessoais
     @cobranca = @valortransferir * 0.01.to_f
-    puts "O valo de #{@valortransferir} de transferência para a conta#{@contadestino}"\
-    " foi feito por #{@nome} que tem como agencia #{@agencia} e conta #{@conta}"
-    super
+    puts "O valo de #{@valortransferir}\n de transferência para a conta #{@contadestino}\n"\
+    " foi feito por #{@nome}\n que tem como agencia #{@agencia} e conta #{@conta}"
   end
 end
 
 cobrancaaotransferir = CobrancaAoTransferir.new
-cobrancaaotransferir.dadospessoais
+cobrancaaotransferir.cobrancaaotransferir
