@@ -35,3 +35,19 @@ class ContaBancaria
 
   protected :creditar
 end
+
+=begin
+
+Quando os atributos de conta_william e o objeto conta_pessoa2 entra aqui em ContaBancaria o
+método initialize cria as variáveis de objeto (as que estão com o @) e recebe o proprietario
+da ContaComTaxa que é o William e o valor inicial que ten em conta, que vieram para cá como
+parâmetro
+
+O método transferir recebe o objeto conta_pessoa2 com os seus atributos que é: a pessoa que vai
+receber a transferencia e o valor que ela tem em conta. Ele recebe também o valor de transferencia
+
+1º o método transferir verifica se o valor que o william tem na conta é maior ou igual ao
+valor_transferencia passados por parâmetro
+
+
+=end

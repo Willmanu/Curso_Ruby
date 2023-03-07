@@ -1,8 +1,14 @@
 =begin
-Este método transferir em ContaBancaria, recebe o Objeto instanciado conta_pessoa2 e o valor de
-transferencia do William, que está em valor_transferencia.
-Esse valores foram passados para ContaBancaria pela classe principal
+ Lembre-se que os valores de conta_william vieram para cá, quando ContaComTaxa foi instanciado
+ na memória
+ Quando conta_william chama o método transferir, é passado por parâmetro o objeto conta_pessoa2
+ com seus atributos que são nome da conta que vai receber a transferencia e o valor que este tem
+ em conta, e o atributo de conta_william que é o valor a ser transferido de 50 reais
 
+ Aqui este método transferir levas esse valores para ContaBancaria
+veja lá.
+
+ para cá e cai em pessoa2 e valor_transferencia
 Aqui o objetivo desta classe ContaComTaxa, é redefinir o método transferir
 O método transferir aqui recebe os mesmo valores que ContaBancaria recebeu: conta_pessoa2 e
 o valor_transferencia

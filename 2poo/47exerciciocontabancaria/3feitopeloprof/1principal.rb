@@ -1,10 +1,8 @@
+# O propósito aqui e fazer uma transferencia de uma conta para outra
+
 require './2poo/47exerciciocontabancaria/3feitopeloprof/feitopeloprof'
 require './2poo/47exerciciocontabancaria/3feitopeloprof/contacomtaxa'
 
-=begin
-O propósito aqui e fazer uam transferencia de uma conta para outra
-
-=end
 conta_william = ContaComTaxa.new('William', 100)
 
 conta_pessoa2 = ContaBancaria.new('pessoa2', 200)
@@ -28,7 +26,16 @@ p conta_william.saldo
 Neste arquivo principal iniciamos a ContaComTaxa e ContaBancaria
 ContaComTaxa tem esse nome porque será cobrado uma taxa de transferencia pela transferencia
 ContaComTaxa recebe por parametro o nome do dono da conta e o valor que ele tem em conta
-ContaBancaria recebe o dono da conta que vai receber a transferencia
+conta_pessoa2 representa a pessoa que vai receber a transferencia, e recebe a ContaBancaria que
+é onde tudo vai acontecer.
+Esta ContaBancaria foi instanciada com os valores da pessoa que vai receber a transferencia,
+ou seja, recebe o dono da conta que vai receber a transferencia e quanto este tem em conta
 
+O conta_William que é a ContaComTaxa chama um método transferir de ContaBancaria, com o
+objeto conta_pessoa e o valor de transferencia de 50 reais.
+Isso significa que o método transferir vai receber um objeto instanciado com valores.
+
+Os os atributos do objetos conta_william que é o ContaComTaxa vão para a classe ContaComTaxa
+veja lá.
 
 =end
