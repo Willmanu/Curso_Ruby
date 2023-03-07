@@ -27,6 +27,8 @@ e não continua a excussão da impressão da classe principal
 
 # Esta classe trata de cobrar uma taxa de transferencia
 class ContaComTaxa < ContaBancaria
+  # posso definir uma constante TAXA, com todas as letras maiúsculas recebendo o 2
+  # Exemplo -> TAXA = 2
   def self.taxa
     2
   end
