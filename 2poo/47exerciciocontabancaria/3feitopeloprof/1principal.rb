@@ -38,4 +38,11 @@ Isso significa que o método transferir vai receber um objeto instanciado com va
 Os os atributos do objetos conta_william que é o ContaComTaxa vão para a classe ContaComTaxa
 veja lá.
 
+Quando voltam para cá atualizados o programa imprimi na tela as atualizações mostrando que um
+foi debitado e o outro creditado
+
+Após imprimir o programa lê a linha que conta_william chama o método transferir novamente
+levando o objeto conta_pessoa2 e um novo valor de transferencia que é 60 reais.
+Lembre-se que conta_william e conta_pessoa2 estão atualizadas, ou seja, então indo para
+transferir de ContaComTaxa atualizadas
 =end

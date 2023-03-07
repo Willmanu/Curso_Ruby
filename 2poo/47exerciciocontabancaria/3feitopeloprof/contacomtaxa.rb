@@ -10,8 +10,16 @@ veja lá.
 
  Quando o método transferir retorna aqui ele lê o if e se o saldo for maior ou igual o valor da
  transferencia, o programa entra no super e trás para cá os valores atualizados.
- Sendo verdadeiro o estado dos valores atuais
+ Sendo verdadeiro o estado dos valores atuais chama debitar levando 2 e lá retira do valor atual
+mais 2 deixando com 48
 
+Após isso parte para retornar a classe principal com os valores atualizados tanto de
+conta_william como conta_pessoa2.
+veja lá.
+
+Aqui novamente no método transferir com o objeto pessoa2 atualizada e um novo valor de
+60 reais de transferencia, vai para ContaBancaria com esse atributo de 60 e o objeto pessoa2
+veja lá
 =end
 
 # Esta classe trata de cobrar uma taxa de transferencia
@@ -20,6 +28,6 @@ class ContaComTaxa < ContaBancaria
     if saldo >= valor_transferencia
       super(pessoa2, valor_transferencia)
       debitar(2)
-	end
+    end
   end
 end

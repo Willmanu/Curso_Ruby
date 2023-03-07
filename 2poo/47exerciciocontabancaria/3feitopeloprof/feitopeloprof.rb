@@ -14,8 +14,8 @@ class ContaBancaria
       pessoa2.creditar(valor_transferencia)
     else
       # não faz nada
-      puts 'Saldo insuficiente! Por favor verifique o valor em sua conta'
-      puts "Você está tentando transferi #{valor_transferencia}, porém em sua conta tem #{saldo}"
+      raise puts "Saldo insuficiente! Por favor verifique o valor em sua conta\n"\
+      "Você está tentando transferi #{valor_transferencia}, porém em sua conta tem #{saldo}"
     end
   end
 
@@ -60,5 +60,14 @@ Após isso sendo verdadeiro o objeto Conta_pessoa2 que aqui esta na variável pe
 atributos, chama o método creditar. E o initialize pega os atributos de pessoa2.
 O método creditar pega a variavel valorinicial do initialize, que contém o valor em conta da
 pessoa que vai receber a transferencia, e acrescenta nesta o valor_transferencia que chega aqui
-por parâmetro e retorna para o método transferir
+por parâmetro e retorna para o método transferir de ContaComTaxa e retorna para a classe principal
+veja lá.
+
+Entrando aqui novamente no método transferir, com o objeto pessoa2 atualizado e 60 reais para
+transferir, o programa entra no if e verifica se o valor que o william tem na conta é maior ou
+igual ao valor_transferencia passados por parâmetro, se for verdade chama os métodos creditar e
+debitar e faz o que fez anteriormente debitando em um  e credito no outro.
+Se for falso entra no else e vê o raise, então encerra o processo e retorna um erro para ContaComTaxa
+ao super 
+veja lá
 =end
