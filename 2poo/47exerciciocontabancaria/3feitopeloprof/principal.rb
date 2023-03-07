@@ -6,5 +6,8 @@ conta_pessoa2 = ContaBancaria.new('pessoa2', 200)
 
 conta_william.transferir(conta_pessoa2, 50)
 
+P 'A conta do William'
 p conta_william.saldo   # 50
+
+p "A conta do pessoa2"
 p conta_pessoa2.saldo   # 250
