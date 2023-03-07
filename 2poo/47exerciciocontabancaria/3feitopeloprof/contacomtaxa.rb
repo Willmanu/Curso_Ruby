@@ -8,16 +8,9 @@
  Aqui este método transferir levas esse valores para ContaBancaria
 veja lá.
 
- para cá e cai em pessoa2 e valor_transferencia
-Aqui o objetivo desta classe ContaComTaxa, é redefinir o método transferir
-O método transferir aqui recebe os mesmo valores que ContaBancaria recebeu: conta_pessoa2 e
-o valor_transferencia
-O super trás o mesmo comportamento da classe pai ContaBancaria
-Definindo Super na primeira linha do método, o programa trás aqui os valores que fores feitos
-na classe ContaBancaria, ou seja, o resultado de ContaBancaria classe pai está aqui.
-O método debitar é chamado e leva o valor de 2 reais que é a taxa a ser cobrado.
-Quando chega em ContaBancaria o valor inicial ja está com o debito do valor_transferir, e desse
-valor debitado retira a taxa que é 2 reais.
+ Quando o método transferir retorna aqui ele lê o if e se o saldo for maior ou igual o valor da
+ transferencia, o programa entra no super e trás para cá os valores atualizados.
+ Sendo verdadeiro o estado dos valores atuais
 
 =end
 
@@ -27,6 +20,6 @@ class ContaComTaxa < ContaBancaria
     if saldo >= valor_transferencia
       super(pessoa2, valor_transferencia)
       debitar(2)
-    end
+	end
   end
 end
