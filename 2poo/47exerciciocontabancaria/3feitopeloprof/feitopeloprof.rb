@@ -6,6 +6,11 @@ class ContaBancaria
   end
 
   def transferir(pessoa2, valor_transferencia)
+    #logica de transferencia
+
+    if @valorinicial >= valor_transferencia # vendo se tem saldo para transferencia
+      
+	end
   end
 
   def saldo
