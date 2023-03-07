@@ -14,4 +14,7 @@ p conta_pessoa2.saldo   #  aqui que é 250 recebendo 50 tem que ficar 300
 
 
 # caso de teste de conta sem saldo
-conta_william.transferir(conta_pessoa2, 50)
+conta_william.transferir(conta_pessoa2, 60) # teste que tem que falhar
+p 'A conta do William'
+p conta_william.saldo
+
