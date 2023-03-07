@@ -16,9 +16,13 @@ p 'A conta do pessoa2'
 p conta_pessoa2.saldo   #  aqui que é 250 recebendo 50 tem que ficar 300
 
 # caso de teste de conta sem saldo
-conta_william.transferir(conta_pessoa2, 60) # teste que tem que falhar
-p 'A conta do William'
-p conta_william.saldo
+
+begin
+  conta_william.transferir(conta_pessoa2, 60) # teste que tem que falhar
+rescue StandardError => e
+  p e.message
+end
+
 
 =begin
 
@@ -43,5 +47,19 @@ foi debitado e o outro creditado
 Após imprimir o programa lê a linha que conta_william chama o método transferir novamente
 levando o objeto conta_pessoa2 e um novo valor de transferencia que é 60 reais.
 Lembre-se que conta_william e conta_pessoa2 estão atualizadas, ou seja, então indo para
-transferir de ContaComTaxa atualizadas
+transferir de ContaComTaxa atualizadas.
+Vamos lá ver.
+Observação:
+Este bloco com rescue faz parte do tratamento de erro que esta em ContaComTaxa, no bloco
+condicional temos um método chamado raise que gera um TypError.
+Este TypeError quando executado, interrompe o programa e apresenta o erro. Se tiver mais código
+depois desta linha, por conta do TypeError não será lido esta linha. Então cria-se este bloco
+rescue que armazena esta mensagem de erro e imprime esta mensagem sem interromper as demais
+linhas de código.
+
+
+
+apidock.com ruby
+
+
 =end
