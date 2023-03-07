@@ -18,19 +18,27 @@ conta_william como conta_pessoa2.
 veja lá.
 
 Aqui novamente no método transferir com o objeto pessoa2 atualizada e um novo valor de
-60 reais de transferencia, vai para ContaBancaria com esse atributo de 60 e o objeto pessoa2
-veja lá
+60 reais de transferencia, entra no if se tiver saldo maior ou igual ao valor que se deseja
+fazer a transferencia, o programa ele entra na ContaBancaria e faz a transferencia
 =end
 
 # Esta classe trata de cobrar uma taxa de transferencia
 class ContaComTaxa < ContaBancaria
   def transferir(pessoa2, valor_transferencia)
     if saldo >= valor_transferencia
-      super
+      super(pessoa2, valor_transferencia) # olhe a explicação lá embaixo sobre esse trecho
       debitar(2)
     else
-      raise puts "Saldo insuficiente! Por favor verifique o valor em sua conta\n"\
+      puts "Saldo insuficiente! Por favor verifique o valor em sua conta\n"\
       "Você está tentando transferi #{valor_transferencia}, porém em sua conta tem #{saldo}"
     end
   end
 end
+
+=begin
+
+O método super vem em primeiro antes de debitar porque:
+1º ele realiza a transferencia depois quando volta debita o valor da taxa
+Outra coisa é que se os do método transferir são o mesmo do super, quando os parâmetros
+são iguais não é necessário passar parâmetros no super
+=end
