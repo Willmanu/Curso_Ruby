@@ -9,7 +9,9 @@ class ContaBancaria
     #logica de transferencia
 
     if @valorinicial >= valor_transferencia # vendo se tem saldo para transferencia
-      
+      #consigo
+	else
+		# não faz nada
 	end
   end
 
