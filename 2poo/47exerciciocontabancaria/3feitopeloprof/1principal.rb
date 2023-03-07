@@ -57,9 +57,5 @@ depois desta linha, por conta do TypeError não será lido esta linha. Então cr
 rescue que armazena esta mensagem de erro e imprime esta mensagem sem interromper as demais
 linhas de código.
 
-
-
-apidock.com ruby
-
-
 =end
+
