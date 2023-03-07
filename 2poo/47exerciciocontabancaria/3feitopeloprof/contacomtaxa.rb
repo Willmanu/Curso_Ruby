@@ -26,8 +26,11 @@ veja lá
 class ContaComTaxa < ContaBancaria
   def transferir(pessoa2, valor_transferencia)
     if saldo >= valor_transferencia
-      super(pessoa2, valor_transferencia)
+      super
       debitar(2)
+    else
+      raise puts "Saldo insuficiente! Por favor verifique o valor em sua conta\n"\
+      "Você está tentando transferi #{valor_transferencia}, porém em sua conta tem #{saldo}"
     end
   end
 end

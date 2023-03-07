@@ -8,7 +8,7 @@ class ContaBancaria
   def transferir(pessoa2, valor_transferencia)
     # logica de transferencia
 
-    if @valorinicial >= valor_transferencia # vendo se tem saldo para transferencia
+    if saldo >= valor_transferencia # vendo se tem saldo para transferencia
       # consigo
       debitar(valor_transferencia)
       pessoa2.creditar(valor_transferencia)

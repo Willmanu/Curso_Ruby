@@ -15,7 +15,6 @@ p conta_william.saldo   # quando transferi 50 dos 100 tem que restar 48 porque 2
 p 'A conta do pessoa2'
 p conta_pessoa2.saldo   #  aqui que é 250 recebendo 50 tem que ficar 300
 
-
 # caso de teste de conta sem saldo
 conta_william.transferir(conta_pessoa2, 60) # teste que tem que falhar
 p 'A conta do William'
