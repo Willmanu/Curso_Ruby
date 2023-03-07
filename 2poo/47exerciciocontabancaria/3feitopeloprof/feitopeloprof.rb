@@ -9,6 +9,6 @@ class ContaBancaria
   end
 
   def saldo
-    @valor_transferencia
+    @valorinicial
   end
 end
