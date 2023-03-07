@@ -18,6 +18,7 @@ descomente
 divid
 empaty
 exerciciocontabancaria
+feitopeloprof
 heranca
 MAIUSCULA
 mensagemspritada
@@ -35,6 +36,7 @@ objsubclasse
 palindromo
 Pamella
 prefirível
+proprietario
 pust
 sensorgenerico
 sensorindutivo
@@ -46,6 +48,7 @@ subclasseacessandoprivate
 textão
 transferencia
 unica
+valorinicial
 valortransferir
 variavel
 writter
