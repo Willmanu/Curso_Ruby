@@ -11,6 +11,7 @@ cobrancaaotransferir
 cobrancaaotransferiri
 cobrancatransferir
 contabancaria
+contacomtaxa
 contadestino
 contatransferir
 dadospessoais
