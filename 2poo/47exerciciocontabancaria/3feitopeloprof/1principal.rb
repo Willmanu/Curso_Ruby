@@ -38,7 +38,7 @@ O conta_William que é a ContaComTaxa chama um método transferir de ContaBancar
 objeto conta_pessoa e o valor de transferencia de 50 reais.
 Isso significa que o método transferir vai receber um objeto instanciado com valores.
 
-Os os atributos do objetos conta_william que é o ContaComTaxa vão para a classe ContaComTaxa
+Os atributos do objetos conta_william que é o ContaComTaxa vão para a classe ContaComTaxa
 veja lá.
 
 Quando voltam para cá atualizados o programa imprimi na tela as atualizações mostrando que um
@@ -57,5 +57,13 @@ depois desta linha, por conta do TypeError não será lido esta linha. Então cr
 rescue que armazena esta mensagem de erro e imprime esta mensagem sem interromper as demais
 linhas de código.
 
-=end
+Resultado da impressão baixo:
 
+ "A conta do William"
+48
+"A conta do pessoa2"
+250
+Saldo insuficiente! Por favor verifique o valor em sua conta
+Você está tentando transferir 60, porém em sua conta tem 48
+"exception class/object expected"
+=end
