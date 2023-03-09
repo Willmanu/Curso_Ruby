@@ -27,14 +27,33 @@ Este arquivo está em:
 database: db/test.sqlite3
 Ou seja dentro da pasta db e o nome do arquivo é test.sqlite3
 
-                                          Construindo Tabela
+                                          Migration
 
 Por padrão as tabelas no Rails são criadas pelo próprio Rails.
 Fazendo assim o próprio Rails gera um arquivo de migração.
 Isso significa que o BD, a partir do Rails, fica versionado com todas as estruturas aqui no
 meu projeto conforme ele vai evoluindo.
-Então imagina criar a tabela pessoas, usuário, produtos etc. apaga uma tabela etc. isso tudo
-acompanhando em tempo real, histórico, evolução etc
+Imagina criar a tabela pessoas, usuário, produtos etc. apaga uma tabela etc. isso tudo
+acompanhando em tempo real, histórico, evolução etc. Todas essas informações ficará no
+que se chama de migração.
+Assim quando colocarmos esse projeto em algum repositório, como exemplo o GitHub, outra
+pessoa que clonar esse repositório vai conseguir executar as alterações que foram feitas
+por mim neste BD. E isto é muito util trabalhando em equipe, ao invés de ter scripts
+compartilhados que criam o BD.
+
+                                      Criando tabela pessoa
+
+Em Rails para criar uma tabela podemos fazer duas coisas:
+-criar uma migração
+-gerar um modelo
+
+Rails é MVC - Model, View e Controller.
+Sendo assim a camada que fala com o banco de dados geralmente é o Model
+Então criando no código, como por exemplo a tabela product, se tivermos uma classe chamada
+product, automaticamente o rials vai se comunicar através da classe com a tabela product
+
+Por padrão e convenção, no Rails não é preciso fazer configurações para que a classe
+se comunique com a tabela x ou esse campo x se comunica com essa coluna etc.
 
 
 =end
