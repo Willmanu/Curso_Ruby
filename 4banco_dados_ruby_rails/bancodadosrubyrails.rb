@@ -29,4 +29,12 @@ Ou seja dentro da pasta db e o nome do arquivo é test.sqlite3
 
                                           Construindo Tabela
 
+Por padrão as tabelas no Rails são criadas pelo próprio Rails.
+Fazendo assim o próprio Rails gera um arquivo de migração.
+Isso significa que o BD, a partir do Rails, fica versionado com todas as estruturas aqui no
+meu projeto conforme ele vai evoluindo.
+Então imagina criar a tabela pessoas, usuário, produtos etc. apaga uma tabela etc. isso tudo
+acompanhando em tempo real, histórico, evolução etc
+
+
 =end
