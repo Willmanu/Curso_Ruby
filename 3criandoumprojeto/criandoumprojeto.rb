@@ -13,8 +13,9 @@ rails new nome_projeto
 Dando enter nesta linha, o rails cria as estruturas de diretórios dessa
 aplicação
 Como vimos cria-se um diretório com varias pastas.
-Entre essas pastas temos a bin e  entrando nela é possível inicializar o servidor com o comando:
-bin/rails server 
+Entre essas pastas temos a bin e, pelo terminal, é possível inicializar o servidor com o
+comando:
+bin/rails server
 
 bin é uns dos diretórios, como dito acima, que o rails criou
 rails é um dos scripts
@@ -22,5 +23,5 @@ rails é um dos scripts
  Após rodar esse comando o rails inicializa o servidor web e mostra a porta que esta escutando,
  o caminho etc.
  Com esse caminho escrito no browser, será possível ver essa nova aplicação
-
+localhost:300
 =end
