@@ -27,5 +27,6 @@ Este arquivo está em:
 database: db/test.sqlite3
 Ou seja dentro da pasta db e o nome do arquivo é test.sqlite3
 
+                                          Construindo Tabela
 
 =end
