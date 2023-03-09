@@ -36,6 +36,7 @@ objetocarro
 objsubclasse
 palindromo
 Pamella
+postgresql
 prefirível
 proprietario
 pust
@@ -44,6 +45,7 @@ sensorindutivo
 sensorsolo
 sensortemperatura
 sintaxuguer
+sqlite
 subcadeia
 subclasseacessandoprivate
 textão
