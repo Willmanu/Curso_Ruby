@@ -19,4 +19,13 @@ cat é o comando para mostrar o conteúdo de um arquivo
 
 No casse o conteúdo que seja mostrado é do arquivo database.yml que esta na pasta config
 dentro do projeto. Neste arquivo esta especificado qual o BD que esta configurado.
+
+O sqlite3 é um BD baseado em um arquivo, ou seja, ele lê um arquivo ao invés de se comunicar
+com um protocolo cliente e servidor
+
+Este arquivo está em:
+database: db/test.sqlite3
+Ou seja dentro da pasta db e o nome do arquivo é test.sqlite3
+
+
 =end
