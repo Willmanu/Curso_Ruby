@@ -41,7 +41,7 @@ pessoa que clonar esse repositório vai conseguir executar as alterações que f
 por mim neste BD. E isto é muito util trabalhando em equipe, ao invés de ter scripts
 compartilhados que criam o BD.
 
-                                      Criando tabela pessoa
+                                      Criando tabela product
 
 Em Rails para criar uma tabela podemos fazer duas coisas:
 -criar uma migração
@@ -55,7 +55,7 @@ product, automaticamente o rials vai se comunicar através da classe com a tabel
 Por padrão e convenção, no Rails não é preciso fazer configurações para que a classe
 se comunique com a tabela x ou esse campo x se comunica com essa coluna y etc.
 
-Por padrão quando informamos ao Rails que o modelo é do activerecordes, que é o
+Por padrão quando informamos ao Rails que o modelo é do ActiveRecord, que é o
 Framework ORM (Object-Relational Mapping) do Rails, ele procura a tabela que corresponde a
 esse modelo
 
@@ -81,5 +81,22 @@ Exemplo:
 bin/rails generate model product
 Isso significa:
 dentro da pasta bin em rails gera um modelo chamado product
+
+Agora vem os atributos desta tabela.
+Por padrão nẽo é necessário criar id, o Rails cria automaticamente.
+Exemplo:
+bin/rails generate model product nome:string price:decimal active:boolean
+
+Assim que eu der enter o Rails cria uma migração, ou seja, um código que gera o BD e o model
+para mim
+Assim não é necessário escrever o código do model, porque será gerado pelo rails:
+Exemplo da impressão:
+
+ invoke  active_record
+ create    db/migrate/20230310155351_create_products.rb ------>aqui esta o migrate com o código ruby que relaciona o BD
+ create    app/models/product.rb
+ invoke    test_unit
+ create      test/models/product_test.rb
+ create      test/fixtures/products.yml
 
 =end
