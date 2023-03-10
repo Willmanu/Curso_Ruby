@@ -1,0 +1,3 @@
+[submodule "3criandoumprojeto/primeiro_projeto"]
+	path = 3criandoumprojeto/primeiro_projeto
+	url = git@github.com:Willmanu/Curso_Ruby.git
