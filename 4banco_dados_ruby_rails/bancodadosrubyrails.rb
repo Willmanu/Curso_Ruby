@@ -53,7 +53,26 @@ Então criando no código, como por exemplo a tabela product, se tivermos uma cl
 product, automaticamente o rials vai se comunicar através da classe com a tabela product
 
 Por padrão e convenção, no Rails não é preciso fazer configurações para que a classe
-se comunique com a tabela x ou esse campo x se comunica com essa coluna etc.
+se comunique com a tabela x ou esse campo x se comunica com essa coluna y etc.
 
+Por padrão quando informamos ao Rails que o modelo é do activerecordes, que é o
+Framework ORM (Object-Relational Mapping) do Rails, ele procura a tabela que corresponde a
+esse modelo
+
+                                         Framework ORM
+"Frame" significa "estrutura" ou "esqueleto" e "work" significa "trabalho" ou "trabalho em
+equipe"
+No contexto do desenvolvimento de software, o termo "framework" se refere a uma estrutura
+de software que oferece aos desenvolvedores uma estrutura básica para construir aplicativos.
+A estrutura de um framework é semelhante a um esqueleto, que os desenvolvedores podem
+preencher com código personalizado para criar um aplicativo completo.
+Assim, a palavra "frame" descreve a estrutura básica que o framework fornece, enquanto a
+palavra "work" se refere ao trabalho em equipe necessário para preencher essa estrutura com
+código personalizado para criar um aplicativo funcional.
+ORM -> Object-Relational Mapping -> Mapeamento objeto-relacional
+
+Então Framework ORM é: Uma estrutura de trabalho que serve para Mapear objetos relacionais.
+É uma camada de abstração de BD que permite aos devs interagir com um BD relacional usando
+objetos Ruby em vez de SQL
 
 =end

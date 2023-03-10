@@ -16,6 +16,7 @@ contadestino
 contatransferir
 dadospessoais
 descomente
+devs
 divid
 empaty
 exerciciocontabancaria
