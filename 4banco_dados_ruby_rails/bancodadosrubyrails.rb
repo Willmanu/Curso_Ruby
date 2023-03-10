@@ -59,7 +59,7 @@ Por padrão quando informamos ao Rails que o modelo é do activerecordes, que é
 Framework ORM (Object-Relational Mapping) do Rails, ele procura a tabela que corresponde a
 esse modelo
 
-                                         Framework ORM
+   Framework ORM
 "Frame" significa "estrutura" ou "esqueleto" e "work" significa "trabalho" ou "trabalho em
 equipe"
 No contexto do desenvolvimento de software, o termo "framework" se refere a uma estrutura
@@ -73,6 +73,13 @@ ORM -> Object-Relational Mapping -> Mapeamento objeto-relacional
 
 Então Framework ORM é: Uma estrutura de trabalho que serve para Mapear objetos relacionais.
 É uma camada de abstração de BD que permite aos devs interagir com um BD relacional usando
-objetos Ruby em vez de SQL
+objetos Ruby em vez de SQL diretamente
+
+                        Usando o Generate para criar a tabela
+Dentro do projeto novo precisamos informar que em bin/rails vai acontecer um generate model
+Exemplo:
+bin/rails generate model product
+Isso significa:
+dentro da pasta bin em rails gera um modelo chamado product
 
 =end
