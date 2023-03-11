@@ -90,7 +90,7 @@ bin/rails generate model product nome:string price:decimal active:boolean
 Assim que eu der enter o Rails cria uma migração, ou seja, criou um código que vai alterar o BD
 Exemplo da impressão ao dar enter:
 
- invoke  active_record
+ invoke  active_record                     --> invoca o ActiveRecord
  create    db/migrate/20230310155351_create_products.rb ------>aqui esta o migrate com o código ruby que relaciona o BD
  create    app/models/product.rb                               criou em app/models o arquivo product.rb
  invoke    test_unit
@@ -99,7 +99,15 @@ Exemplo da impressão ao dar enter:
 
  O que temos aqui acima uma migração -> código que vai alterar o BD
 
- Exemplo do código:
+ Perceba que na primeira linha, á uma invocação de ActiveRecord
+ Exemplo:  invoke  active_record
+
+ ActiveRecord e um FrameWork que faz a relação entre a classe e a tabelas do BD, com códigos para
+ manipulação destes registos que estão em atividade
+
+ Olhe a segunda linha o que foi criado ao dar enter:
+ create    db/migrate/20230310155351_create_products.rb
+ Isso acima se refere ao código abaixo, que fpi criado dentro de app/db/migrate:
 
 # esta classe é sobre a tabela produto
 class CreateProducts < ActiveRecord::Migration[7.0]
@@ -116,10 +124,12 @@ end
 
 O que temos nesse código é:
 Uma classe chamada Criar Produtos -> CreateProducts
+Percebe que escrevi no singular e o Rails crio o nome em plural.
+Essa é a forma que Rails faz para identificar uma tabela, tratando seu nome no plural
+
 ActiveRecord significa Registro Ativo, ou seja, a expressão quer dizer que os registros
 são os dados que entram no BD, para serem manipulados e estão em atividades
-ActiveRecord e um FrameWork que faz a relação entre a classe e a tabelas do BD, com códigos para
-manipulação destes registos que estão em atividade
+
 Então Dentro de ActiveRecord tem uma classe chamada -> Migration[7.0]
 CreateProducts é subclasse de Migration
 
