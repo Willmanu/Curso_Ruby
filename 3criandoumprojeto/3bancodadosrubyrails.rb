@@ -132,4 +132,22 @@ outra decimal que se chama price e uma boolean que se chama active
 t.timestamps são:
 Por padrão o Rails cria duas colunas chamadas criado em e atualizado em
 Todo vez que inserir dados na tabela, automaticamente sera preenchido essas colunas
+
+Outra coisa que pode ser feita na colunas são dar comportamentos a elas como por exemplo:
+nome não pode ser em branco.
+para isso faz -> :name, nill: false -> ou seja não pode ser nula tem que ter conteúdo nesta coluna
+Isso vai ser escrito no BD, essa coluna tem uma regra que não pode estar vazio
+ Então fica assim a classe
+
+class CreateProducts < ActiveRecord::Migration[7.0]
+  def change
+    create_table :products do |t|
+      t.string :nome, nill: false
+      t.decimal :price
+      t.boolean :active
+
+      t.timestamps
+    end
+  end
+end
 =end
