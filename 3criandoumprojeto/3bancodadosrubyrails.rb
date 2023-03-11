@@ -150,4 +150,11 @@ class CreateProducts < ActiveRecord::Migration[7.0]
     end
   end
 end
+
+
+Antes de testar o código preciso pensar em umas coisas:
+Quando usei o comando generate para criar a tabela, o rails criou outros arquivos como
+demonstrados
+Dentre esses que vimos temos o 
+create    app/models/product.rb 
 =end
