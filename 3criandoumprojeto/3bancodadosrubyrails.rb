@@ -92,7 +92,7 @@ Exemplo da impressão ao dar enter:
 
  invoke  active_record
  create    db/migrate/20230310155351_create_products.rb ------>aqui esta o migrate com o código ruby que relaciona o BD
- create    app/models/product.rb
+ create    app/models/product.rb                         criou em app/models um arquivo
  invoke    test_unit
  create      test/models/product_test.rb
  create      test/fixtures/products.yml
