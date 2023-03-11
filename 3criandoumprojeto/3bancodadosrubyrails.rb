@@ -62,7 +62,7 @@ esse modelo
    Framework ORM
 "Frame" significa "estrutura" ou "esqueleto" e "work" significa "trabalho" ou "trabalho em
 equipe"
-No contexto do desenvolvimento de software, o termo "framework" se refere a uma estrugenetura
+No contexto do desenvolvimento de software, o termo "framework" se refere a uma estrutura
 de software que oferece aos desenvolvedores uma estrutura básica para construir aplicativos.
 A estrutura de um framework é semelhante a um esqueleto, que os desenvolvedores podem
 preencher com código personalizado para criar um aplicativo completo.
@@ -92,10 +92,10 @@ Exemplo da impressão ao dar enter:
 
  invoke  active_record
  create    db/migrate/20230310155351_create_products.rb ------>aqui esta o migrate com o código ruby que relaciona o BD
- create    app/models/product.rb                         criou em app/models um arquivo
+ create    app/models/product.rb                               criou em app/models o arquivo product.rb
  invoke    test_unit
- create      test/models/product_test.rb
- create      test/fixtures/products.yml
+ create      test/models/product_test.rb                       criou em test/model o arquivo product_test.rb
+ create      test/fixtures/products.yml                        criou em test/fixtures o arquivo product.yml
 
  O que temos aqui acima uma migração -> código que vai alterar o BD
 
