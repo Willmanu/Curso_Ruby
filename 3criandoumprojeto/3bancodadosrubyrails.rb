@@ -17,7 +17,7 @@ cat config/database.yml
 
 cat é o comando para mostrar o conteúdo de um arquivo
 
-No casse o conteúdo que seja mostrado é do arquivo database.yml que esta na pasta config
+No casso o conteúdo que seja mostrado é do arquivo database.yml que esta na pasta config
 dentro do projeto. Neste arquivo esta especificado qual o BD que esta configurado.
 
 O sqlite3 é um BD baseado em um arquivo, ou seja, ele lê um arquivo ao invés de se comunicar
@@ -33,8 +33,8 @@ Por padrão as tabelas no Rails são criadas pelo próprio Rails.
 Fazendo assim o próprio Rails gera um arquivo de migração.
 Isso significa que o BD, a partir do Rails, fica versionado com todas as estruturas aqui no
 meu projeto conforme ele vai evoluindo.
-Imagina criar a tabela pessoas, usuário, produtos etc. apaga uma tabela etc. isso tudo
-acompanhando em tempo real, histórico, evolução etc. Todas essas informações ficará no
+Imagina criar a tabela pessoas, usuário, produtos etc. apaga uma tabela etc. isso sendo
+acompanhado em tempo real, histórico, evolução etc. Todas essas informações ficará no
 que se chama de migração.
 Assim quando colocarmos esse projeto em algum repositório, como exemplo o GitHub, outra
 pessoa que clonar esse repositório vai conseguir executar as alterações que foram feitas
@@ -62,7 +62,7 @@ esse modelo
    Framework ORM
 "Frame" significa "estrutura" ou "esqueleto" e "work" significa "trabalho" ou "trabalho em
 equipe"
-No contexto do desenvolvimento de software, o termo "framework" se refere a uma estrutura
+No contexto do desenvolvimento de software, o termo "framework" se refere a uma estrugenetura
 de software que oferece aos desenvolvedores uma estrutura básica para construir aplicativos.
 A estrutura de um framework é semelhante a um esqueleto, que os desenvolvedores podem
 preencher com código personalizado para criar um aplicativo completo.
@@ -87,10 +87,8 @@ Por padrão nẽo é necessário criar id, o Rails cria automaticamente.
 Exemplo:
 bin/rails generate model product nome:string price:decimal active:boolean
 
-Assim que eu der enter o Rails cria uma migração, ou seja, um código que gera o BD e o model
-para mim
-Assim não é necessário escrever o código do model, porque será gerado pelo rails:
-Exemplo da impressão:
+Assim que eu der enter o Rails cria uma migração, ou seja, criou um código que vai alterar o BD
+Exemplo da impressão ao dar enter:
 
  invoke  active_record
  create    db/migrate/20230310155351_create_products.rb ------>aqui esta o migrate com o código ruby que relaciona o BD
@@ -99,4 +97,39 @@ Exemplo da impressão:
  create      test/models/product_test.rb
  create      test/fixtures/products.yml
 
+ O que temos aqui acima uma migração -> código que vai alterar o BD
+
+ Exemplo do código:
+
+# esta classe é sobre a tabela produto
+class CreateProducts < ActiveRecord::Migration[7.0]
+  def change
+    create_table :products do |t|
+      t.string :nome
+      t.decimal :price
+      t.boolean :active
+
+      t.timestamps
+    end
+  end
+end
+
+O que temos nesse código é:
+Uma classe chamada Criar Produtos -> CreateProducts
+ActiveRecord é o FrameWork que faz a relação entre a classe e a tabelas do BD
+Então Dentro de ActiveRecord tem uma classe chamada -> Migration[7.0]
+CreateProducts é subclasse de Migration
+
+Dentro de migration tem um método que se chama change com um bloco começa em do e finaliza em end
+Quando o Migration for executado acontece o seguinte:
+
+Create_table :products -> vai criar a tabela produtos
+Entre o do e o end temos um bloco de código
+Entre pipe | | temos o t que é uma variavel, t de tabela
+Então t,string :name é para criar uma coluna na tabela do tipo string que se chama nome
+outra decimal que se chama price e uma boolean que se chama active
+
+t.timestamps são:
+Por padrão o Rails cria duas colunas chamadas criado em e atualizado em
+Todo vez que inserir dados na tabela, automaticamente sera preenchido essas colunas
 =end
