@@ -102,7 +102,7 @@ Exemplo da impressão ao dar enter:
  Perceba que na primeira linha, á uma invocação de ActiveRecord
  Exemplo:  invoke  active_record
 
- ActiveRecord e um FrameWork que faz a relação entre a classe e a tabelas do BD, com códigos para
+ ActiveRecord e um FrameWork que faz a relação entre a classe e a tabela do BD, com códigos para
  manipulação destes registos que estão em atividade
 
  Olhe a segunda linha o que foi criado ao dar enter:
@@ -225,7 +225,21 @@ a tabela e os códigos que tratam delas.
 
 Resumo:
 Então temos uma tabela que se chama Product, sendo assim temos uma classe que se chama Product
-que é subclasse de ApplicationRecord, por isso que o Rails sabe que uma tabela. 
+que é subclasse de ApplicationRecord, por isso que o Rails sabe que uma tabela
 E quando sabe que é uma tabela trata o nome da tabela com pluralidade
+
+                                  Rodando a migração para se criar uma tabela
+Até aqui o que foi gerado é a migração e não temos tabela
+Para criar a tabela precisamos rodar a migrate
+exemplo:
+Dentro do projeto executa -> bin/rails de:migrate
+
+o resultado é:
+
+== 20230310221141 CreateProducts: migrating ===================================
+-- create_table(:products)
+   -> 0.0026s
+== 20230310221141 CreateProducts: migrated (0.0027s) ==========================
+
 
 =end
