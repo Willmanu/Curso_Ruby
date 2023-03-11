@@ -107,7 +107,7 @@ Exemplo da impressão ao dar enter:
 
  Olhe a segunda linha o que foi criado ao dar enter:
  create    db/migrate/20230310155351_create_products.rb
- Isso acima se refere ao código abaixo, que fpi criado dentro de app/db/migrate:
+ Isso acima se refere ao código abaixo, que foi criado dentro de app/db/migrate:
 
 # esta classe é sobre a tabela produto
 class CreateProducts < ActiveRecord::Migration[7.0]
