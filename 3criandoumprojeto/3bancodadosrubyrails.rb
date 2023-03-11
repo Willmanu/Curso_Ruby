@@ -133,10 +133,11 @@ são os dados que entram no BD, para serem manipulados e estão em atividades
 Então Dentro de ActiveRecord tem uma classe chamada -> Migration[7.0]
 CreateProducts é subclasse de Migration
 
-Dentro de migration tem um método que se chama change com um bloco começa em do e finaliza em end
+Dentro de migration tem um método que se chama change com um bloco começa em "do" e finaliza em
+"end"
 Quando o Migration for executado acontece o seguinte:
 
-Create_table :products -> vai criar a tabela chamada produtos
+Create_table :products -> vai criar a tabela chamada produtos(pluralidade para saber que é uma tabela)
 Entre o do e o end temos um bloco de código
 Entre pipe | | temos o t que é uma variavel, t de tabela
 Então t.string :name é para criar uma coluna na tabela, do tipo string, que se chama nome
@@ -199,14 +200,32 @@ do aplicativo
 Então essa classe ApplicationRecord que esta em app model, e model trata de BD, o rails sabe que
 é um modelo de BD
 
-                       Como o Rails sabe o nome da tabela sem especificar?
+                       Como o Rails sabe o nome da tabela sem o dev especificar?
 
-Quando temos Product sendo subclasse de < ApplicationRecord, o Rails está dizendo que
-Product tem alguma tabela relacionada ao BD
-Por padrão o Rails vai saber que a tabela se chama Product, isso é por convenção do Ruby & Rails
-não é necessário especificar o nome da tabela em nenhum lugar, pois o Rails ja sabe que o nome da
-tabela é o plural do nome da classe.
-Aqui estamos dizendo ao Rails que temos uma tabela Product
-Por isso é importante tratar os nomes de tabelas em ingles por convenção, por padrão
+Quando temos Product sendo subclasse de < ApplicationRecord, o Rails está dizendo:
+"Aaaaa! Product é subclasse de ApplicationRecord, e esta esta em Model que trata de BD..então
+Product tem alguma tabela relacionada ao BD"
+Por padrão o Rails vai saber que a tabela se chama Product pelo fato desta ser subclasse de
+ApplicationRecord
+Por isso que o Rails quando vai criar a tabela em db/migrate/20230310155351_create_products.rb
+trata a palavra Product como Products
+Este é o padrão do Rails: o nome da tabela que sera criada é o nome do modelo no plural
+E o modelo foi descrito no comando generate: bin/rails generate model product
+
+Isso é por convenção do Ruby & Rails, eles tratam o nome de tabelas com pluralidade
+Dessa forma e por convenção não é necessário especificar o nome da tabela em nenhum lugar, pois o
+Rails ja sabe que o nome da tabela é Product
+
+                               Importância de se criar nomes em Inglês
+Por isso é importante tratar os nomes nos códigos em ingles
+Se eu tivesse criado o nome da tabela como Produto no português o rails não ia saber que isso é uma
+tabela, pleo fato estar configurado assim.
+Por padrão é em ingles que o Rails vai saber o que é uma tabela e assim vai criar de forma certa
+a tabela e os códigos que tratam delas.
+
+Resumo:
+Então temos uma tabela que se chama Product, sendo assim temos uma classe que se chama Product
+que é subclasse de ApplicationRecord, por isso que o Rails sabe que uma tabela. 
+E quando sabe que é uma tabela trata o nome da tabela com pluralidade
 
 =end
