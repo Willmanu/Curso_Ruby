@@ -188,7 +188,15 @@ do aplicativo
 
 Então essa classe ApplicationRecord que esta em app model, e model trata de BD, o rails sabe que
 é um modelo de BD
+
+                       Como o Rails sabe o nome da tabela sem especificar?
+
 Quando temos Product sendo subclasse de < ApplicationRecord, o Rails está dizendo que
 Product tem alguma tabela relacionada ao BD
-Por padrão o Rails vai saber que a tabela se chama Product
+Por padrão o Rails vai saber que a tabela se chama Product, isso é por convenção do Ruby & Rails
+não é necessário especificar o nome da tabela em nenhum lugar, pois o Rails ja sabe que o nome da
+tabela é o plural do nome da classe.
+Aqui estamos dizendo ao Rails que temos uma tabela Product
+Por isso é importante tratar os nomes de tabelas em ingles por convenção, por padrão
+
 =end
