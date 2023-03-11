@@ -116,18 +116,21 @@ end
 
 O que temos nesse código é:
 Uma classe chamada Criar Produtos -> CreateProducts
-ActiveRecord é o FrameWork que faz a relação entre a classe e a tabelas do BD
+ActiveRecord significa Registro Ativo, ou seja, a expressão quer dizer que os registros
+são os dados que entram no BD, para serem manipulados e estão em atividades
+ActiveRecord e um FrameWork que faz a relação entre a classe e a tabelas do BD, com códigos para
+manipulação destes registos que estão em atividade
 Então Dentro de ActiveRecord tem uma classe chamada -> Migration[7.0]
 CreateProducts é subclasse de Migration
 
 Dentro de migration tem um método que se chama change com um bloco começa em do e finaliza em end
 Quando o Migration for executado acontece o seguinte:
 
-Create_table :products -> vai criar a tabela produtos
+Create_table :products -> vai criar a tabela chamada produtos
 Entre o do e o end temos um bloco de código
 Entre pipe | | temos o t que é uma variavel, t de tabela
-Então t,string :name é para criar uma coluna na tabela do tipo string que se chama nome
-outra decimal que se chama price e uma boolean que se chama active
+Então t.string :name é para criar uma coluna na tabela, do tipo string, que se chama nome
+outra é decimal que se chama price e uma boolean que se chama active
 
 t.timestamps são:
 Por padrão o Rails cria duas colunas chamadas criado em e atualizado em
@@ -155,6 +158,37 @@ end
 Antes de testar o código preciso pensar em umas coisas:
 Quando usei o comando generate para criar a tabela, o rails criou outros arquivos como
 demonstrados
-Dentre esses que vimos temos o 
-create    app/models/product.rb 
+Dentre esses que vimos temos o
+create    app/models/product.rb
+esse código abaixo:
+class Product < ApplicationRecord
+end
+
+Perceba que a classe Product é subclasse de ApplicationRecord
+Application Record significa aplicação dos registros, ou seja, é uma classe base para todos os
+modelos do ActiveRecord, que cuida de aplicar os registros/dados
+Ela foi criada também assim que se executou o generate
+Exemplo:
+
+create      test/models/product_test.rb
+
+Esta dentro de app no models visto que models trata de BD
+Seu código é:
+
+  class ApplicationRecord < ActiveRecord::Base
+    primary_abstract_class
+  end
+
+Perceba que ApplicationRecord é subclasse de Base, uma classe que esta no ActiveRecord
+Sabemos que ActiveRecord é um Framework que trata do comportamento do BD
+Em resumo, a classe ApplicationRecord é a classe base para todos os models do ActiveRecord
+no Ruby on Rails. Ela é uma classe abstrata que herda da classe ActiveRecord::Base e é usada
+para definir comportamentos e métodos padrão que serão compartilhados entre todos os models
+do aplicativo
+
+Então essa classe ApplicationRecord que esta em app model, e model trata de BD, o rails sabe que
+é um modelo de BD
+Quando temos Product sendo subclasse de < ApplicationRecord, o Rails está dizendo que
+Product tem alguma tabela relacionada ao BD
+Por padrão o Rails vai saber que a tabela se chama Product
 =end
