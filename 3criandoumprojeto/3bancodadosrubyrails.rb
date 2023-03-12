@@ -263,4 +263,8 @@ Na 1º linha ela esta falando que reverteu a criação da tabela, ou seja, desfe
 na 2º linha mostra o comando que foi executado o drop table que apaga a tabela
 na 3º linha o tempo que levou para criar
 na 4 linha a tabela de produtos foi apagada
+
+                   Como o Rails sabe que deve apagar a tabela no caso de rollback?
+
+
 =end
