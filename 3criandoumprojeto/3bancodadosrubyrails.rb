@@ -240,5 +240,27 @@ o resultado é:
    -> 0.0026s
 == 20230310221141 CreateProducts: migrated (0.0027s) ==========================
 
+Na 1º linha ela esta falando que criou a tabela CreateProduct
+na 2º linha mostra o comando que foi executado
+na 3º linha o tempo que levou para criar
+na 4 linha a tabela de produtos foi migrada
 
+                                          Rollback
+
+E se por um engano gerei a tabela errada?
+Para tal situação usa-se o comando rollback
+Exemplo:
+bin/rails db:rollback
+
+o resultado foi:
+
+== 20230310221141 CreateProducts: reverting ===================================
+-- drop_table(:products)
+   -> 0.0040s
+== 20230310221141 CreateProducts: reverted (0.0138s) ==========================
+
+Na 1º linha ela esta falando que reverteu a criação da tabela, ou seja, desfez
+na 2º linha mostra o comando que foi executado o drop table que apaga a tabela
+na 3º linha o tempo que levou para criar
+na 4 linha a tabela de produtos foi apagada
 =end
