@@ -179,9 +179,6 @@ Perceba que a classe Product é subclasse de ApplicationRecord
 Application Record significa aplicação dos registros, ou seja, é uma classe base para todos os
 modelos do ActiveRecord, que cuida de aplicar os registros/dados
 Ela foi criada também assim que se executou o generate
-Exemplo:
-
-create      test/models/product_test.rb
 
 Esta dentro de app no models visto que models trata de BD
 Seu código é:
@@ -203,24 +200,26 @@ Então essa classe ApplicationRecord que esta em app model, e model trata de BD,
                        Como o Rails sabe o nome da tabela sem o dev especificar?
 
 Quando temos Product sendo subclasse de < ApplicationRecord, o Rails está dizendo:
-"Aaaaa! Product é subclasse de ApplicationRecord, e esta esta em Model que trata de BD..então
+"Aaaaa! Product é subclasse de ApplicationRecord, e esta em Model que trata de BD..então
 Product tem alguma tabela relacionada ao BD"
 Por padrão o Rails vai saber que a tabela se chama Product pelo fato desta ser subclasse de
 ApplicationRecord
-Por isso que o Rails quando vai criar a tabela em db/migrate/20230310155351_create_products.rb
-trata a palavra Product como Products
-Este é o padrão do Rails: o nome da tabela que sera criada é o nome do modelo no plural
+Por isso que o Rails quando vai criar a tabela com o código que esta em
+db/migrate/20230310155351_create_products.rb, trata a palavra Product como Products
+
+Este é o padrão do Rails: o nome da tabela que sera criada é o nome do modelo, ou seja, da
+classe no plural
 E o modelo foi descrito no comando generate: bin/rails generate model product
 
 Isso é por convenção do Ruby & Rails, eles tratam o nome de tabelas com pluralidade
-Dessa forma e por convenção não é necessário especificar o nome da tabela em nenhum lugar, pois o
-Rails ja sabe que o nome da tabela é Product
+Dessa forma e por convenção não é necessário especificar o nome da tabela em nenhum lugar,
+pois o Rails sabe que o nome da tabela é Product
 
                                Importância de se criar nomes em Inglês
 Por isso é importante tratar os nomes nos códigos em ingles
-Se eu tivesse criado o nome da tabela como Produto no português o rails não ia saber que isso é uma
-tabela, pleo fato estar configurado assim.
-Por padrão é em ingles que o Rails vai saber o que é uma tabela e assim vai criar de forma certa
+Se eu tivesse criado o nome da tabela como Produto no português o rails não ia saber que isso
+é uma tabela, pleo fato estar configurado assim.
+Por padrão é em inglês que o Rails vai saber o que é uma tabela e assim vai criar de forma certa
 a tabela e os códigos que tratam delas.
 
 Resumo:
