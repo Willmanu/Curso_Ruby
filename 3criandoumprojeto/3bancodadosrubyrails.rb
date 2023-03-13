@@ -75,6 +75,12 @@ Então Framework ORM é: Uma estrutura de trabalho que serve para Mapear objetos
 É uma camada de abstração de BD que permite aos devs interagir com um BD relacional usando
 objetos Ruby em vez de SQL diretamente
 
+Abstração em Rails é o processo de ocultar os detalhes complexos e necessários de um sistema
+ou banco de dados, e apresentar uma interface mais simples e fácil de usar. Isso permite que
+os desenvolvedores trabalhem em um nível mais alto de abstração, concentrando-se nas
+funcionalidades da aplicação, em vez de se preocuparem com a complexidade interna da
+infraestrutura.
+
                         Usando o Generate para criar a tabela
 Dentro do projeto novo precisamos informar que em bin/rails vai acontecer um generate model
 Exemplo:
@@ -314,9 +320,62 @@ veja o resultado quando o comando é executado:
 Loading development environment (Rails 7.0.4.2) -> carregando ambiente de desenvolvimento
 irb(main):001:0>                                -> ambiente aberto
 
-Escrevendo o nom da tabela Product
+Escrevendo o nome da tabela Product
 temos:
 irb(main):001:0> Product
-=> Product (call 'Product.connection' to establish a connection)
-irb(main):002:0> 
+=> Product (call 'Product.connection' to establish a connection) -> chamar 'Product.connection' para estabelecer uma conexão
+irb(main):002:0>
+
+O que recebemos é que o Rails conhece a tabela e pede para chamar um método de conexão para
+para estabelecer uma conexão. COm isso então sabemos que temos uma conexão com BD
+
+                                          Executando métodos
+
+   Método count
+executando Product.count
+temos:
+irb(main):002:0> Product.count
+  Product Count (0.1ms)  SELECT COUNT(*) FROM "products"
+=> 0
+irb(main):003:0>
+
+Perceba como o Rails cria a query select count, para trazer a contagem de quantos registros
+tem na tabela product
+o resultado foi => 0 registros
+
+  Método create()
+Com o método crate podemos atualizar nossa tabela
+exemplo:
+
+irb(main):007:0> product = Product.create(name:'Perfume', price:100, active:true)
+  TRANSACTION (0.2ms)  begin transaction
+  Product Create (1.0ms)  INSERT INTO "products" ("name", "price", "active", "created_at",
+  "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Perfume"], ["price", 100.0], ["active", 1],
+  ["created_at", "2023-03-13 21:31:41.106589"], ["updated_at", "2023-03-13 21:31:41.106589"]]
+  TRANSACTION (11.8ms)  commit transaction
+=>
+#<Product:0x0000562fd3b6e8c0
+...
+irb(main):008:0>
+
+Após executar o comando temos:
+
+O rails iniciou uma transação
+Criou uma query insert into, que inseri dentro dos atributos name, price, active, created_at e
+updated_at
+Os valores:
+em name -> Perfume que é o nome do produto
+em price -> 100 que é o preço do produto
+em active -> 1 que representa true, 0 representa false
+em created_at -> que representa a data e hora da criação
+updated_at -> que representa a data e hora da atualização
+
+O ActiveRecord que é o Framework ORM do Rails, que mapeia objetos relacionais, faz esse
+mapeamento, de forma abstrata
+ActiveRecord mapeia os objetos da aplicação para as tabelas do banco de dados, permitindo
+que os desenvolvedores trabalhem com objetos em vez de escrever consultas SQL manualmente.
+
+
+
+
 =end
