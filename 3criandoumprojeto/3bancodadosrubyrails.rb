@@ -231,7 +231,7 @@ E quando sabe que é uma tabela trata o nome da tabela com pluralidade
 Até aqui o que foi gerado é a migração e não temos tabela
 Para criar a tabela precisamos rodar a migrate
 exemplo:
-Dentro do projeto executa -> bin/rails de:migrate
+Dentro do projeto executa -> bin/rails db:migrate
 
 o resultado é:
 
@@ -265,6 +265,31 @@ na 3º linha o tempo que levou para criar
 na 4 linha a tabela de produtos foi apagada
 
                    Como o Rails sabe que deve apagar a tabela no caso de rollback?
+O comando de rollback executa a última migração que foi executada, mas em ordem
+reversa.
+No método create_table existe o inverso, ou seja, para todo crate_table o Rails sabe
+que pode executar um drop_table.
 
+Por isso que o método onde está o create_table se chama change, porque o rails sabe
+que pode ter uma change -> mudança
+Isso significa que o Rails olha para a tabela de migrações, que mantém um registro
+de todas as migrações que foram executadas em ordem cronológica inversa. O Rails
+então executa a última migração na lista e reverte as alterações feitas por essa
+migração no banco de dados.
+
+Se a última migração criou uma tabela, então a reversão dessa migração irá excluir
+a tabela correspondente no banco de dados. O Rails faz isso chamando o método down
+da migração correspondente. No método down, é possível definir a lógica necessária
+para reverter as alterações feitas pela migração, como a exclusão da tabela.
+
+Por exemplo, se a última migração que foi executada criou uma tabela chamada products,
+o método down da migração pode incluir o seguinte código para excluir a tabela:
+
+def down
+  drop_table :products
+end
+
+Isso fará com que o Rails exclua a tabela products quando a migração for revertida pelo
+comando bin/rails db:rollback.
 
 =end
