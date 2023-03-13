@@ -10,6 +10,7 @@ cobrancaaotranferir
 cobrancaaotransferir
 cobrancaaotransferiri
 cobrancatransferir
+commitar
 contabancaria
 contacomtaxa
 contadestino

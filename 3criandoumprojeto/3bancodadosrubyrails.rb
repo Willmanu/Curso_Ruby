@@ -292,4 +292,31 @@ end
 Isso fará com que o Rails exclua a tabela products quando a migração for revertida pelo
 comando bin/rails db:rollback.
 
+                        O que Rials faz se rodar o migrate 2 vezes?
+
+Se o comando para criar tabelas for feito duas vezes para mesma tabela, o rails não fara
+nada porque ele sabe exatamente qual migração foi feita pela ultima vez
+Esse processo de migração é muito útil quando se trabalha em equipe. Como o Rails sabe
+exatamente qual foi a ultima migração, se houver novas migrações no projeto vindas de fora
+feitas por outros devs, o Rails saberá quai migração falta e só roda o que falta
+
+Por isso é muito importante commitar essas migração, assim todos os devs vão ter as tabelas
+necessárias para o projeto, que fica nas pasta migrate em db/migrate
+
+                            Trabalhando com a tabela pelo terminal
+Pelo terminal é possível fazer consultas, inserir informações, deletar, atualizar etc.
+sem escrever query mas usando métodos do Rails
+
+O rails tem um terminal próprio e para executar comandos para o BD
+Entrando no projeto e escrevendo bin/rails console, temos aberto o seu terminal
+veja o resultado quando o comando é executado:
+
+Loading development environment (Rails 7.0.4.2) -> carregando ambiente de desenvolvimento
+irb(main):001:0>                                -> ambiente aberto
+
+Escrevendo o nom da tabela Product
+temos:
+irb(main):001:0> Product
+=> Product (call 'Product.connection' to establish a connection)
+irb(main):002:0> 
 =end
