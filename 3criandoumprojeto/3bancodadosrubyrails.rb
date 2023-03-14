@@ -389,15 +389,16 @@ objetos relacionais, faz esse mapeamento, de forma abstrata
 ActiveRecord mapeia os objetos da aplicação para as tabelas do banco de dados, permitindo
 que os desenvolvedores trabalhem com objetos em vez de escrever consultas SQL manualmente.
 
-Quando pedimos para ver a variável product olhe o que temos nela:
+Quando pedimos para ver a tabela Product, olhe o que temos de diferente nela:
 
 irb(main):009:0> Product
 => Product(id: integer, name: string, price: decimal, active: boolean, created_at: datetime, updated_at: datetime)
 
+Percebe que temos no inicio um id que o Rails criou com o método create
 
-
+Quando pedimos para ver a variavel product temos o objeto Product nela veja:
 irb(main):010:0> product
-=> 
+=>
 #<Product:0x0000562fd3b6e8c0
  id: 1,
  name: "Perfume",
@@ -407,5 +408,14 @@ irb(main):010:0> product
  updated_at: Mon, 13 Mar 2023 21:31:41.106589000 UTC +00:00>
 irb(main):011:0>
 
+O id é 1
+o hash name: carrega Perfume
+active tem o valor true
+price tem essa numeração de 100 mostrado em notação cientifica, que o Rails converteu pelo
+fato do campo ser float e entrou um integer, assim ele convert para float e mostra dessa
+forma
+e os dois últimos são relacionados a data e hora que sofreu a alteração
+
+Se examinarmo a classe de product temos:
 
 =end
