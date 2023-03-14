@@ -455,7 +455,7 @@ irb(main):019:0>
 Percebe que temos o 100.0 como float que ele é
 
 
-                                   update em Rails
+                                   UPDATE em Rails
 Veja que podemos atualizar por exemplo o valor do product
 Em uma query ficaria assim:
 update product set price = 200.00 where product.id = 1
@@ -478,7 +478,7 @@ irb(main):025:0>
 Veja que o Rails trás o product.update que atualiza tudo para mim
 
 
-                                SELECT em Rails
+                                SELECT COUNT em Rails
 Para contar todos os meus product
 em BD seria -> SELECT count*from products
 
@@ -534,6 +534,104 @@ irb(main):036:0>
 
 Agora temos 3 produtos na minha tabela
 
+                            ALL em Rails ou SELECIONAR TUDO no BD
+all significa todos, ou seja quando uso esse método estou pedindo ao Rails que traga todos
+os registros ou todos os produtos
+Em BD fica:
+SELECT products * from products
+
+Em RAils fica:
+Product.all
+
+veja o resultado:
+
+irb(main):040:0> Product.all
+  Product Load (7.1ms)  SELECT "products".* FROM "products"
+=>
+[#<Product:0x00007fd9442034b8
+  id: 1,
+  name: "Perfume",
+  price: 0.2e3,
+  active: true,
+  created_at: Mon, 13 Mar 2023 21:31:41.106589000 UTC +00:00,
+  updated_at: Tue, 14 Mar 2023 13:16:00.587942000 UTC +00:00>,
+ #<Product:0x00007fd944202ef0
+  id: 2,
+  name: "Sabonete",
+  price: 0.2e2,
+  active: true,
+  created_at: Tue, 14 Mar 2023
+  updated_at: Tue, 14 Mar 2023 13:51:37.925335000 UTC +00:00>,
+ #<Product:0x00007fd944202bd0
+  id: 3,
+  name: "Shampoo",
+  price: 0.5e2,
+  active: true,
+  created_at: Tue, 14 Mar 2023 14:03:26.254993000 UTC +00:00,
+  updated_at: Tue, 14 Mar 2023 14:03:26.254993000 UTC +00:00>]
+irb(main):041:0>
+
+O Rails me trouxe todos os produtos cadastrados com seus atributos
+
+                                            WHERE
+
+where significa onde
+Este é uma condição no BD
+Se eu quero que me traga todos os produtos ativos. Os inativos não
+ativos é true e inativos é false
+
+ em BD fica:
+ SELECT *from products where active = true
+
+ Aqui acima estou dizendo para o BD me trazer todos os produtos onde active seja true,
+ ou seja, somente produtos ativos
+
+ Em Rails fica:
+Product.where(active:true)
+
+Veja o resultado:
+
+irb(main):042:0> Product.where(active:true)
+  Product Load (0.5ms)  SELECT "products".* FROM "products" WHERE "products"."active" = ?  [["active", 1]]
+=>
+[#<Product:0x0000562fd33d0c30
+  id: 1,
+  name: "Perfume",
+  price: 0.2e3,
+  active: true,
+  created_at: Mon, 13 Mar 2023 21:31:41.106589000 UTC +00:00,
+  updated_at: Tue, 14 Mar 2023 13:16:00.587942000 UTC +00:00>,
+ #<Product:0x0000562fd33d0b68
+  id: 2,
+  name: "Sabonete",
+  price: 0.2e2,
+  active: true,
+  created_at: Tue, 14 Mar 2023 13:51:37.925335000 UTC +00:00,
+  updated_at: Tue, 14 Mar 2023 13:51:37.925335000 UTC +00:00>,
+ #<Product:0x0000562fd33d0aa0
+  id: 3,
+  name: "Shampoo",
+  price: 0.5e2,
+  active: true,
+  created_at: Tue, 14 Mar 2023 14:03:26.254993000 UTC +00:00,
+  updated_at: Tue, 14 Mar 2023 14:03:26.254993000 UTC +00:00>]
+irb(main):043:0>
 
 
+Se eu tivesse produtos inativos, ou seja com a coluna active em false esses não estariam aqui
+
+Posso pedir para que o Rails traga todos os registro em array
+exemplo:
+Product.where(active:true)to_a
+
+O resultado é o mesmo acima porém, no inicio do primeiro registro tem um colchete[ e no final
+do ultimo registro tem o colchete que fecha]
+
+Pedindo o tamanho:
+irb(main):044:0> Product.where(active:true).length
+
+Temos
+ Product Load (0.5ms)  SELECT "products".* FROM "products" WHERE "products"."active" = ?  [["active", 1]]
+=> 3
+irb(main):045:0>
 =end
