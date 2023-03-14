@@ -433,6 +433,7 @@ class CreateProducts < ActiveRecord::Migration[7.0]
   end
 end
 
+                     Acessando meus atributos com comandos como se fossem no BD
 Com isso vimos que a variavel product temos nosso objeto, e dessa forma podemos acessar
 os atributos
 se escrevermos product.id como resposta temos:
@@ -452,6 +453,87 @@ irb(main):018:0> product.price.to_f
 irb(main):019:0>
 
 Percebe que temos o 100.0 como float que ele é
+
+
+                                   update em Rails
+Veja que podemos atualizar por exemplo o valor do product
+Em uma query ficaria assim:
+update product set price = 200.00 where product.id = 1
+
+Como o Rails e pelo conceito de abstração só precisamos dizer ao Rails o que queremos atualizar
+dessa forma abaixo:
+product.update(price: 200.00)
+
+Veja o resultado:
+
+  Product Update (2.0ms)  UPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?  [["price", 200.0], ["updated_at", "2023-03-14 13:16:00.587942"], ["id", 1]]     
+  TRANSACTION (9.8ms)  commit transaction
+=> true
+irb(main):023:0> product.price
+=> 0.2e3
+irb(main):024:0> product.price.to_f
+=> 200.0
+irb(main):025:0>
+
+Veja que o Rails trás o product.update que atualiza tudo para mim
+
+
+                                SELECT em Rails
+Para contar todos os meus product
+em BD seria -> SELECT count*from products
+
+em Rails é -> product.count
+
+irb(main):029:0> Product.count
+  Product Count (0.9ms)  SELECT COUNT(*) FROM "products"
+=> 1
+irb(main):030:0>
+
+O resultado é 1, tenho somente 1 produto no meu BD
+
+
+                                       INSERT em Rails
+Então vou criar outro produto
+em BD seria INSERT into product(name, price, active,) values(Sabonete, 20.00, true)
+
+Aqui acima estou dizendo para:
+ Insira dentro do objeto product na coluna name o valor sabonete, price é 20.00 e
+active será true
+
+em Rails é:
+product = Product.create
+
+O resultado foi:
+
+irb(main):007:0> product = Product.create(name:'Perfume', price:100, active:true)
+  TRANSACTION (0.2ms)  begin transaction
+  Product Create (1.0ms)  INSERT INTO "products" ("name", "price", "active", "created_at",
+  "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Perfume"], ["price", 100.0], ["active", 1],
+  ["created_at", "2023-03-13 21:31:41.106589"], ["updated_at", "2023-03-13 21:31:41.106589"]]
+  TRANSACTION (11.8ms)  commit transaction
+=>
+
+Quando peço para contar temos:
+irb(main):033:0> Product.count
+  Product Count (0.2ms)  SELECT COUNT(*) FROM "products"
+=> 2
+
+Inserindo mais um produto
+irb(main):034:0> product = Product.create(name:"Shampoo", price:50.00, active:true)
+  TRANSACTION (0.1ms)  begin transaction
+  Product Create (0.3ms)  INSERT INTO "products" ("name", "price", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Shampoo"], ["price", 50.0], ["active", 1], ["created_at", "2023-03-14 14:03:26.254993"], ["updated_at", "2023-03-14 14:03:26.254993"]]                             
+  TRANSACTION (8.5ms)  commit transaction
+=>
+#<Product:0x0000562fd4cc1190
+
+Quando peço para contar temos:
+irb(main):035:0> Product.count
+  Product Count (0.6ms)  SELECT COUNT(*) FROM "products"
+=> 3
+irb(main):036:0>
+
+Agora temos 3 produtos na minha tabela
+
 
 
 =end
