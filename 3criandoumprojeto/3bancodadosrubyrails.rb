@@ -417,5 +417,41 @@ forma
 e os dois últimos são relacionados a data e hora que sofreu a alteração
 
 Se examinarmo a classe de product temos:
+irb(main):013:0> product.class
+=> Product(id: integer, name: string, price: decimal, active: boolean, created_at: datetime, updated_at: datetime)
+
+Ele mostra exatamente que product é o abjecto Product que ja vimos no nosso código abaixo.
+class CreateProducts < ActiveRecord::Migration[7.0]
+  def change
+    create_table :products do |t|
+      t.string :nome, nill: false
+      t.decimal :price
+      t.boolean :active
+
+      t.timestamps
+    end
+  end
+end
+
+Com isso vimos que a variavel product temos nosso objeto, e dessa forma podemos acessar
+os atributos
+se escrevermos product.id como resposta temos:
+irb(main):015:0> product.id
+=> 1
+Lembrando que falamos mais atrás que não precisamos criar id que o Rails faz isso para nós
+
+O price podemos acessar também
+
+irb(main):017:0> product.price
+=> 0.1e3
+irb(main):018:0>
+
+Ele mostra com notação científica mas podemos usar o float para ver o que realmente é
+irb(main):018:0> product.price.to_f
+=> 100.0
+irb(main):019:0>
+
+Percebe que temos o 100.0 como float que ele é
+
 
 =end
