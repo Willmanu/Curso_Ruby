@@ -10,12 +10,14 @@ cobrancaaotranferir
 cobrancaaotransferir
 cobrancaaotransferiri
 cobrancatransferir
+commita
 commitar
 contabancaria
 contacomtaxa
 contadestino
 contatransferir
 dadospessoais
+datetime
 descomente
 devs
 divid

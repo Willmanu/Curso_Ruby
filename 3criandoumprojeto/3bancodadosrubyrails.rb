@@ -93,6 +93,10 @@ Por padrão nẽo é necessário criar id, o Rails cria automaticamente.
 Exemplo:
 bin/rails generate model product nome:string price:decimal active:boolean
 
+observação:
+Perceba que os atributos foram feito em forma de hash, seja, chave e valor
+chave é → name      valor é → vai ser colocado mais a frente
+
 Assim que eu der enter o Rails cria uma migração, ou seja, criou um código que vai alterar o BD
 Exemplo da impressão ao dar enter:
 
@@ -345,7 +349,14 @@ o resultado foi => 0 registros
 
   Método create()
 Com o método crate podemos atualizar nossa tabela
-exemplo:
+exemplo do script:
+Crio um variavel product que recebe o script:
+
+product = Product.create(name:'Perfume', price:100, active:true)
+
+Percebe que o script/código é feito com o hahs, ou seja, chave valor
+chave -> name     valor -> Perfume etc.
+Ao clicar em enter temos:
 
 irb(main):007:0> product = Product.create(name:'Perfume', price:100, active:true)
   TRANSACTION (0.2ms)  begin transaction
@@ -370,12 +381,31 @@ em active -> 1 que representa true, 0 representa false
 em created_at -> que representa a data e hora da criação
 updated_at -> que representa a data e hora da atualização
 
-O ActiveRecord que é o Framework ORM do Rails, que mapeia objetos relacionais, faz esse
-mapeamento, de forma abstrata
+Para finalizar o Rails commita a transação ->   TRANSACTION (11.8ms)  commit transaction
+e exibi o id do product -> #<Product:0x0000562fd3b6e8c0
+
+Não criei nenhum script de BD, o ActiveRecord que é o Framework ORM do Rails, que mapeia
+objetos relacionais, faz esse mapeamento, de forma abstrata
 ActiveRecord mapeia os objetos da aplicação para as tabelas do banco de dados, permitindo
 que os desenvolvedores trabalhem com objetos em vez de escrever consultas SQL manualmente.
 
+Quando pedimos para ver a variável product olhe o que temos nela:
 
+irb(main):009:0> Product
+=> Product(id: integer, name: string, price: decimal, active: boolean, created_at: datetime, updated_at: datetime)
+
+
+
+irb(main):010:0> product
+=> 
+#<Product:0x0000562fd3b6e8c0
+ id: 1,
+ name: "Perfume",
+ price: 0.1e3,
+ active: true,
+ created_at: Mon, 13 Mar 2023 21:31:41.106589000 UTC +00:00,
+ updated_at: Mon, 13 Mar 2023 21:31:41.106589000 UTC +00:00>
+irb(main):011:0>
 
 
 =end
