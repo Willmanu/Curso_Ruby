@@ -682,7 +682,13 @@ O DESTROY apaga o registro da tabela e da memória
 O DELETE apaga da tabela mas não da memória
 
 Não existe o comando DESTROY para BD, isso é do Rails
-Com o DESTROY 
+Com o DESTROY se pode executar outras operações além da remoção de um registro, como o DELETE
+faz.
+Com DESTROY do Rails é possível remoção de associações e dependências de atributos
+
+Com isso se eu quiser fazer remoções como o DESTROY faz, com o DELETE, preciso fazer query
+personalizadas e especificas para isso com o DELETE
+
 O DELETE em BD é
 DELETE from product where active = o   ou true
 
@@ -690,5 +696,13 @@ Aqui acima quer dizer
 Apagar a partir da tabela product onde active seja igual a zero, ou seja, seja false
 
 em Rails fica:
-product.destrory(id_product)
+Product.delete(id_product)
+
+Esse é um comando direto em que o objeto chama o produto em questão pelo seu id, e assim apaga
+o mesmo da tabela.
+
+Armazenar o objeto em uma variável primeiro antes de exclui-lo, pode ser mais útil do que fazer
+a exclusão diretamente como no comando acima
+Assim com o armazenamento é possível realizar outras operações com o objeto antes ou depois de
+excluí-lo 
 =end
