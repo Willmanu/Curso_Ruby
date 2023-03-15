@@ -729,7 +729,7 @@ variavel = Product.find(id_Product)
                                             find
 
 find significa encontrar
-Ele é um método do ActiveRecord, e pode ser chamado por um modelo do ActiveRecord, para
+Ele é um método do ActiveRecord, e pode ser chamado por um model do ActiveRecord, para
 encontrar e buscar um registro especifico (ou uma coleção de registro) no BD com base no id
 
 O método find aceita um ou mais argumentos que representam os IDs dos registros a serem
@@ -744,6 +744,114 @@ Com relação a coleção de registro pode ser passado uma matriz de IDs como ar
 exemplo, Product.find([1, 2, 3]) retornaria uma coleção de registros da tabela "products"
 com IDs iguais a 1, 2 e 3.
 
-                                 Executando o comando DELETE ba Tabela Product
+                                 Executando o comando DELETE na Tabela Product
 
+Para excluir o produto 3 da tabela faz assim
+
+1º armazena o objeto que se deseja excluir
+produto = Product.find(3)
+
+2º usa a variável para deletar o registro
+product.delete  ou product.destroy
+
+Observação: não é necessário passar o id neste exemplo, porque ao armazenar este item da tabela
+Product na variável product, estou apontando ao ActiveRecord qual é o id que quero excluir
+Ou seja eu encontrei o item da tabela e agora to excluindo o que foi encontrado
+
+veja o resultado:
+      ARMAZENAMENTO
+irb(main):001:0> product = Product.find(3)
+  Product Load (0.4ms)  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?  [["id", 3], ["LIMIT", 1]]                                                                           
+=>
+#<Product:0x0000564014c1d568
+...
+irb(main):002:0> product
+=>
+#<Product:0x0000564014c1d568
+ id: 3,
+ name: "Shampoo",
+ price: 0.5e2,
+ active: true,
+ created_at: Tue, 14 Mar 2023 14:03:26.254993000 UTC +00:00,
+ updated_at: Tue, 14 Mar 2023 14:03:26.254993000 UTC +00:00>
+irb(main):003:0>
+
+Feito o armazenamento e chamei a variável para ver o que nela, e consta o item 3 na variável
+  EXCLUSÃO:
+irb(main):003:0> product.delete
+  Product Destroy (11.1ms)  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 3]]
+=>
+#<Product:0x0000564014c1d568
+ id: 3,
+ name: "Shampoo",
+ price: 0.5e2,
+ active: true,
+ created_at: Tue, 14 Mar 2023 14:03:26.254993000 UTC +00:00,
+ updated_at: Tue, 14 Mar 2023 14:03:26.254993000 UTC +00:00>
+
+O comando foi dado e ele informa que exclui
+Quando peço para ver o conteúdo da tabela Product tenho:
+
+ irb(main):006:0> Product.where
+  Product Load (0.2ms)  SELECT "products".* FROM "products"
+=>
+#<ActiveRecord::QueryMethods::WhereChain:0x00005640153a4458
+ @scope=
+  [#<Product:0x000056401545d368
+    id: 1,
+    name: "Perfume",
+    price: 0.2e3,
+    active: true,
+    created_at: Mon, 13 Mar 2023 21:31:41.106589000 UTC +00:00,
+    updated_at: Tue, 14 Mar 2023 13:16:00.587942000 UTC +00:00>,
+   #<Product:0x000056401545d2a0
+    id: 2,
+    name: "Sabonete",
+    price: 0.2e2,
+    active: true,
+    created_at: Tue, 14 Mar 2023 13:51:37.925335000 UTC +00:00,
+    updated_at: Tue, 14 Mar 2023 13:51:37.925335000 UTC +00:00>]>
+irb(main):007:0>
+
+Somente dois itens é o que vejo
+
+                            Percorrendo a tabela Product com .each
+
+Sintaxe:
+
+Product.where(active:true).each do |product|
+  puts "O nome do produto é #{product.name}"
+end
+
+Aqui acima estou pedindo para que na tabela Product onde o active for true percorra todos os
+registros e imprima seu nome
+
+O resultado é:
+irb(main):007:1* Product.where(active:true).each do |product|
+irb(main):008:1*   puts "O nome do produto é #{product.name}"
+irb(main):009:0> end
+  Product Load (0.3ms)  SELECT "products".* FROM "products" WHERE "products"."active" = ?  [["active", 1]]
+O nome do produto é Perfume
+O nome do produto é Sabonete
+
+	                             Abrindo o Console do BD
+
+Até aqui vimos comando de BD no Rails, ou seja, o Rails executa as query
+Graças a duas linhas de códigos que tomos em app/models/product.rb
+código abaixo:
+
+class Product < ApplicationRecord
+end
+
+
+Para abrir o console do BD dentro do projeto pelo terminal primeiro devo instalar o bd que vou
+usar
+E dentro do arquivo database.yml configurar o BD que ira usar
+dentro do projeto devo executar
+	bin/rails db
+Quando der enter o Rails abrirá o BD que esta instalado e configurado
+
+No terminal ele escreve o nome do banco e assim é possível fazer query do BD instalado conforme
+sua sintaxe
+	com .help podemos ver os comandos desse BD
 =end
