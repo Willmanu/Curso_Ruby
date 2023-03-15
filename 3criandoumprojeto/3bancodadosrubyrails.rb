@@ -684,7 +684,7 @@ O DELETE apaga da tabela mas não da memória
 Não existe o comando DESTROY para BD, isso é do Rails
 Com o DESTROY se pode executar outras operações além da remoção de um registro, como o DELETE
 faz.
-Com DESTROY do Rails é possível remoção de associações e dependências de atributos
+Com DESTROY do Rails é possível remoção de associações e dependências
 
 Com isso se eu quiser fazer remoções como o DESTROY faz, com o DELETE, preciso fazer query
 personalizadas e especificas para isso com o DELETE
@@ -698,11 +698,52 @@ Apagar a partir da tabela product onde active seja igual a zero, ou seja, seja f
 em Rails fica:
 Product.delete(id_product)
 
-Esse é um comando direto em que o objeto chama o produto em questão pelo seu id, e assim apaga
-o mesmo da tabela.
+ou
+
+Product.destroy(id_Product)
+
+Esse acima é um comando direto em que o objeto chama o produto em questão pelo seu id, e assim
+apaga o mesmo da tabela.
 
 Armazenar o objeto em uma variável primeiro antes de exclui-lo, pode ser mais útil do que fazer
 a exclusão diretamente como no comando acima
 Assim com o armazenamento é possível realizar outras operações com o objeto antes ou depois de
-excluí-lo 
+excluí-lo.
+Por exemplo, suponha que você precisa excluir o produto com id igual a 1 e, em seguida,
+atualizar uma outra tabela que possui uma referência para esse produto. Nesse caso, você pode
+armazenar o objeto Product com id igual a 1 em uma variável, excluir o produto do banco de
+dados, atualizar a outra tabela e, em seguida, utilizar o objeto armazenado na variável para
+outras operações no código.
+
+Outra situação em que pode ser útil armazenar o objeto em uma variável é se você precisar
+utilizar as informações do objeto após a exclusão do registro no banco de dados, por exemplo,
+para enviar uma notificação de que o produto foi excluído.
+
+Em resumo, armazenar o objeto em uma variável antes de excluí-lo permite mais flexibilidade
+para realizar outras operações com o objeto antes ou depois de excluí-lo, de acordo com a
+lógica de negócio do seu sistema.
+
+Então para deletar um Product faz o seguinte:
+variavel = Product.find(id_Product)
+
+                                            find
+
+find significa encontrar
+Ele é um método do ActiveRecord, e pode ser chamado por um modelo do ActiveRecord, para
+encontrar e buscar um registro especifico (ou uma coleção de registro) no BD com base no id
+
+O método find aceita um ou mais argumentos que representam os IDs dos registros a serem
+buscados. Por exemplo, Product.find(1) retornaria o registro da tabela "products" que tem um
+ID igual a 1.
+
+Se nenhum registro com o ID especificado for encontrado, o método find lançará uma exceção
+ActiveRecord::RecordNotFound. Para evitar isso, você pode usar o método find_by_id, que retorna
+nil se nenhum registro com o ID especificado for encontrado.
+
+Com relação a coleção de registro pode ser passado uma matriz de IDs como argumento. Por
+exemplo, Product.find([1, 2, 3]) retornaria uma coleção de registros da tabela "products"
+com IDs iguais a 1, 2 e 3.
+
+                                 Executando o comando DELETE ba Tabela Product
+
 =end
