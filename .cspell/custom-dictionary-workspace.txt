@@ -19,6 +19,7 @@ contatransferir
 dadospessoais
 datetime
 descomente
+destrory
 devs
 divid
 empaty

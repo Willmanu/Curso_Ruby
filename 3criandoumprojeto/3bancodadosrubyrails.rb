@@ -676,12 +676,19 @@ irb(main):001:0> Product.where.not(active:false)
   updated_at: Tue, 14 Mar 2023 14:03:26.254993000 UTC +00:00>]
 irb(main):002:0>
 
-                                            DELETE
-Este comando deleta registros do BD
-em BD fica
+                                    DELETE ou DESTROY
+Os dois comandos tem a mesma função no BD que é deletar ou apagar registros do BD.
+O DESTROY apaga o registro da tabela e da memória
+O DELETE apaga da tabela mas não da memória
 
+Não existe o comando DESTROY para BD, isso é do Rails
+Com o DESTROY 
+O DELETE em BD é
 DELETE from product where active = o   ou true
 
 Aqui acima quer dizer
-Apagar a partir da tabela
+Apagar a partir da tabela product onde active seja igual a zero, ou seja, seja false
+
+em Rails fica:
+product.destrory(id_product)
 =end
