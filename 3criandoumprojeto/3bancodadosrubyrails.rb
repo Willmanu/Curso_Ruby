@@ -634,4 +634,54 @@ Temos
  Product Load (0.5ms)  SELECT "products".* FROM "products" WHERE "products"."active" = ?  [["active", 1]]
 => 3
 irb(main):045:0>
+
+                                        WHERE.not
+
+Com o .not podemos negar a condição
+Exemplo:
+em BD fica
+SELECT *from product where not active = 0
+
+aqui acima quer dizer: selecionar tudo a partir da tabela product, onde active não seja igual
+a zero. COmo 0 é false e 1 é true, tudo que for zero não vira na consulta
+
+em Rails fica:
+Product.where.not(Active: false)
+
+O resulta é:
+
+irb(main):001:0> Product.where.not(active:false)
+  Product Load (0.4ms)  SELECT "products".* FROM "products" WHERE "products"."active" != ?  [["active", 0]]
+=>
+[#<Product:0x00007f15a439c770
+  id: 1,
+  name: "Perfume",
+  price: 0.2e3,
+  active: true,
+  created_at: Mon, 13 Mar 2023 21:31:41.106589000 UTC +00:00,
+  updated_at: Tue, 14 Mar 2023 13:16:00.587942000 UTC +00:00>,
+ #<Product:0x000055596c8455b0
+  id: 2,
+  name: "Sabonete",
+  price: 0.2e2,
+  active: true,
+  created_at: Tue, 14 Mar 2023 13:51:37.925335000 UTC +00:00,
+  updated_at: Tue, 14 Mar 2023 13:51:37.925335000 UTC +00:00>,
+ #<Product:0x000055596c8454e8
+  id: 3,
+  name: "Shampoo",
+  price: 0.5e2,
+  active: true,
+  created_at: Tue, 14 Mar 2023 14:03:26.254993000 UTC +00:00,
+  updated_at: Tue, 14 Mar 2023 14:03:26.254993000 UTC +00:00>]
+irb(main):002:0>
+
+                                            DELETE
+Este comando deleta registros do BD
+em BD fica
+
+DELETE from product where active = o   ou true
+
+Aqui acima quer dizer
+Apagar a partir da tabela
 =end
