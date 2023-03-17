@@ -48,10 +48,10 @@ objetocarro.carro # 3º
 
 =begin
 
-1º escreve o require passando o endereço de onde esta a classe que vai receber os valore
-passados e fazer o retorno.
-2º criar o objetocarro e passar os valores
-3º chama o método que vai fazer e retornar a impressão
+1º escrevi o require passando o endereço de onde esta a classe, que vai receber o valor passado, e faz
+o retorno após processar o dado ou os dados.
+2º criei o objetocarro e passei o valor
+3º chamei o método que vai fazer o processo do dado e retornar a impressão
 
 lembre se:
 ./ -> representa o diretório atual
