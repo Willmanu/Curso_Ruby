@@ -37,10 +37,18 @@ Cada parte do MVC tem suas responsabilidades para atender o que usuário deseja
 View mostra o conteúdo para o usuário, só se preocupa em pegar dados e mostra para usuário,
 ou seja, envia uma resposta
 
-Controller sua função é receber a requisição, e baseado nisto, pode ou não buscar um dado
-em um model e mostrar na View
+Controller sua função é receber a requisição do usuário, e baseado nisto, pode ou não buscar
+dados em um model e mostrar na View
 
+Model armazena os dados do usuário ou pega de outro lugar para armazenar
 
+Resumo: O MVC tem a responsabilidade de separar cada função, e assim delegar atividades a cada
+um dos elementos, para que quando minha aplicação cresça, não vire um bola de neve e me
+faça ter trabalho demasiado para corrigir os problemas.
+Assim a escalabilidade vai estar garantida
+
+A interação sempre começa do usuário
+Entra no controller e assim é distribuídas para outras parte se necessário: View e Controller
 
 
 =end
