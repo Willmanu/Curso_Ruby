@@ -4,8 +4,8 @@ Model
 View
 Controller
 
-É um padrão de arquitetura de software que separa a representação da informação da interação do
-usuário
+É um padrão, de arquitetura de software, que separa a, representação da informação,
+da interação do usuário
 
                                    Problema que o MVC resolve
 
@@ -68,9 +68,46 @@ rails new nome_projeto(mvc_teste)
 2º dentro do projeto usa-se o comando:
 rails g scaffold User name:string email:string
 
-O g é de generate
-O scaffold vem emprestado de construção civil e quer dizer -> pré-moldado ou andaime - uma referencia a um
-esqueleto da aplicação, gerando estruturas que se repetem muitas vezes no sistema de uma
-maneira mais rápida e simples
+o g é de generate
+
+
+                                           scaffold
+
+O vem emprestado de construção civil e quer dizer -> pré-moldado ou andaime - faz
+referencia a uma esqueleto da aplicação, gerando estruturas que se repetem muitas vezes no
+sistema de uma maneira mais rápida e simples
+
+"scaffold" é um gerador de código que pode ser usado para criar rapidamente uma estrutura
+básica para uma aplicação web.
+Ele gera automaticamente um conjunto de arquivos, incluindo um modelo, controlador, rotas,
+views e arquivos de migração para o banco de dados
+
+O objetivo do scaffold é acelerar o desenvolvimento de uma aplicação web, permitindo que os
+desenvolvedores criem rapidamente uma estrutura básica para o aplicativo, sem precisar escrever
+manualmente todo o código para cada parte do aplicativo
+
+No entanto, é importante notar que o scaffold não é uma solução completa para o desenvolvimento
+de aplicativos web.
+Embora possa ser útil para criar rapidamente uma estrutura básica, os desenvolvedores ainda
+precisam escrever código adicional para implementar recursos avançados ou personalizar a
+aplicação. Além disso, o código gerado pelo scaffold pode precisar ser ajustado para atender às
+necessidades específicas do aplicativo.
+
+
+User é o nome do scaffold
+name e email são os campos do CRUD, sempre com seus tipos a frente.
+No caso de tipos string, na versão do Rails de numero 5.0 náo é mais necessário informar
+
+	então fica assim o script:
+	rails g scaffold User name email
+
+Então com base nessa explicação o que o script quer dizer é:
+que o rails vai gerar um esqueleto/estrutura, chamada User porque é para um usuário que também é
+o nome do model, com dois campos/atributos onde o usuário vai preencher, com seu nome e email.
+
+Isso que significa que o CRUD será um cadastro para usuário, onde será cadastrado nome e email.
+
+observação: o nome do model sempre será no singular e com a 1º letra em maiúscula
+
 
 =end
