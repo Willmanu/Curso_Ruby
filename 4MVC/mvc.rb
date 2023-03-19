@@ -57,9 +57,17 @@ Update
 Delete
 
 CRUD (Create, Read, Update, Delete) é um acrônimo(palavra formada pelas iniciais)
-Refere-se a maneira para se operar em informação armazenada
+São ações em informações que estão armazenada
 É um mnemônico( relativo à memória; é uma técnica com o objetivo de auxiliar a memória) para
 as quatro operações básicas de armazenamento persistente.
+
+                                         Ciando CRUD
+1º cria um projeto com:
+rails new nome_projeto(mvc_teste)
+
+2º dentro do projeto usa-se o comando:
+rails g(generation) scaffold User name:string email:string
+
 
 
 =end
