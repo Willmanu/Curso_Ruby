@@ -152,4 +152,40 @@ da palavra create
       create      app/views/users/_user.json.jbuilder
 
 
+
+
+Aqui  create    db/migrate/20230319203204_create_users.rb
+temo uma migração
+
+class CreateUsers < ActiveRecord::Migration[7.0]
+  def change
+    create_table :users do |t|
+      t.string :name
+      t.string :email
+
+      t.timestamps
+    end
+  end
+end
+
+Aqui  create    app/models/user.rb
+temos a classe User sendo subclasse de ApplicationRecord
+
+class User < ApplicationRecord   
+
+classe base do framework ActiveRecord, end cuida da aplicação dos dados ao BD
+
+
+                "teste_unit" Framework de teste de unidade Ruby on Rails
+Aqui
+ invoke    test_unit
+    create      test/models/user_test.rb
+    create      test/fixtures/users.yml
+
+O Rails invoca e cria arquivos de teste
+teste_unit é um framework de teste de unidade padrão que vem com o Ruby on Rails
+Usado para escrever teste automatizados com o intuito de verificar se o código funciona
+corretamente
+observação: 
+
 =end
