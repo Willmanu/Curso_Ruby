@@ -109,5 +109,47 @@ Isso que significa que o CRUD será um cadastro para usuário, onde será cadast
 
 observação: o nome do model sempre será no singular e com a 1º letra em maiúscula
 
+	Analisando o que esta nas pastas do projeto mvc_test antes de rodar o script scaffold
+
+Dentro das pasta Controller, Model e View temos os arquivos padrão que o Rails cria quando
+o generate cria o projeto que são:
+
+Controller temos -> application_controller.rb
+Models temos -> application_records.rb
+Views temos -> layouts-> application.html.erb, mailer.html.erb e mailer.text.erb
+
+                          O que o scaffold cria quando da enter ao script?
+Após executar o script/comando veja o que o Rails criou, observando o log de saída, a frente
+da palavra create
+ invoke  active_record
+      create    db/migrate/20230319203204_create_users.rb
+      create    app/models/user.rb
+      invoke    test_unit
+      create      test/models/user_test.rb
+      create      test/fixtures/users.yml
+      invoke  resource_route
+       route    resources :users
+      invoke  scaffold_controller
+      create    app/controllers/users_controller.rb
+      invoke    erb
+      create      app/views/users
+      create      app/views/users/index.html.erb
+      create      app/views/users/edit.html.erb
+      create      app/views/users/show.html.erb
+      create      app/views/users/new.html.erb
+      create      app/views/users/_form.html.erb
+      create      app/views/users/_user.html.erb
+      invoke    resource_route
+      invoke    test_unit
+      create      test/controllers/users_controller_test.rb
+      create      test/system/users_test.rb
+      invoke    helper
+      create      app/helpers/users_helper.rb
+      invoke      test_unit
+      invoke    jbuilder
+      create      app/views/users/index.json.jbuilder
+      create      app/views/users/show.json.jbuilder
+      create      app/views/users/_user.json.jbuilder
+
 
 =end
