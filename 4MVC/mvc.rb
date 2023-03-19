@@ -66,8 +66,11 @@ as quatro operações básicas de armazenamento persistente.
 rails new nome_projeto(mvc_teste)
 
 2º dentro do projeto usa-se o comando:
-rails g(generation) scaffold User name:string email:string
+rails g scaffold User name:string email:string
 
-
+O g é de generate
+O scaffold vem emprestado de construção civil e quer dizer -> pré-moldado ou andaime - uma referencia a um
+esqueleto da aplicação, gerando estruturas que se repetem muitas vezes no sistema de uma
+maneira mais rápida e simples
 
 =end
