@@ -50,5 +50,16 @@ Assim a escalabilidade vai estar garantida
 A interação sempre começa do usuário
 Entra no controller e assim é distribuídas para outras parte se necessário: View e Controller
 
+                                            CRUD
+Create
+Read
+Update
+Delete
+
+CRUD (Create, Read, Update, Delete) é um acrônimo(palavra formada pelas iniciais)
+Refere-se a maneira para se operar em informação armazenada
+É um mnemônico( relativo à memória; é uma técnica com o objetivo de auxiliar a memória) para
+as quatro operações básicas de armazenamento persistente.
+
 
 =end
