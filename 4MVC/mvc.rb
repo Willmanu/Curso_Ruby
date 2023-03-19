@@ -171,12 +171,13 @@ end
 Aqui  create    app/models/user.rb
 temos a classe User sendo subclasse de ApplicationRecord
 
-class User < ApplicationRecord   
+class User < ApplicationRecord
 
 classe base do framework ActiveRecord, end cuida da aplicação dos dados ao BD
 
 
-                "teste_unit" Framework de teste de unidade Ruby on Rails
+                                      "teste_unit" 
+Framework de teste de unidade Ruby on Rails
 Aqui
  invoke    test_unit
     create      test/models/user_test.rb
@@ -186,6 +187,12 @@ O Rails invoca e cria arquivos de teste
 teste_unit é um framework de teste de unidade padrão que vem com o Ruby on Rails
 Usado para escrever teste automatizados com o intuito de verificar se o código funciona
 corretamente
-observação: 
+observação: este teste são importantes para garantir que parte individual do código,
+funcionem corretamente antes de serem combinados em uma aplicação completa
 
+Este teste garante a detecção de problemas em um estagio inicial de desenvolvimento,
+facilitando sua correção e assim, reduzindo a necessidade de depuração economizando
+tempo e esforço
+
+                                        resource_rotas
 =end
