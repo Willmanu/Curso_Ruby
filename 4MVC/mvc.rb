@@ -1,11 +1,14 @@
 =begin
 
+                                             MVC
 Model
 View
 Controller
+Em um Desenvolvimento web tenho:
+- interação do usuário e a representação da informação
 
-É um padrão, de arquitetura de software, que separa a, representação da informação,
-da interação do usuário
+O mvc e um padrão de arquitetura de software, que separa a:
+representação da informação da interação do usuário
 
                                    Problema que o MVC resolve
 
@@ -16,13 +19,13 @@ Quando se cria um aplicação web, esta é colocada em um servidor.
 Uma pessoa vai acessar o browser e vai acessar essa aplicação que esta em um servidor
 Essa aplicação pode ser feita em um único arquivo
 Porém quando se começa a criar novas funcionalidades para esse arquivo a tendencia é
-ele ir aumentando
+ele ir aumentando, ou seja, escalando
 Vai inchando inchando até se tornar uma bola de neve
 Este fato quer dizer que se criar uma aplicação, e ela for crescendo de forma desorganizada,
 e muito fácil ter um problema
-Principalmente em uma aplicação que atende muitas pessoas, será normal precisar criar novas
-funcionalidades e assim essa aplicação crescer ou como diz na programação -> escalar.
-E com isso muita manutenção no futuro
+Em uma aplicação que atende muitas pessoas, é normal criar novas funcionalidades, o que
+essa aplicação crescer ou como diz na programação -> escala
+E com isso gera muita manutenção no futuro
 
                                    Forma que o MVC resolve os problema
 
@@ -48,7 +51,7 @@ faça ter trabalho demasiado para corrigir os problemas.
 Assim a escalabilidade vai estar garantida
 
 A interação sempre começa do usuário
-Entra no controller e assim é distribuídas para outras parte se necessário: View e Controller
+Está passa pelo controller, e assim é distribuídas para outras parte se necessário: View e Controller
 
                                             CRUD
 Create
@@ -108,6 +111,7 @@ o nome do model, com dois campos/atributos onde o usuário vai preencher, com se
 Isso que significa que o CRUD será um cadastro para usuário, onde será cadastrado nome e email.
 
 observação: o nome do model sempre será no singular e com a 1º letra em maiúscula
+
 
 	Analisando o que esta nas pastas do projeto mvc_test antes de rodar o script scaffold
 
@@ -176,7 +180,7 @@ class User < ApplicationRecord
 classe base do framework ActiveRecord, end cuida da aplicação dos dados ao BD
 
 
-                                      "teste_unit" 
+                                      "teste_unit"
 Framework de teste de unidade Ruby on Rails
 Aqui
  invoke    test_unit
@@ -195,4 +199,55 @@ facilitando sua correção e assim, reduzindo a necessidade de depuração econo
 tempo e esforço
 
                                         resource_rotas
+Aqui
+ invoke  resource_route
+    route    resources :users
+
+Invoca o resource_rotas → rotas de recurso
+É um help methods -> métodos de ajuda
+Este gera rotas para recursos API RESTful ->  recomendado para desenvolvimento
+web, ou seja, cria uma rota para APIRestful
+Resumindo é um método de ajuda que cria as rotas necessárias para um API, encapsulando
+a logica necessária para criar as rotas de CRUD
+Com esse método não é necessário criar rotas manualmente para cada um desses métodos HTTP
+para cada modelo no meu aplicativo
+
+   resource :user
+O resource que vimos acima cria um código que é adicionado ao arquivo de rotas ->
+config/routs.rb criando as rotas para o model User com as seguintes ações:
+
+GET /users para listar todos os usuários
+GET /users/new para exibir um formulário de criação de usuário
+POST /users para criar um novo usuário
+GET /users/:id para exibir um usuário específico
+GET /users/:id/edit para exibir um formulário de edição de usuário
+PATCH /users/:id para atualizar um usuário específico
+DELETE /users/:id para excluir um usuário específico
+
+resumo: Quando se adiciona o "resources :users" ao arquivo de rotas do aplicativo Rails,
+ele cria automaticamente essas rotas para o modelo de usuário, permitindo a execução
+dessas ações no aplicativo.
+
+                                   scaffold_controller
+Aqui
+invoke  scaffold_controller
+  create    app/controllers/users_controller.rb
+
+É uma tarefa do Rails
+Essa tarefa gera um controlador com todas as ações do CRUD, para meu modelo de
+aplicação User
+Foi criado com um arquivo chamado users_controller.rb em app/controllers/
+possuindo métodos de ações para o CRUD para classe User com as seguintes ações:
+
+index: lista todos os usuários
+show: exibe um usuário específico
+new: cria um novo usuário
+create: salva um novo usuário no banco de dados
+edit: exibe o formulário para editar um usuário
+update: atualiza os dados de um usuário no banco de dados
+destroy: exclui um usuário do banco de dados
+
+
+                                        erb
+Embedded Ruby
 =end
