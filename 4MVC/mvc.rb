@@ -249,5 +249,35 @@ destroy: exclui um usuário do banco de dados
 
 
                                         erb
-Embedded Ruby
+Aqui temos
+   invoke    erb
+      create      app/views/users
+      create      app/views/users/index.html.erb
+      create      app/views/users/edit.html.erb
+      create      app/views/users/show.html.erb
+      create      app/views/users/new.html.erb
+      create      app/views/users/_form.html.erb
+      create      app/views/users/_user.html.erb
+
+erb é -> Embedded Ruby significa -> Ruby embutido
+É um formato de modelo de visualização usado em muitos aplicativos Ruby on Rails
+Combina HTML, ou qualquer tipo de código de marcação com código Ruby
+
+Este arquivo user, foi criado dentro da pasta view, que esta em app
+São modelos de visualização (views) em formato .erb (Embedded Ruby) para a entidade User
+
+O comando invoke erb é uma tarefa do gerador de scaffold do Rails, que gera automaticamente
+arquivos de visualização para CRUD do User
+
+Os arquivos criados são:
+
+  index.html.erb: a view para exibir uma lista de todos os usuários
+  edit.html.erb: a view para editar um usuário existente
+  show.html.erb: a view para exibir os detalhes de um usuário específico
+  new.html.erb: a view para criar um novo usuário
+  _form.html.erb: um parcial que contém o formulário para criar ou editar um usuário
+  _user.html.erb: um parcial que contém o HTML para exibir os detalhes de um usuário em
+  uma tabela, por exemplo
+
+  
 =end
