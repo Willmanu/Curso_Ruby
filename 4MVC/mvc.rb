@@ -295,5 +295,26 @@ Aqui
 
 dentro de app foi criada uma pasta helper que contem o arquivo user_helper.rb
 
+                                      jbuilder
+
+jbuilder -> significa json builder, ou seja, construtor json
+Ele é uma gem(biblioteca) que constrói saídas json de forma mais fácil e legível, sem fazer
+mistura de código Ruby com json
+
+Aqui
+ invoke    jbuilder
+    create      app/views/users/index.json.jbuilder
+    create      app/views/users/show.json.jbuilder
+    create      app/views/users/_user.json.jbuilder
+
+Temos:
+Os comandos "create" estão criando os arquivos de visualização (views) para a ação "index"
+e "show" do controlador (controller) "Users", que irão fornecer as saídas JSON para essas
+ações. O arquivo "_user.json.jbuilder" é um arquivo de visualização parcial que é usado para
+renderizar o JSON de cada usuário na lista de usuários retornada pela ação "index".
+
+Em resumo, esses arquivos Jbuilder estão sendo criados para permitir que o Rails construa
+respostas JSON a partir de dados retornados pelo controlador "Users" em seu aplicativo web
+
 
 =end
