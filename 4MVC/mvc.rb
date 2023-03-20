@@ -51,7 +51,8 @@ faça ter trabalho demasiado para corrigir os problemas.
 Assim a escalabilidade vai estar garantida
 
 A interação sempre começa do usuário
-Está passa pelo controller, e assim é distribuídas para outras parte se necessário: View e Controller
+Está passa pelo controller, e assim é distribuídas para outras parte se necessário:
+View e Controller
 
                                             CRUD
 Create
@@ -65,6 +66,8 @@ São ações em informações que estão armazenada
 as quatro operações básicas de armazenamento persistente.
 
                                          Ciando CRUD
+Aqui vou criar um CRUD que valida nome e email do usuário, ou seja, um cadastro
+
 1º cria um projeto com:
 rails new nome_projeto(mvc_teste)
 
@@ -76,7 +79,7 @@ o g é de generate
 
                                            scaffold
 
-O vem emprestado de construção civil e quer dizer -> pré-moldado ou andaime - faz
+A palavra vem emprestada da construção civil e quer dizer -> pré-moldado ou andaime - faz
 referencia a uma esqueleto da aplicação, gerando estruturas que se repetem muitas vezes no
 sistema de uma maneira mais rápida e simples
 
@@ -279,5 +282,18 @@ Os arquivos criados são:
   _user.html.erb: um parcial que contém o HTML para exibir os detalhes de um usuário em
   uma tabela, por exemplo
 
-  
+
+                                            helper
+helper -> ajuda
+É um tipo de arquivos que contém métodos que vão ajudar as views, ajudando a exibir
+informações dos usuários na pagina. Por exemplo:
+posso criar método que formate a data de nascimento do usuário
+
+Aqui
+ invoke    helper
+    create      app/helpers/users_helper.rb
+
+dentro de app foi criada uma pasta helper que contem o arquivo user_helper.rb
+
+
 =end
