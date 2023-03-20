@@ -8,7 +8,12 @@ gems installed rails
 Após esse comando, o Rails baixa todas as dependências, as instala e instala também a biblioteca
 Após essa instalação é possível criar um projeto
 Indo no terminal e escrevendo:
+
 rails new nome_projeto
+Observação:
+após o projeto ser criado é sempre bom executar o comando:
+bundle install
+para buscar possíveis gem que possa faltar
 
 Dando enter nesta linha, o rails cria as estruturas de diretórios dessa
 aplicação

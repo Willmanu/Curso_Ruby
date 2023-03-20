@@ -71,6 +71,10 @@ Aqui vou criar um CRUD que valida nome e email do usuário, ou seja, um cadastro
 1º cria um projeto com:
 rails new nome_projeto(mvc_teste)
 
+Observação:
+após o projeto ser criado é sempre bom executar o comando: bundle install
+assim ele busca possíveis gem que esteja falta no projeto
+
 2º dentro do projeto usa-se o comando:
 rails g scaffold User name:string email:string
 
@@ -316,5 +320,93 @@ renderizar o JSON de cada usuário na lista de usuários retornada pela ação "
 Em resumo, esses arquivos Jbuilder estão sendo criados para permitir que o Rails construa
 respostas JSON a partir de dados retornados pelo controlador "Users" em seu aplicativo web
 
+Resumo: com isso sabemos que o Rails criou o básico do mvc para essa aplicação
 
+                                    Comandos db:create  db:migrate
+
+Neste momento tenho o esqueleto de criação da tabela User, com os campos nome e email
+e diversas outras coisas feitas graças ao Rails.
+
+Vimos que temos o arquivo em db/migrate criado, ou seja, o código ruby abaixo
+
+class CreateUsers < ActiveRecord::Migration[7.0]
+  def change
+    create_table :users do |t|
+      t.string :name
+      t.string :email
+
+      t.timestamps
+    end
+  end
+end
+
+ db:migrate é: quando esse código acima for executado, o rails vai pegar esse código em
+ Ruby, transformar em query na lingua do bd configurado aqui no projeto, e assim o bd
+vai tomar a ações e criar a tabela no BD
+
+db:create é: criar o BD
+
+resumo: cia o banco e migra -> gera a tabela no bd
+
+Os dois comando para execução fica assim:
+dentro do projeto escreve
+
+rails db:create
+
+rails de:migrate
+
+ou em uma linha só
+
+rails db:create db:migrate
+
+após o db:create temos
+Created database 'db/development.sqlite3'
+Created database 'db/test.sqlite3'
+
+acima ele cria o banco de dados sqlite3, um arquivo chamado -> development.sqlite3
+dentro da pasta db
+e cria também test.sqlite3 o db de teste
+
+
+após o db:migrate temos
+== 20230319203204 CreateUsers: migrating ======================================
+-- create_table(:users)
+   -> 0.0021s
+== 20230319203204 CreateUsers: migrated (0.0022s) =============================
+
+aqui vemos a migração, ou seja, query de BD através de código Ruby que o Rails criou
+
+
+                                    Rails server
+É o comando que inicia o servidor para ver se esta funcionando a aplicação
+
+no terminal é só escrever:
+
+rails server ou abreviado rails s
+
+e o retorno é:
+
+=> Booting Puma
+=> Rails 7.0.4.3 application starting in development
+=> Run `bin/rails server --help` for more startup options
+Puma starting in single mode...
+* Puma version: 5.6.5 (ruby 3.0.2-p107) ("Birdie's Version")
+*  Min threads: 5
+*  Max threads: 5
+*  Environment: development
+*          PID: 18805
+* Listening on http://127.0.0.1:3000
+* Listening on http://[::1]:3000
+Use Ctrl-C to stop
+
+e assim que eu abrir o app no browser tenho:
+
+Started GET "/" for ::1 at 2023-03-20 16:29:30 -0300
+  ActiveRecord::SchemaMigration Pluck (0.6ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY
+  "schema_migrations"."version" ASC
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  (Duration: 2.7ms | Allocations: 931)
+Completed 200 OK in 57ms (Views: 32.6ms | ActiveRecord: 0.0ms | Allocations: 7992)
 =end
