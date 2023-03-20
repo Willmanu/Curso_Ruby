@@ -346,7 +346,7 @@ vai tomar a ações e criar a tabela no BD
 
 db:create é: criar o BD
 
-resumo: cia o banco e migra -> gera a tabela no bd
+resumo: cria o banco e migra -> gera a tabela no bd
 
 Os dois comando para execução fica assim:
 dentro do projeto escreve
@@ -409,4 +409,5 @@ Processing by Rails::WelcomeController#index as HTML
   Rendered vendor/bundle/ruby/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
   (Duration: 2.7ms | Allocations: 931)
 Completed 200 OK in 57ms (Views: 32.6ms | ActiveRecord: 0.0ms | Allocations: 7992)
+
 =end
