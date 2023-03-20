@@ -410,4 +410,32 @@ Processing by Rails::WelcomeController#index as HTML
   (Duration: 2.7ms | Allocations: 931)
 Completed 200 OK in 57ms (Views: 32.6ms | ActiveRecord: 0.0ms | Allocations: 7992)
 
+                          Analisando como os elementos do MVC conversam
+
+Embora o nome dessa arquitetura seja MVC, pela forma que as coisas acontecem aqui na
+arquitetura, o nome deveria ser CVM ou CMV
+
+Isso porque quando o user faz uma requisição(requeste), ou seja, entra na barra de endereço
+do browser(navegador) e faz uma busca, a  busca cai primeiramente em um controller
+E este analisa este pedido primeiro para depois decidir para onde vai
+Se apresenta uma view ou entra no model para pegar um dado/registro/informação
+
+Observação: só vai cair no controller se tiver uma rota
+A rota é o endereço -> https://…… do site etc, para o que se deseja ver
+
+A exemplo foi o endereço dessa aplicação -> localhost:3000 que leva o user para a tela de
+apresentação do app
+
+Quando o endereço localhost:3000 cai no controller ele vai até o servidor e trás a view de
+apresentação do app
+
+
+	                           Especificando rota no browser
+
+Para chegar especificamente no user_controller.rb se faz necessário especificar a rota no
+browser
+
+                             
+
+
 =end
