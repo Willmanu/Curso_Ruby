@@ -497,8 +497,61 @@ Na segunda linha tenho o Verbo→ POST com  /users(.:format) onde serei levado p
 da coluna Controller#Action, ou seja, controller é user e action(ação) é create(criar)
 e assim sucessivamente para as demais linhas das colunas
 
-                                    Como as maquinas se conversão?
-O usuário é o cliente e onde fica a aplicação é o servidor, ou seja, cliente e servidor
+                                Padrão de como as maquinas conversão
+O usuário esta acostumado a ver de forma gráfica as coisas a sua frente na tela do computador
+	Ele clica em um botão e a magica acontece
 
-Quando o cliente conversa com o servidor eles o fazem pelo padrão REST
+O usuário é o cliente, e onde fica a aplicação é o servidor, ou seja, cliente e servidor
+
+Quando o cliente conversa com o servidor, por trás de tudo ele o faz pelo padrão REST
+Representational State Transfer -> Transferência de estado representacional
+
+É um estilo de arquitetura de software para sistemas distribuídos, é amplamente utilizado para
+criar serviços web que podem ser acessados pela internet
+
+Ele é baseado no protocolo HTTP e utiliza seus métodos de requisição que são:
+GET, POST, PUT e DELETE
+Com esses métodos podemos realizar operação em recursos como: dados ou arquivos, disponíveis
+no servidor
+Cada um desses recursos tem um identificador único, chamado de URL(Uniform Resource Locator -
+localizador padrão de recursos)
+
+Uma das principais vantagens do REST é a sua simplicidade e facilidade de implementação.
+Ele usa formatos de dados comuns, como XML ou JSON, para representar as informações que são
+transferidas entre o cliente e o servidor, tornando a comunicação mais eficiente e flexível
+
+REST é altamente escalável e pode ser usado para criar sistemas distribuídos complexos que
+suportam milhões de usuários e transações. Por essas razões, o padrão REST é amplamente adotado
+em projetos de desenvolvimento de software e é considerado uma das principais tecnologias para
+a criação de serviços web
+
+                               Operações que cada método HTTP faz
+GET: é usado para recuperar informações ou dados de um recurso específico na Web. Por exemplo,
+se você inserir a URL de um site em um navegador, o navegador fará uma solicitação GET para
+recuperar a página da Web.
+
+POST: é usado para enviar dados para um servidor e criar um novo recurso na Web. Por exemplo,
+um formulário de registro em um site geralmente usa uma solicitação POST para enviar os dados
+do usuário para o servidor, que então cria uma nova conta de usuário.
+
+PUT: é usado para atualizar um recurso existente na Web. Por exemplo, um aplicativo de
+gerenciamento de tarefas pode usar uma solicitação PUT para atualizar as informações de uma
+tarefa existente.
+
+DELETE: é usado para excluir um recurso na Web. Por exemplo, um aplicativo de mídia social
+pode usar uma solicitação DELETE para excluir uma postagem ou comentário que um usuário tenha
+feito.
+
+Resumindo
+Get - pega e retorna informação do servidor
+Post - envia informação para o servidor
+Put - atualiza toda a informações de um recurso no servidor
+Patch - atualiza parcialmente um recurso no servidor
+Delete - exclui informações no servidor
+
+
+
+
+
+
 =end
