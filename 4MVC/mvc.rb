@@ -434,15 +434,50 @@ apresentação do app
 
 Dentro do meu projeto mvc_test temos a pasta app e nela temos os elementos do mvc que são
 Model, View e Controller
-Dentro de controller temos o arquivo user_controller.
+Dentro de controller temos o arquivo user_controller.rb
 Este tem a responsabilidade que receber a requisição do usuário e apresentar o que este
 usuário deseja
-Para chegar especificamente no user_controller.rb se faz necessário especificar a rota no
-browser
 
                 Como saber a rota para chegar em user_controle.rb no browser?
 
-Neste caso são duas as formas
+Neste caso são duas as formas:
+
+1º poe ser dentro do projeto mvc_test em config/routes.rb
+
+Porém aqui dentro temos:
+Rails.application.routes.draw do
+  resources :users
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  # Defines the root path route ("/")
+  # root "articles#index"
+end
+
+Perceba que não mostra as rotas
+Mostra uma sintaxe -> Rails.application.routes.draw do" que define um bloco de configuração de
+rotas que é executado quando o aplicativo é inicializado e é responsável por definir todas as
+rotas disponíveis para o aplicativo.
+
+
+Veja que o resource cria as rotas para user
+user é o nome que foi dado para os elementos Model, View e Controller
+O resource como vimos anteriormente, é o metodo que cria as rotas para o user
+
+Essas linhas de código é uma configuração de rota que define como o sistema irá tratar as
+solicitações HTTP recebidas pelo aplicativo para a rota "/users".
+
+Ela define uma rota para o recurso "users" que pode ser acessado por meio de solicitações HTTP
+para os endpoints padrão de CRUD (Create, Read, Update, Delete) que correspondem às ações de
+um controlador RESTful
+
+Isso significa que, quando um usuário faz uma solicitação HTTP para o endpoint "/users",
+o Rails roteia essa solicitação para o controlador "UsersController" correspondente, que então
+lida com a solicitação e retorna a resposta apropriada
+
+2º é mais fácil de entender é digitar junto o endereço do meu servidor o: /rails/info/routes
+
+o endereço completo fica assim:
+localhost:3000/rails/info/routes
 
 
 =end
