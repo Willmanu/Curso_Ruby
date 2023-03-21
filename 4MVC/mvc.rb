@@ -479,5 +479,8 @@ lida com a solicitação e retorna a resposta apropriada
 o endereço completo fica assim:
 localhost:3000/rails/info/routes
 
+Este endereço me leva para uma pagina no browser com as rotas que foram criadas na minha
+aplicação
+
 
 =end
