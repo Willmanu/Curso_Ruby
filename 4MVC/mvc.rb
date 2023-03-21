@@ -430,12 +430,19 @@ Quando o endereço localhost:3000 cai no controller ele vai até o servidor e tr
 apresentação do app
 
 
-	                           Especificando rota no browser
+	                    Especificando rota no browser do meu app mvc_test
 
+Dentro do meu projeto mvc_test temos a pasta app e nela temos os elementos do mvc que são
+Model, View e Controller
+Dentro de controller temos o arquivo user_controller.
+Este tem a responsabilidade que receber a requisição do usuário e apresentar o que este
+usuário deseja
 Para chegar especificamente no user_controller.rb se faz necessário especificar a rota no
 browser
 
-                             
+                Como saber a rota para chegar em user_controle.rb no browser?
+
+Neste caso são duas as formas
 
 
 =end
