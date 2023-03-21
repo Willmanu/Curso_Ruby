@@ -482,5 +482,23 @@ localhost:3000/rails/info/routes
 Este endereço me leva para uma pagina no browser com as rotas que foram criadas na minha
 aplicação
 
+Temos 4 coluna na pagina
+ Help – HTTP Verbo – Path – Controller#Action
 
+Como dito temos as rotas da minha aplicação disponíveis nesta pagina.
+Com isso temos como exemplo:
+
+Na primeira linha temos a coluna HTTP Verbo com o verbo → Get  e, ao lado dela, na coluna
+Path(caminho) tenho → /users(.:format) onde "user" é uma rota
+Essa rota "user" vai me levar para users#index da coluna Controller#Action, ou seja,
+controller é "user" e action "index"
+
+Na segunda linha tenho o Verbo→ POST com  /users(.:format) onde serei levado para users#create
+da coluna Controller#Action, ou seja, controller é user e action(ação) é create(criar)
+e assim sucessivamente para as demais linhas das colunas
+
+                                    Como as maquinas se conversão?
+O usuário é o cliente e onde fica a aplicação é o servidor, ou seja, cliente e servidor
+
+Quando o cliente conversa com o servidor eles o fazem pelo padrão REST
 =end
