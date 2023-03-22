@@ -205,7 +205,7 @@ Este teste garante a detecção de problemas em um estagio inicial de desenvolvi
 facilitando sua correção e assim, reduzindo a necessidade de depuração economizando
 tempo e esforço
 
-                                        resource_rotas
+                                        resource_route
 Aqui
  invoke  resource_route
     route    resources :users
@@ -765,5 +765,17 @@ Como é feita a requisição?
 Como essa requisição chega no controller?
 O que o controller foi buscar em um model?
 Como os dados foram parar na View?
+
+                                   Criando uma nova rota
+
+Como vimos o resource é um método de ajuda que cria as rotas para a aplicação
+Este método se encontra em:
+config/routes.rb
+nele temos o seguinte código:
+
+Rails.application.routes.draw do
+  resources :users
+end
+
 
 =end
