@@ -622,6 +622,35 @@ Controller é o código acima que se chama users_controller.rb
 e nela temos a subclasse UsersController que herda ações de ApplicationController
 e nesta subclasse temos o método "index" que corresponde ao Action que está ao lado de
 Controller -> Controller#Action
+que é esse método abaixo
+
+  # GET /users or /users.json
+  def index
+    @users = User.all
+  end
+
+O User.all é uma classe, sei que é porque está escrito com U maiúsculo, e por convenção classe
+recebem a primeira letra maiúscula
+
+Esta classe esta em model/user.rb
+corresponde ao código abaixo
+
+class User < ApplicationRecord
+end
+
+Classe User que é subclasse de ApplicationRecord(classe base para todos os models da aplicação
+ApplicationRecord é uma classe do framework ActiveRecord, e serve para definir comportamentos
+e métodos padrão que serão compartilhados entre todos os models do aplicativo
+
+Tendo isso em mente o método o que User.all quer dizer é:
+Trazer todos os usuários cadastrados no meu BD, e coloque nesta variável da classe @user
+
+Perceba que a requisição do usuário tem uma rota localhost:3000/user
+que cai em um controller
+que vai no model pegar(GET) todos o usuário(User.all)
+e o controller mostra em uma view para o usuário, a lista de usuários cadastrados
+
+É isso que acontece com essa rota localhost:3000/user
 
 
 =end
