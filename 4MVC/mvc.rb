@@ -706,7 +706,56 @@ cadastrado no BD
 Aqui em index.html.erb temos o bloco de código Ruby ".each do || end" atuando na variável @user
 
 Para cada usuário que conter na variável @user o bloco de código Ruby ".each do || end" em
-index.html.erb
+index.html.erb vai imprimir na tela e o usuário verá cada user cadastrado no BD
+
+                                      Cadastrando User na tela User
+
+Quando entramos em http://localhost:3000/users
+Na View, ou seja, na tela que foi apresentado ao usuário por essa rota, temos duas coisas:
+1º o titulo da pagina que é -> Users
+2º Uma flag chamada -> New user
+
+Não me foi mostrado uma lista com usuários porque não cadastrei nenhum ainda
+
+Para fazer isso cliquei em New user e a resposta foi:
+Perceba que tenho dois campos para preencher
+Apos preencher os campos com nome de user e email tive essa resposta:
+
+User was successfully created.       aqui diz que o usuário foi criado com sucesso
+
+Name: William                        o nome do user
+
+Email: william@gmail.com              email do user
+
+Edit this user | Back to users         Editar este usuário | Voltar para os usuários
+Destroy this user                      Destruir este usuário
+
+
+O endereço desta view agora http://localhost:3000/users/new e não mais  http://localhost:3000/users
+
+Quando cliquei em Back to users, ou seja, para voltara tela anterior  tenho
+
+Users
+Name: William
+
+Email: william@gmail.com
+
+Show this user                       aqui é Mostrar este usuário
+
+New user
+
+Perceba que a rota agora é http://localhost:3000/users
+
+                                   O fluxo correto dos elementos
+
+O que tem que ficar claro com tudo isso é a importância de entender a responsabilidade de cada elemento
+e o fluxo das coisas
+1º requisição do usuário(cliente)
+2º Tudo passa pelo controller
+3º O controller pode ou não ir para o model pegar informações no banco de dados
+4º O controller envia 
+Tudo passa pelo controller e ele é quem vai ou não buscar dados no model e fas a renderização para a
+view
 
 É isso que acontece com essa rota localhost:3000/user
 =end
