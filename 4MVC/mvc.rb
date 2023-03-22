@@ -549,6 +549,50 @@ Put - atualiza toda a informações de um recurso no servidor
 Patch - atualiza parcialmente um recurso no servidor
 Delete - exclui informações no servidor
 
+                                   Padrão URL e Verbo
+
+Depois da toda essa analise de como acontece as coisas, quando o usuário(cliente) escreve um
+endereço no browser, que sei agora que é uma URL, e esta é unica, um identificador de um
+recurso no servidor etc. tudo isso acontece porque houve uma requisição do user
+
+E essa requisição tem esse padrão acima descrito, de funcionamento para que corra tudo bem na
+aplicação
+
+O padrão então sempre usará a URL e um verbo
+
+Exemplo:
+Quando eu o cliente escrevo a URL localhost:3000 no browser e clico em enter, criei uma
+requisição
+Essa requisição para o servidor é uma requisição do tipo GET, ou seja, é para pegar algo no
+servidor
+
+Isso é imutável, sempre que um user(cliente) digitar a URL no browser é uma requisição GET
+
+Nesse contexto existe também a requisição POST, PATCH, DELETE etc.
+Porém essas outras citadas não é possível velas através da URL, a não ser com uma ferramenta
+especifica para mostra-lá como por exemplo o "postman"
+
+Tendo isso em mente se eu digitar localhost:3000/user, no meu código essa rota cai em:
+app/controllers/users_controller.rb
+onde tenho esse código em Ruby:
+
+class UsersController < ApplicationController
+  before_action :set_user, only: %i[ show edit update destroy ]
+
+  # GET /users or /users.json
+  def index
+    @users = User.all
+  end
+
+  # GET /users/1 or /users/1.json
+  def show
+  end
+
+  # GET /users/new
+  def new
+    @user = User.new
+  end
+
 
 
 
