@@ -558,13 +558,13 @@ recurso no servidor etc. tudo isso acontece porque houve uma requisição do use
 E essa requisição tem esse padrão acima descrito, de funcionamento para que corra tudo bem na
 aplicação
 
-O padrão então sempre usará a URL e um verbo
+O padrão sempre usará a URL e um verbo
 
 Exemplo:
 Quando eu o cliente escrevo a URL localhost:3000 no browser e clico em enter, criei uma
 requisição
-Essa requisição para o servidor é uma requisição do tipo GET, ou seja, é para pegar algo no
-servidor
+Essa requisição para o servidor é uma requisição do tipo GET, ou seja, é para pegar esse
+recurso que tem como identificação esta url no servidor
 
 Isso é imutável, sempre que um user(cliente) digitar a URL no browser é uma requisição GET
 
@@ -597,13 +597,31 @@ class UsersController < ApplicationController
 É uma subclasse que significa controle de usuário, como subclasse de ApplicationController
 herda os métodos que tem nesta classe.
 
+
+                                       ApplicationController
 ApplicationController -> Controlador de aplicativo: está é uma classe base em Rails usada como
 controlador principal para os controladores do aplicativo, fornecendo uma camada de abstração
 entre o servidor web e os controladores do aplicativo
-o aplicativo
+
 Com ApplicationController é possível definir métodos para autenticação de usuários, autorização
 de acesso, manipulação de erros etc.
-Por isso os controladores da aplicação herda esta classe reutilizando esses comportamentos
+Por isso os controladores da aplicação herda esta classe reutilizando essas ações
+
+O ApplicationController também é responsável por definir o layout padrão que será usado em
+todas as páginas do aplicativo. Ele permite que você defina um layout comum para todas as
+páginas, como um cabeçalho, rodapé e barra de navegação, que serão usados em todas as páginas
+do aplicativo.
+
+Perceba meu GET na pagina localhost:3000/user
+
+na coluna HTTP Verbo, que indica o verbo usado é o GET
+Na coluna Path(caminho) é /users(.:format) ou seja é user
+Por isso na url após a porta 3000 tenho o /user
+isso cai em Controller#Action
+Controller é o código acima que se chama users_controller.rb
+e nela temos a subclasse UsersController que herda ações de ApplicationController
+e nesta subclasse temos o método "index" que corresponde ao Action que está ao lado de
+Controller -> Controller#Action
 
 
 =end
