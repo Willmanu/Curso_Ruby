@@ -748,14 +748,22 @@ Perceba que a rota agora é http://localhost:3000/users
 
                                    O fluxo correto dos elementos
 
-O que tem que ficar claro com tudo isso é a importância de entender a responsabilidade de cada elemento
-e o fluxo das coisas
+O que tem que ficar claro com tudo isso é a importância de entender a responsabilidade de cada
+elemento, o fluxos das coisas entre eles , como eles conversam e perceber tudo isso na aplicação
 1º requisição do usuário(cliente)
 2º Tudo passa pelo controller
 3º O controller pode ou não ir para o model pegar informações no banco de dados
-4º O controller envia 
-Tudo passa pelo controller e ele é quem vai ou não buscar dados no model e fas a renderização para a
-view
+4º O controller empurra, transfere, redireciona os dados para a view
+5º Esta view responde ao usuário, renderizando o que foi escrito em HTML para o user
 
-É isso que acontece com essa rota localhost:3000/user
+Tudo passa pelo controller
+Neste caso do aplicativo de cadastro do User, a renderização para o usuário, só acontece por
+causa da variável @user que partiu do controller carregando a informação para View
+
+Preciso fazer a seguinte pergunta e responder:
+Como é feita a requisição?
+Como essa requisição chega no controller?
+O que o controller foi buscar em um model?
+Como os dados foram parar na View?
+
 =end
