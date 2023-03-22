@@ -574,7 +574,7 @@ especifica para mostra-lá como por exemplo o "postman"
 
 Tendo isso em mente se eu digitar localhost:3000/user, no meu código essa rota cai em:
 app/controllers/users_controller.rb
-onde tenho esse código em Ruby:
+onde tenho esse código abaixo em Ruby:
 
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
@@ -594,8 +594,16 @@ class UsersController < ApplicationController
   end
 
 
+É uma subclasse que significa controle de usuário, como subclasse de ApplicationController
+herda os métodos que tem nesta classe.
 
-
+ApplicationController -> Controlador de aplicativo: está é uma classe base em Rails usada como
+controlador principal para os controladores do aplicativo, fornecendo uma camada de abstração
+entre o servidor web e os controladores do aplicativo
+o aplicativo
+Com ApplicationController é possível definir métodos para autenticação de usuários, autorização
+de acesso, manipulação de erros etc.
+Por isso os controladores da aplicação herda esta classe reutilizando esses comportamentos
 
 
 =end
