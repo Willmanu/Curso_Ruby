@@ -648,9 +648,65 @@ Trazer todos os usuários cadastrados no meu BD, e coloque nesta variável da cl
 Perceba que a requisição do usuário tem uma rota localhost:3000/user
 que cai em um controller
 que vai no model pegar(GET) todos o usuário(User.all)
-e o controller mostra em uma view para o usuário, a lista de usuários cadastrados
+e o controller mostra em uma view para o usuário, a lista de usuários cadastrados como resposta
+
+
+
+                              Mostrando para o usuário através da View
+
+A pergunta é: Como o controller vai mostrar na View para o usuário?
+
+Quando o Rails crias as coisas, através do scaffold(estrutura), ele usa um padrão
+Se estamos falando de uma aplicação que é um cadastro de user, esse padrão é criar o MVC com o
+nome apropriado para identificar cada parte da estrutura(scaffold)
+Perceba que vimos user_controller.rb, user.rb etc. veja que cada arquivo com suas
+responsabilidades recebe o nome user para classificar que são códigos para o user
+Com as Views não será diferente
+Dentro de app/views temos uma pasta users, dizendo que são views para o usuário
+
+E dentro desta pasta users temos um arquivo chamado index.html.erb
+este arquivo tem o código abaixo:
+
+<p style="color: green"><%= notice %></p>
+
+<h1>Users</h1>
+
+<div id="users">
+  <% @users.each do |user| %>
+    <%= render user %>
+    <p>
+      <%= link_to "Show this user", user %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New user", new_user_path %>
+
+Esse código renderiza(cria o produto final) a resposta para o usuário
+E este arquivo se chama index.html.erb
+
+Perceba que no código do arquivo user_controller.rb temos o método index
+  # GET /users or /users.json
+  def index
+    @users = User.all
+  end
+
+veja que existe um padrão de nomes que se ligam
+
+Este arquivo index.html.erb vai trabalhar em conjunto com user_controller.rb recebendo algo
+do método index do user_controller.rb
+
+Como ja vimos anteriormente o .erb combina HTML, ou qualquer tipo de código de marcação com
+código Ruby
+
+Perceba também que temos a variável @user chamando o método .each em index.html.erb
+Esta variavel esta no método index de user_controller.rb recebendo cada nome do usuário
+cadastrado no BD
+
+Aqui em index.html.erb temos o bloco de código Ruby ".each do || end" atuando na variável @user
+
+Para cada usuário que conter na variável @user o bloco de código Ruby ".each do || end" em
+index.html.erb
 
 É isso que acontece com essa rota localhost:3000/user
-
-
 =end
