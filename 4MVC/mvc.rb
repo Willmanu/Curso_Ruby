@@ -787,10 +787,24 @@ draw: é um método que é chamado no objeto routes e é usado para definir as r
 Então essa linha -> Rails.application.routes.draw
 quer dizer o seguinte:
 
-Framework Rails na aplicação atual crie rotas
+Framework Rails, na aplicação atual crie rotas.
 
 E essa linha -> resources :users quer dizer:
 
-resources -> representa que é o dialogo acima,ou seja, da criação das rotas
-:user -> que as rotas é para o :user
+resources -> representa o dialogo acima,ou seja, da criação das rotas
+:user -> que as rotas que serão criadas é para o -> :user
+
+:user é o nome da tabela que está no arquivo de migração, e esta tabela tem os campos
+nome e email.
+Então o código inteiro quer dizer:
+
+Para o Rails criar rotas para os campos nome e email que ficam na tabela :user, tabela
+essa criada em migrate.
+
+
+                                Adicionando novas Rotas
+Dentro deste código é o lugar que se adiciona as novas rotas
+
+
+
 =end
