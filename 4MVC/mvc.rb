@@ -808,7 +808,7 @@ São as rotas: index, show, new, create, edit, update e destroy
 Essas rotas permitem a realização das operações CRUD (Create, Read, Update, Delete) no
 recurso "users" da minha aplicação
 Apagando a linha "resources :users" dentro código do arquivo routes.rb
-Automaticamente essas sete rotas deixaram de existir
+Automaticamente essas sete rotas deixaram de existir, e será necessário criá-las na mão
 
                                 Adicionando as Rotas na mão
 Dentro deste código citado acima é o lugar que se adiciona as novas rotas
@@ -842,7 +842,57 @@ exemplo:
 
  Abaixo de resources :users criei as rotas que o scaffold tinha feito
 
- Quando escrevi no browser
+ Quando escrevi no browser o localhost:3000/rails/info/routes tive a mesma pagina que o
+ scaffold criou de forma automática
+A unica diferença é que nesta pagina nova, a coluna Path/Url não tem os caminhos que o
+scaffold tinha feito.
+
+Quando escrevi a Url localhost:3000/user para ver a pagina User
+recebi o seguinte erro:
+
+    NoMethodError in Users#index
+    Showing /home/william/workspace/estudoruby/Curso_Ruby/4MVC/mvc_test/app/views/users/
+    index.html.erb where line #9 raised:
+
+    undefined method `user_path' for #<ActionView::Base:0x0000000000afa0>
+    Did you mean?  users_path
+    Extracted source (around line #9):
+    7    <%= render user %>
+    8    <p>
+    9     <%= link_to "Show this user", user %>
+    10   </p>
+    11  <% end %>
+    12  </div>
+
+    Rails.root: /home/william/workspace/estudoruby/Curso_Ruby/4MVC/mvc_test
+
+Este erro é causado pelo fato de eu ter definido as rotas manualmente e, com isso a
+rotas do recurso "user" criadas pelo scaffold através do resource não estão mais disponíveis
+Mesmo assim o arquivo da view chamado "index.html.erb" dentro da pasta "users", na sua linha
+9 tem um trecho de código, que é um link, e após virgula da palavra "Show this user"
+indica o uso de "user", que é um helper -> user_help que é uma rota padrão definida pelo
+método resources :users. Como este ultimo foi retirado de Rails.application.routes.draw o
+método  "user_help" não funciona mais
+
+Para resolver esse erro preciso indicar na linha 9, ao link_to a rota manual que criei
+
+O helper link_to aceita uma URL como seu segundo argumento. Então, em vez de usar
+user_path(user) como faria com resources :users, vou precisa passar a URL manualmente ficando
+assim:
+    <%= link_to "Show this user", "/users/#{user.id}" %>
+
+Desta forma estou construindo a url manualmente, usando a rota definida no arquivo rout.rb
+na linha 8, para o método "show" do código abaixo
+
+ get 'users', to: 'users#show'
+
+Em suma, foi definido rotas manualmente no arquivo routes.rb, com isso não haverá helpers
+de rota gerados automaticamente como user_path. Em vez disso, é necessário construir a
+URL manualmente para cada rota que foi definida.
+
+
+Partindo disso fui onde é preciso e passei a Url
+
  o propósito é me levar para a rota que "localhost:3000/users", rota que o scaffold criou
  dita acima
 
