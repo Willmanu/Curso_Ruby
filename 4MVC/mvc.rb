@@ -801,10 +801,31 @@ Então o código inteiro quer dizer:
 Para o Rails criar rotas para os campos nome e email que ficam na tabela :user, tabela
 essa criada em migrate.
 
+                         Se tirar as rotas que o scaffold criou?
+
 
                                 Adicionando novas Rotas
 Dentro deste código é o lugar que se adiciona as novas rotas
 
+Indo em config routes.rb escrevo por exemplo:
 
+1º se defini o verbo - GET, POST, PATCH, PUT etc
+2º Da o nome para a rota entre aspas simples
+3º inseri uma virgula após o nome e defini para qual método do arquivo user_controller
+vai a rota
+3.1 user_controller porque a requisição do user chega primeiro nele como vimos
+3.2 Então depois do nome da virgula escreve a expressão -> to: que significa para
+3.3 Dentro de aspas simples descreve o nome do método
+
+	sintaxe:
+	verbo 'nome_rota', to: 'nome#método'
+
+Como exemplo vou cria a mesma rota get para o controller chamada -> user#index
+que o scaffold crio
+
+Na minha pagina tenho:
+na coluna HTTP o GET
+na coluna PATCH o /users(.:format), afirmando que é para o user
+na coluna Controller#Action tenho users#index
 
 =end
