@@ -777,5 +777,20 @@ Rails.application.routes.draw do
   resources :users
 end
 
+Neste código temos:
 
+Rails: se refere ao framework Ruby on Rails
+application: se refere à aplicação Rails atualmente em execução
+routes: se refere ao objeto responsável por definir as rotas da aplicação
+draw: é um método que é chamado no objeto routes e é usado para definir as rotas da aplicação
+
+Então essa linha -> Rails.application.routes.draw
+quer dizer o seguinte:
+
+Framework Rails na aplicação atual crie rotas
+
+E essa linha -> resources :users quer dizer:
+
+resources -> representa que é o dialogo acima,ou seja, da criação das rotas
+:user -> que as rotas é para o :user
 =end
