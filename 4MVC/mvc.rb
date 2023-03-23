@@ -803,11 +803,17 @@ essa criada em migrate.
 
                          Se tirar as rotas que o scaffold criou?
 
+O scaffold cria 7 rotas para o controller, as 7 tem relação com o CRUD
+São as rotas: index, show, new, create, edit, update e destroy
+Essas rotas permitem a realização das operações CRUD (Create, Read, Update, Delete) no
+recurso "users" da minha aplicação
+Apagando a linha "resources :users" dentro código do arquivo routes.rb
+Automaticamente essas sete rotas deixaram de existir
 
-                                Adicionando novas Rotas
-Dentro deste código é o lugar que se adiciona as novas rotas
+                                Adicionando as Rotas na mão
+Dentro deste código citado acima é o lugar que se adiciona as novas rotas
 
-Indo em config routes.rb escrevo por exemplo:
+Indo em config routes.rb vou escrever as sete rotas a mão desta forma:
 
 1º se defini o verbo - GET, POST, PATCH, PUT etc
 2º Da o nome para a rota entre aspas simples
@@ -820,12 +826,24 @@ vai a rota
 	sintaxe:
 	verbo 'nome_rota', to: 'nome#método'
 
-Como exemplo vou cria a mesma rota get para o controller chamada -> user#index
-que o scaffold crio
+exemplo:
+  Rails.application.routes.draw do
+    #resources :users
 
-Na minha pagina tenho:
-na coluna HTTP o GET
-na coluna PATCH o /users(.:format), afirmando que é para o user
-na coluna Controller#Action tenho users#index
+    get 'users', to: 'users#index'
+    post 'users', to: 'users#create'
+    get 'users', to: 'users#new'
+    get 'users', to: 'users#edit'
+    get 'users', to: 'users#show'
+    patch 'users', to: 'users#update'
+    put 'users', to: 'users#update'
+    delete 'users', to: 'users#destroy'
+  end
+
+ Abaixo de resources :users criei as rotas que o scaffold tinha feito
+
+ Quando escrevi no browser
+ o propósito é me levar para a rota que "localhost:3000/users", rota que o scaffold criou
+ dita acima
 
 =end
