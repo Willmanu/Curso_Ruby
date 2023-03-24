@@ -921,9 +921,33 @@ Vou voltar a linha do resource :user remover a adição do "/users/#{user.id}" d
 ficara certo como antes.
 
                                            Resumo
+Minha aplicação é um cadastro de usuários
+Esse cadastro tem dois campos Nome e Email, são essas as informações que serão armazenadas
+O CRUD é create, read, update e delete, e são as ações que atuarão nas informações
+Minha aplicação tem a Arquitetura o MVC
+MVC é Model, View e Controller
+  Model cuida do armazenamento das informações
+  View cuida de mostrar a interface gráfica ao usuário
+  Controller tem a responsabilidade de pegar a requisição do usuário e trabalhar ela, sendo
+  buscar uma informação ao usuário no BD e enviar essa resposta ao user
+Esses elementos conversão entre sí
+Vieram para resolver um problema, que era: as aplicação eram feitas em um único arquivo, e
+quando essa aplicação recebia mais recurso, crescia -> escalava, com isso ficava ruim dar a
+manutenção visto que era um único arquivo. Com o MVC a manutenção acontece exatamente no local
+que ela precisa, sem ter que mexer no arquivo inteiro
+Se esta manutenção é no BD, será mexido somente no Model
+Se na interface gráfica será mexido somente na View e etc
 
-1º Requisição do usuário
-2º esta requisição
+Funcionamento do dialogo entre os elementos
+ Cliente e Servidor
+  O user é o cliente e o servidor é um local onde esta o recurso que o user precisa
+   1º O usuário dispara uma requeste -> requisição
+   2º esta requisição precisa de uma rota, essa rota é a url
+    2.1º Url é uma identificação para um recurso que esta no servidor, quando o user digita o
+	url no browser ele esta acessando o servidor, e assim acessando minha aplicação que foi
+	colocada neste servidor e tem essa identificação que o user digitou no browser
+
+   3º A requisição cai em um controller, um dos elemento do MVC 
 
 O propósito é me levar para a rota que "localhost:3000/users", rota que o scaffold criou
 dita acima
