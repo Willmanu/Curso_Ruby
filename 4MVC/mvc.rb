@@ -184,7 +184,7 @@ temos a classe User sendo subclasse de ApplicationRecord
 
 class User < ApplicationRecord
 
-classe base do framework ActiveRecord, end cuida da aplicação dos dados ao BD
+classe base do framework ActiveRecord, cuida da aplicação dos dados ao BD
 
 
                                       "teste_unit"
@@ -656,7 +656,7 @@ e o controller mostra em uma view para o usuário, a lista de usuários cadastra
 
 A pergunta é: Como o controller vai mostrar na View para o usuário?
 
-Quando o Rails crias as coisas, através do scaffold(estrutura), ele usa um padrão
+Quando o Rails crias as rotas, através do scaffold(estrutura), ele usa um padrão
 Se estamos falando de uma aplicação que é um cadastro de user, esse padrão é criar o MVC com o
 nome apropriado para identificar cada parte da estrutura(scaffold)
 Perceba que vimos user_controller.rb, user.rb etc. veja que cada arquivo com suas
@@ -892,8 +892,40 @@ URL manualmente para cada rota que foi definida.
 
 
 Partindo disso fui onde é preciso e passei a Url
+Porém quando fiz a requisição no browser tiver essa resposta
 
- o propósito é me levar para a rota que "localhost:3000/users", rota que o scaffold criou
- dita acima
+   NameError em Users#index
+   Mostrando /home/william/workspace/estudoruby/Curso_Ruby/4MVC/mvc_test/app/views/users/index.html.erb onde a linha #14 levantou:
+   
+   undefined local variable or method `new_user_path' for #<ActionView::Base:0x0000000000ad98>
+   Fonte extraída (em torno da linha #14 ):
+   12  </div>
+   13
+   14  <%= link_to "Novo usuário", new_user_path %>
+   
+   Rails.root: /home/william/workspace/estudoruby/Curso_Ruby/4MVC/mvc_test
+   
+   Rastreamento de aplicativo | Rastreamento de estrutura | Rastreamento Completo
+   app/views/users/index.html.erb:14
+
+Aqui a variável new_user_path não foi definida no projeto
+Isso porque ao retirar o resource :users
+Ao usar o resource :users o Rails gera vários helper de rota, e aqui esta mais um
+Esta variavel é usada para gerar "url"  para pagina de criação de um novo usuário
+Não vou resolver este caso, porque não vai ser somente neste  lugar que vai dar erro, pois
+como explicado acima o Rails gera vários helper
+Em um curso mais especifico como protocolo HTTP, API RESTFUL etc. vou aprender a gerar
+todas as minhas rotas manualmente.
+
+Vou voltar a linha do resource :user remover a adição do "/users/#{user.id}" do link e tudo
+ficara certo como antes.
+
+                                           Resumo
+
+1º Requisição do usuário
+2º esta requisição
+
+O propósito é me levar para a rota que "localhost:3000/users", rota que o scaffold criou
+dita acima
 
 =end
