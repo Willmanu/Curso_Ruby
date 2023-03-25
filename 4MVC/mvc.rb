@@ -938,6 +938,19 @@ que ela precisa, sem ter que mexer no arquivo inteiro
 Se esta manutenção é no BD, será mexido somente no Model
 Se na interface gráfica será mexido somente na View e etc
 
+Criando o CRUD
+  Criando o projeto
+    A criação do projeto foi feita automaticamente pelo comando:
+     rails new mvc_test
+
+  Criando o crud user com scaffold
+    A criação do crud foi feita com o comando
+     rails g scaffold User :nome :email
+      Visto que o nome da tabela é User, todo o esqueleto criado, ou seja, em todas as partes
+	  do MVC, onde for relacionado a essa tabela User tera esse nome, indicando que os elementos
+      criados são para o user
+
+
 Funcionamento do dialogo entre os elementos
  Cliente e Servidor
   O user é o cliente e o servidor é um local onde esta o recurso que o user precisa
@@ -947,7 +960,51 @@ Funcionamento do dialogo entre os elementos
 	url no browser ele esta acessando o servidor, e assim acessando minha aplicação que foi
 	colocada neste servidor e tem essa identificação que o user digitou no browser
 
-   3º A requisição cai em um controller, um dos elemento do MVC 
+   3º A requisição (url) cai em um controller, um dos elemento do MVC que tem a responsabilidade
+	de analisar a requisição (url) e ir no lugar de identificação desta para trazer as
+	informações
+
+   4º essa informação o Controller envia para a View, que é a resposta para o user
+
+
+Todas essas coisas acontecem porque tem lógica nó código
+Os código estão em arquivo
+Esses arquivos são escritos nas seguintes tecnologias: Ruby, Rails, Json, HTML, protocolo HTTP
+e seus verbos GET, POST, PATCH, PUT, DELETE etc. respeitando a arquitetura RESTFull
+
+Rotas
+ As requisições(url) ficam gravadas no arquivo routes.rb dentro de config
+  este arquivo usa um help method chamado resource para criar as rotas automaticamente
+
+Controller
+  O código principal do Controller fica escrito em user_controller.rb que esta em
+  app/controllers
+
+
+Model
+  Com relação a o armazenamento
+   1º Migration cria as tabelas, através do framework ActiveRecord
+	  Migration fica em db/migrate
+
+   2º a tabela é criada no arquivo user.rb, e este é subclasse de ApplicationRecord
+    2.1º ApplicationRecord esta no arquivo application_record.rb e é uma classe de ActiveRecord
+
+View
+  Com relação a visualização
+    São criadas automaticamente usando extensão de arquivo .erb
+    Esses arquivos estão em app/view/user
+	erb -> Embedded Ruby significa -> Ruby embutido, combina HTML, json e qualquer arquivo de
+	marcação, etc. com código Ruby
+    Aqui tem código para criar o formulário, com os nomes dos campos para preenchimento, código
+	para criar uma lista com todos os user cadastrados, código que mostra na tela essa lista
+	para o user, código para receber e adicionar um novo user ao bd
+
+
+
+
+
+
+
 
 O propósito é me levar para a rota que "localhost:3000/users", rota que o scaffold criou
 dita acima
