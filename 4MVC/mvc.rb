@@ -986,8 +986,43 @@ Model
    1º Migration cria as tabelas, através do framework ActiveRecord
 	  Migration fica em db/migrate
 
-   2º a tabela é criada no arquivo user.rb, e este é subclasse de ApplicationRecord
-    2.1º ApplicationRecord esta no arquivo application_record.rb e é uma classe de ActiveRecord
+   2º a tabela é criada no arquivo user.rb que está em app/model, e este é subclasse de
+      ApplicationRecord
+    2.1º ApplicationRecord esta no arquivo application_record.rb e é uma classe de
+	     ActiveRecord
+
+Exemplo de dialogo entre controller e model:
+  Quando o user colocar a URL localhost:3000/user
+  Ele esta pedindo para ver a lista de usuários
+  Neste caso temos uma requisição que é ver a lista dos usuários na aplicação quado o user passa
+  -> localhost:3000 mais o / e o nome user
+ 
+   A rota cai no controller, especificamente no arquivo user_controller.rb onde o método index
+   que recebe a rota
+   veja o código:
+
+     def index
+      @users = User.all
+     end
+
+Perceba que uma variável na classe @user recebendo a classe User
+Essas classe User esta no model, no arquivo user.rb
+Veja o código:
+
+    class User < ApplicationRecord
+    end
+
+Perceba que User é subclasse de ApplicationRecord
+ApplicationRecord está no model também
+Veja o código:
+
+    class ApplicationRecord < ActiveRecord::Base
+      primary_abstract_class
+    end
+
+
+
+
 
 View
   Com relação a visualização
