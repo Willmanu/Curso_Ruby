@@ -923,7 +923,6 @@ ficara certo como antes.
                                            Resumo
 Minha aplicação é um cadastro de usuários
 Esse cadastro tem dois campos Nome e Email, são essas as informações que serão armazenadas
-O CRUD é create, read, update e delete, e são as ações que atuarão nas informações
 Minha aplicação tem a Arquitetura o MVC
 MVC é Model, View e Controller
   Model cuida do armazenamento das informações
@@ -931,13 +930,15 @@ MVC é Model, View e Controller
   Controller tem a responsabilidade de pegar a requisição do usuário e trabalhar ela, sendo
   buscar uma informação ao usuário no BD e enviar essa resposta ao user
 Esses elementos conversão entre sí
-Vieram para resolver um problema, que era: as aplicação eram feitas em um único arquivo, e
-quando essa aplicação recebia mais recurso, crescia -> escalava, com isso ficava ruim dar a
-manutenção visto que era um único arquivo. Com o MVC a manutenção acontece exatamente no local
-que ela precisa, sem ter que mexer no arquivo inteiro
-Se esta manutenção é no BD, será mexido somente no Model
-Se na interface gráfica será mexido somente na View e etc
+A arquitetura veio para resolver um problema, que era: as aplicação eram feitas em um único
+arquivo, e quando essa aplicação recebia mais recurso, crescia -> escalava, com isso ficava
+ruim dar a manutenção visto que era um único arquivo. Com o MVC a manutenção acontece
+exatamente no local que ela precisa, sem ter que mexer no arquivo inteiro
+Se esta manutenção é no BD, será mexido somente no Model, se na interface gráfica será mexido
+somente na View e etc
 
+Nesta aplicação fiz o CRUD, nome que se chama na area de devs para:
+O CRUD é create, read, update e delete, e são as ações que atuarão nas informações
 Criando o CRUD
   Criando o projeto
     A criação do projeto foi feita automaticamente pelo comando:
@@ -984,18 +985,30 @@ Controller
 Model
   Com relação a o armazenamento
    1º Migration cria as tabelas, através do framework ActiveRecord
-	  Migration fica em db/migrate
+	  O arquivo de migration fica em db/migrate
 
    2º a tabela é criada no arquivo user.rb que está em app/model, e este é subclasse de
       ApplicationRecord
     2.1º ApplicationRecord esta no arquivo application_record.rb e é uma classe de
 	     ActiveRecord
 
+
+View
+  Com relação a visualização
+    São criadas automaticamente usando extensão de arquivo .erb
+    Esses arquivos estão em app/view/user
+	erb -> Embedded Ruby significa -> Ruby embutido, combina HTML, json e qualquer arquivo de
+	marcação, etc. com código Ruby
+    Aqui tem código para criar o formulário, com os nomes dos campos para preenchimento, código
+	para criar uma lista com todos os user cadastrados, código que mostra na tela essa lista
+	para o user, código para receber e adicionar um novo user ao bd
+
+
 Exemplo de dialogo entre controller e model:
-  Quando o user colocar a URL localhost:3000/user
+  Quando o user colocar a URL localhost:3000/user no browser
   Ele esta pedindo para ver a lista de usuários
   Neste caso temos uma requisição que é ver a lista dos usuários na aplicação quado o user passa
-  -> localhost:3000 mais o / e o nome user
+  -> localhost:3000 mais a / e o nome user
  
    A rota cai no controller, especificamente no arquivo user_controller.rb onde o método index
    que recebe a rota
@@ -1020,28 +1033,47 @@ Veja o código:
       primary_abstract_class
     end
 
+Então quando o user escreve a url no browser contendo o /user, isso quer dizer que é para
+a lista de usuários cadastrados
+A url cai no controller, justamente nesse código que tem o método index, que tem a classe User
+User sabemos que é a classe
+O .all é um método que significa que é para trazer todos os usuários cadastrados da classe User
 
+Sabemos que a classe user é na verdade uma subclasse de ApplicationRecord
+E ApplicationRecord é na verdade uma classe do framework ActiveRecord
+ Perceba que o código diz que Application Record tem uma herança de ActiveRecorde que é o Base
+ isso significa que ApplicationRecord vai atuar na função da criação da tabela e em seu
+ comportamento que no caso é o CRUD, ou seja, criar, ler, atualizar e deletar informação nessa
+ tabela User.
 
+ Mas no caso o ApplicationRecord vai simplesmente usar o método show, ou seja, mostra
 
+ O retorno desta lista volta para o Controller que tem o método show, que agora envia estes
+ dados para a view
+Na view temos o arquivo show.html.erb
+veja o código abaixo:
 
-View
-  Com relação a visualização
-    São criadas automaticamente usando extensão de arquivo .erb
-    Esses arquivos estão em app/view/user
-	erb -> Embedded Ruby significa -> Ruby embutido, combina HTML, json e qualquer arquivo de
-	marcação, etc. com código Ruby
-    Aqui tem código para criar o formulário, com os nomes dos campos para preenchimento, código
-	para criar uma lista com todos os user cadastrados, código que mostra na tela essa lista
-	para o user, código para receber e adicionar um novo user ao bd
+<p style="color: green"><%= notice %></p>
 
+<%= render @user %>
 
+<div>
+  <%= link_to "Edit this user", edit_user_path(@user) %> |
+  <%= link_to "Back to users", users_path %>
 
+  <%= button_to "Destroy this user", @user, method: :delete %>
+</div>
 
+Perceba que tem a variavel @user, a mesma que esta recebendo a classe User.all
+Ela esta carregando a lista dos user para a view passada pelo controller
+A view vai renderizar a lista e também criar flags para:
+ editar o usuário da lista
+ Criar um novo
+ E quando tiver aditado ou criado, vou estar posicionado nessas paginas de criar ou atualizar
+  então tem uma flag chamada "Back to users" que volta para a pagina da lista
 
-
-
-
-O propósito é me levar para a rota que "localhost:3000/users", rota que o scaffold criou
-dita acima
+Quanto a criar, atualizar, deletar tem método no controller que vai atuar fazendo isso, e ao
+finalizar as ações chama o model e a view, na ordem das solicitações a fim que o user tenha o
+que deseja
 
 =end
