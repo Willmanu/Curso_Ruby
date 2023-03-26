@@ -1046,34 +1046,61 @@ E ApplicationRecord é na verdade uma classe do framework ActiveRecord
  comportamento que no caso é o CRUD, ou seja, criar, ler, atualizar e deletar informação nessa
  tabela User.
 
- Mas no caso o ApplicationRecord vai simplesmente usar o método show, ou seja, mostra
+ Mas no caso o ApplicationRecord vai simplesmente usar o método GET, para pegar os user na
+ tabela
 
- O retorno desta lista volta para o Controller que tem o método show, que agora envia estes
- dados para a view
-Na view temos o arquivo show.html.erb
+O retorno desta lista volta para o Controller no método index
+Na view temos o arquivo index.html.erb
 veja o código abaixo:
 
 <p style="color: green"><%= notice %></p>
 
-<%= render @user %>
+<h1>Users</h1>
 
-<div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
-
-  <%= button_to "Destroy this user", @user, method: :delete %>
+<div id="users">
+  <% @users.each do |user| %>
+    <%= render user %>
+    <p>
+      <%= link_to "Show this user", user %>
+    </p>
+  <% end %>
 </div>
 
-Perceba que tem a variavel @user, a mesma que esta recebendo a classe User.all
-Ela esta carregando a lista dos user para a view passada pelo controller
-A view vai renderizar a lista e também criar flags para:
- editar o usuário da lista
- Criar um novo
- E quando tiver aditado ou criado, vou estar posicionado nessas paginas de criar ou atualizar
-  então tem uma flag chamada "Back to users" que volta para a pagina da lista
+<%= link_to "New user", new_user_path %>
 
-Quanto a criar, atualizar, deletar tem método no controller que vai atuar fazendo isso, e ao
-finalizar as ações chama o model e a view, na ordem das solicitações a fim que o user tenha o
-que deseja
+Perceba que tem a variavel @user, a mesma que esta recebendo a classe User.all no controller
+Ela esta carregando a lista dos user para a view passada pelo controller
+A variavel chama o método .each que faz um loop em todos os registros
+
+
+<h1>Users</h1> - Exibe um cabeçalho "Users" em negrito na página.
+
+<div id="users">...</div> - Define um bloco HTML com um identificador "users", que será usado
+para estilizar o conteúdo com CSS.
+
+<% @users.each do |user| %> - Itera sobre uma lista de usuários que foram passados para a view
+pelo controlador e armazena cada usuário na variável |user|
+
+<%= render user %> - Renderiza uma visão parcial para cada usuário na lista, usando o método
+render. A visão parcial é um modelo que define como cada usuário deve ser exibido na lista.
+
+<p>...</p> - Define um parágrafo HTML para cada usuário exibido na lista.
+
+<%= link_to "Show this user", user %> - Cria um link para exibir os detalhes do usuário clicado
+usando o método link_to. O texto do link é "Show this user" e o destino é a página de detalhes
+do usuário.
+
+<% end %> - Encerra o loop each.
+
+<%= link_to "New user", new_user_path %> - Cria um link para criar um novo usuário, usando o
+método link_to. O texto do link é "New user" e o destino é a página de criação de usuário.
+
+Em resumo, essa view exibe uma lista de usuários e fornece links para visualizar os detalhes
+de cada usuário individualmente ou criar um novo usuário.
+
+
+Quanto a criar, ler atualizar, deletar tem método no controller que vai atuar fazendo isso, e
+ao finalizar as ações chama o model e a view, na ordem das solicitações a fim que o user tenha
+o que deseja
 
 =end
