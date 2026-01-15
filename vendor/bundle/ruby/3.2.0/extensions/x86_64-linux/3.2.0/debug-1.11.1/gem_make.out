@@ -1,0 +1,20 @@
+current directory: /home/william/projetos/Curso_Ruby/vendor/bundle/ruby/3.2.0/gems/debug-1.11.1/ext/debug
+/home/william/.rbenv/versions/3.2.9/bin/ruby extconf.rb
+/home/william/.rbenv/versions/3.2.9/bin/ruby: warning: Ruby was built without YJIT support. You may need to install rustc to build Ruby with YJIT.
+creating Makefile
+
+current directory: /home/william/projetos/Curso_Ruby/vendor/bundle/ruby/3.2.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260114-63919-sp3kdc sitelibdir\=./.gem.20260114-63919-sp3kdc clean
+
+current directory: /home/william/projetos/Curso_Ruby/vendor/bundle/ruby/3.2.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260114-63919-sp3kdc sitelibdir\=./.gem.20260114-63919-sp3kdc
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/william/projetos/Curso_Ruby/vendor/bundle/ruby/3.2.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260114-63919-sp3kdc sitelibdir\=./.gem.20260114-63919-sp3kdc install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20260114-63919-sp3kdc/debug
+
+current directory: /home/william/projetos/Curso_Ruby/vendor/bundle/ruby/3.2.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260114-63919-sp3kdc sitelibdir\=./.gem.20260114-63919-sp3kdc clean

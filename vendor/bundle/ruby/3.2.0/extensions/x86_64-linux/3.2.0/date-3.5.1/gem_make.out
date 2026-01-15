@@ -1,0 +1,25 @@
+current directory: /home/william/projetos/Curso_Ruby/vendor/bundle/ruby/3.2.0/gems/date-3.5.1/ext/date
+/home/william/.rbenv/versions/3.2.9/bin/ruby extconf.rb
+/home/william/.rbenv/versions/3.2.9/bin/ruby: warning: Ruby was built without YJIT support. You may need to install rustc to build Ruby with YJIT.
+checking for rb_category_warn()... yes
+checking for timezone in time.h with  -Werror... yes
+checking for altzone in time.h with  -Werror... no
+creating Makefile
+
+current directory: /home/william/projetos/Curso_Ruby/vendor/bundle/ruby/3.2.0/gems/date-3.5.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20260114-63919-1mf3aj sitelibdir\=./.gem.20260114-63919-1mf3aj clean
+
+current directory: /home/william/projetos/Curso_Ruby/vendor/bundle/ruby/3.2.0/gems/date-3.5.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20260114-63919-1mf3aj sitelibdir\=./.gem.20260114-63919-1mf3aj
+compiling date_core.c
+compiling date_parse.c
+compiling date_strftime.c
+compiling date_strptime.c
+linking shared-object date_core.so
+
+current directory: /home/william/projetos/Curso_Ruby/vendor/bundle/ruby/3.2.0/gems/date-3.5.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20260114-63919-1mf3aj sitelibdir\=./.gem.20260114-63919-1mf3aj install
+/usr/bin/install -c -m 0755 date_core.so ./.gem.20260114-63919-1mf3aj
+
+current directory: /home/william/projetos/Curso_Ruby/vendor/bundle/ruby/3.2.0/gems/date-3.5.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20260114-63919-1mf3aj sitelibdir\=./.gem.20260114-63919-1mf3aj clean

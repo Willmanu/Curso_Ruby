@@ -1,0 +1,20 @@
+current directory: /home/william/projetos/Curso_Ruby/vendor/bundle/ruby/3.2.0/gems/stringio-3.2.0/ext/stringio
+/home/william/.rbenv/versions/3.2.9/bin/ruby extconf.rb
+/home/william/.rbenv/versions/3.2.9/bin/ruby: warning: Ruby was built without YJIT support. You may need to install rustc to build Ruby with YJIT.
+checking for rb_io_mode_t in ruby/io.h... no
+creating Makefile
+
+current directory: /home/william/projetos/Curso_Ruby/vendor/bundle/ruby/3.2.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260114-63919-4qdpmr sitelibdir\=./.gem.20260114-63919-4qdpmr clean
+
+current directory: /home/william/projetos/Curso_Ruby/vendor/bundle/ruby/3.2.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260114-63919-4qdpmr sitelibdir\=./.gem.20260114-63919-4qdpmr
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/william/projetos/Curso_Ruby/vendor/bundle/ruby/3.2.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260114-63919-4qdpmr sitelibdir\=./.gem.20260114-63919-4qdpmr install
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20260114-63919-4qdpmr
+
+current directory: /home/william/projetos/Curso_Ruby/vendor/bundle/ruby/3.2.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260114-63919-4qdpmr sitelibdir\=./.gem.20260114-63919-4qdpmr clean

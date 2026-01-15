@@ -23,7 +23,7 @@ ele ir aumentando, ou seja, escalando
 Vai inchando inchando até se tornar uma bola de neve
 Este fato quer dizer que se criar uma aplicação, e ela for crescendo de forma desorganizada,
 e muito fácil ter um problema
-Em uma aplicação que atende muitas pessoas, é normal criar novas funcionalidades, o que
+Em uma aplicação que atende muitas pessoas, é normal criar novas funcionalidades, o que faz
 essa aplicação crescer ou como diz na programação -> escala
 E com isso gera muita manutenção no futuro
 
@@ -46,7 +46,7 @@ dados em um model e mostrar na View
 Model armazena os dados do usuário ou pega de outro lugar para armazenar
 
 Resumo: O MVC tem a responsabilidade de separar cada função, e assim delegar atividades a cada
-um dos elementos, para que quando minha aplicação cresça, não vire um bola de neve e me
+um dos elementos, assim quando minha aplicação crescer, não vire um bola de neve e me
 faça ter trabalho demasiado para corrigir os problemas.
 Assim a escalabilidade vai estar garantida
 
@@ -115,7 +115,7 @@ Então com base nessa explicação o que o script quer dizer é:
 que o rails vai gerar um esqueleto/estrutura, chamada User porque é para um usuário que também é
 o nome do model, com dois campos/atributos onde o usuário vai preencher, com seu nome e email.
 
-Isso que significa que o CRUD será um cadastro para usuário, onde será cadastrado nome e email.
+Isso significa que este CRUD, será um cadastro para usuário, onde será cadastrado nome e email.
 
 observação: o nome do model sempre será no singular e com a 1º letra em maiúscula
 
@@ -162,11 +162,16 @@ da palavra create
       create      app/views/users/show.json.jbuilder
       create      app/views/users/_user.json.jbuilder
 
-
-
-
 Aqui  create    db/migrate/20230319203204_create_users.rb
 temo uma migração
+O termo migração seve para descreve o BD de um estado para outro, ou seja,
+antes dessa ação o BD não tem nada, após essa ação, o BD passa a ter um novo estado.
+Por isso o termo migrate, migrou de nada para ter algo.
+Agora tem tabela com dois campos
+Conforme o desenvolvimento da aplicação, seu estado vai mudando, ou seja,
+migrando porque vai adquirindo dados novos.
+
+La na projeto dentro da pasta models no arquivo user.rb tem isso abaixo
 
 class CreateUsers < ActiveRecord::Migration[7.0]
   def change
@@ -179,12 +184,24 @@ class CreateUsers < ActiveRecord::Migration[7.0]
   end
 end
 
-Aqui  create    app/models/user.rb
-temos a classe User sendo subclasse de ApplicationRecord
+temos a classe CreateUser herdando ApplicationRecord
+Aqui acima entra o conceito de herança, ou seja, Classe CreateUser herda
+funcionalidades de ActiveRecorde  
 
-class User < ApplicationRecord
+Active Record é uma das partes mais importantes do Ruby on Rails.
+Ele é o ORM do Rails.
+ORM (Object-Relational Mapping) = uma camada que faz a ponte entre objetos Ruby
+e tabelas do banco de dados.
 
-classe base do framework ActiveRecord, cuida da aplicação dos dados ao BD
+Em termos simples
+
+O Active Record permite que você trate registros do banco como objetos Ruby,
+sem precisar escrever SQL na maior parte do tempo.
+
+👉 Tabela → vira uma classe
+👉 Linha da tabela → vira um objeto
+👉 Coluna → vira um atributo
+Ou seja, cuida da aplicação dos dados ao BD
 
 
                                       "teste_unit"
@@ -442,7 +459,7 @@ usuário deseja
 
 Neste caso são duas as formas:
 
-1º poe ser dentro do projeto mvc_test em config/routes.rb
+1º pode ser dentro do projeto mvc_test em config/routes.rb
 
 Porém aqui dentro temos:
 Rails.application.routes.draw do
